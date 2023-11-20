@@ -1,0 +1,26 @@
+.intro {
+    margin-top: 80px;
+
+    &-container {
+        @include flexCenter;
+        flex-direction: column;
+    }
+
+    &-heading {
+        margin-bottom: 40px;
+    }
+
+    &-item {
+        text-align: center;
+    }
+
+    &-img {
+        width: 100vw;
+        height: auto;
+        object-fit: cover;
+
+        &--wrapper {
+            margin-top: 40px; 
+        }
+    }
+}

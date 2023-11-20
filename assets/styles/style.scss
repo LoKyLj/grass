@@ -1,0 +1,13 @@
+@import './fonts';
+@import './vars';
+@import './mixins';
+@import './adjustments';
+@import './features/slider';
+
+
+/* blocks */
+@import './blocks/header';
+@import './blocks/hero';
+@import './blocks/intro';
+@import './blocks/about';
+@import './blocks/contact';

@@ -1,0 +1,20 @@
+.about {
+    background-color: white;
+    padding-top: 80px;
+
+    &-container {
+        @include flexCenter;
+        flex-direction: column;
+    }
+
+    &-heading {
+        margin-bottom: 40px;
+        color: black;
+    }
+
+    &-item {
+        text-align: center;
+        color: black;
+        margin-bottom: 40px;
+    }
+}

@@ -1,0 +1,49 @@
+.header {
+    display: flex;
+    justify-content: center;
+
+    &-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            justify-self: center;
+            height: 100px;
+            z-index: 2;
+
+            @include tablet {
+                height: 98px;
+            }
+
+            @include wideMobile {
+                height: 95px;
+                justify-content: end;
+            }
+
+            @include mediumMobile {
+                height: 85px;
+            }
+
+            @include tinyMobile {
+                height: 70px;
+            }
+    }
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+
+    &-item {
+        margin-right: 20px;
+
+        &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
