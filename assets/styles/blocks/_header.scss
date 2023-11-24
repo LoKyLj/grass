@@ -7,7 +7,7 @@
             justify-content: space-between;
             align-items: center;
             justify-self: center;
-            height: 100px;
+            height: 80px;
             z-index: 2;
 
             @include tablet {
@@ -29,12 +29,22 @@
     }
 }
 
+.logo {
+    width: 110px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
 .nav {
     display: flex;
     align-items: center;
+    margin-left: -50px;
 
     &-item {
-        margin-right: 20px;
+        @include fontStyle(Raleway, 400, 18);
+        margin-right: 50px;
 
         &:hover {
             cursor: pointer;
@@ -44,6 +54,24 @@
         &:last-child {
             margin-right: 0;
         }
+    }
+}
+
+.profile {
+    display: flex;
+}
+
+.cart-wrapper {
+    margin-right: 20px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.profile-wrapper {
+    &:hover {
+        cursor: pointer;
     }
 }
 

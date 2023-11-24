@@ -1,5 +1,5 @@
 .intro {
-    margin-top: 80px;
+    margin-top: 120px;
 
     &-container {
         @include flexCenter;
@@ -7,20 +7,58 @@
     }
 
     &-heading {
-        margin-bottom: 40px;
+        @include fontStyle(Raleway, 500, 46);
+    }
+
+    &-subheading {
+        margin-top: 25px;
+        width: 490px;
+        text-align: center;
+        @include fontStyle(Raleway, 400, 26);
+        background-image: linear-gradient(91deg, #1A7025 -3.7%, #77B140 47.02%, #E0EFA8 103.44%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 
     &-item {
-        text-align: center;
+        @include fontStyle(Raleway, 400, 18);
+        text-align: left;
+        width: 60%;
+        margin-top: 80px;
+
+        &:last-child {
+            margin-top: 60px;
+        }
+
+        &--left {
+            align-self: flex-start;
+        }
+
+        &--right {
+            align-self: flex-end;
+        }
+
+        &--marked {
+            border-top-right-radius: 15px;
+            border-bottom-left-radius: 15px;
+            background-color: #2F7F2B;
+        }
     }
 
     &-img {
+        position: absolute;
         width: 100vw;
         height: auto;
         object-fit: cover;
+        border-radius: 40px;
 
         &--wrapper {
-            margin-top: 40px; 
+            position: relative;
+            width: 100vw;
+            aspect-ratio: 32/13;
+            margin-top: 40px;
+            margin-bottom: -40px;
         }
     }
 }

@@ -1,0 +1,81 @@
+.miniShop {
+    padding-top: 120px;
+
+    &-container {
+        @include flexCenter;
+        flex-direction: column;
+    }
+
+    &-heading {
+        @include fontStyle(Raleway, 500, 46);
+    }
+
+    &-list {
+        margin-top: 45px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap: 50px;
+        column-gap: 20px;
+        
+        &__item {
+            width: fit-content;
+            border-radius: 40px;
+            border: 2px solid #5AA02D;
+            overflow: hidden;
+        }
+    }
+
+    &-item {
+
+        &__photo {
+            width: 100%;
+
+            &--wrapper {
+                overflow: hidden;
+            }
+        }
+
+        &__info {
+            margin: 20px 15px 15px 15px;
+
+            &-name {
+                @include fontStyle(Raleway, 500, 26);
+            }
+
+            &-price {
+                @include fontStyle(Montserrat, 500, 46);
+                color: #4E9B1C;
+                display: flex;
+                flex-direction: row;
+                margin-top: 20px;
+
+                &--meter {
+                    @include fontStyle(Raleway, 400, 18);
+                    color: white;
+                    margin-left: 10px;
+                }
+            }
+
+            &-button {
+                @include fontStyle(Raleway, 500, 25);
+                color: white;
+                background-color: #5AA02D;
+                border-radius: 20px;
+                height: 80px;
+                width: 100%;
+                margin-top: 40px;
+                border: none;
+                transition: all 0.15s ease-in-out;
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: #447923;
+                }
+
+                &:active {
+                    background-color: #345d1a;
+                }
+            }
+        }
+    }
+}

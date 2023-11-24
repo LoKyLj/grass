@@ -1,6 +1,6 @@
 .about {
     background-color: white;
-    padding-top: 80px;
+    padding-top: 160px;
 
     &-container {
         @include flexCenter;
@@ -10,11 +10,66 @@
     &-heading {
         margin-bottom: 40px;
         color: black;
+        @include fontStyle(Raleway, 500, 46);
+    }
+
+    &-items {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
     }
 
     &-item {
+        width: 100%;
         text-align: center;
-        color: black;
-        margin-bottom: 40px;
+        border-radius: 40px;
+        display: flex;
+        align-items: center;
+        
+        &--first {
+            position: relative;
+            background: linear-gradient(100deg, #1F7225 5.98%, #5AA02D 51.37%, #A9D764 101.11%, #D6EF9C 152.42%);
+            grid-row-start: 1;
+            grid-row-end: 3;
+
+            .about-item--number {
+                position: absolute;
+                top: 40%;
+                left: 0;
+            }
+        }
+
+        &--second {
+            position: relative;
+            background-color: black;
+
+            .about-item--number {
+                position: absolute;
+                top: 10px;
+                right: 0;
+            }
+        }
+
+        &--third {
+            position: relative;
+            border: 2px solid black;
+
+            .about-text {
+                color: black;
+            }
+
+            .about-item--number {
+                position: absolute;
+                top: 30%;
+                left: 0;
+            }
+        }
+    }
+
+    &-text {
+        @include fontStyle(Raleway, 400, 18);
+        text-align: center;
+        margin: 30px 60px;
     }
 }
