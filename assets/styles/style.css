@@ -502,7 +502,7 @@ transition-none {
 .intro-item--marked {
   border-top-right-radius: 15px;
   border-bottom-left-radius: 15px;
-  background-color: #2F7F2B;
+  background-color: #345d1a;
 }
 .intro-img {
   position: absolute;
@@ -637,7 +637,7 @@ transition-none {
   font-family: Montserrat;
   font-size: 2.875rem;
   font-weight: 500;
-  color: #4E9B1C;
+  color: #5AA02D;
   display: flex;
   flex-direction: row;
   margin-top: 20px;
@@ -702,7 +702,127 @@ transition-none {
   -webkit-text-fill-color: transparent;
 }
 
+.form {
+  margin-top: 100px;
+}
+.form-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+  row-gap: 50px;
+}
+.form-item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  row-gap: 20px;
+  border-bottom: 2px solid black;
+}
+.form-item--wide {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.form-item--wide .form-input {
+  resize: vertical;
+  min-height: 80px;
+}
+.form-label {
+  font-family: Raleway;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.form-input {
+  width: 100%;
+  font-family: Montserrat;
+  font-size: 0.875rem;
+  font-weight: 300;
+  padding: 0 0 12px 0;
+  border: none;
+}
+.form-agreement {
+  display: flex;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.form-button {
+  width: 270px;
+  height: 70px;
+  font-family: Raleway;
+  font-size: 1.375rem;
+  font-weight: 500;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid #5AA02D;
+  transition: all 0.15s ease-in-out;
+}
+.form-button:hover {
+  color: white;
+  border: 2px solid #447923;
+  background-color: #447923;
+}
+.form-button:active {
+  color: white;
+  border: 2px solid #345d1a;
+  background-color: #345d1a;
+}
+
+.agreement-input {
+  align-self: flex-start;
+  width: auto;
+  cursor: pointer;
+  display: none;
+}
+.agreement-input:checked + .agreement-label::after {
+  transform: scale(1);
+}
+.agreement-label {
+  width: 100%;
+  font-family: Raleway;
+  font-size: 1rem;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  line-height: 140%;
+  position: relative;
+}
+.agreement-label span {
+  display: flex;
+}
+.agreement-label::before {
+  font-size: 0;
+  margin-right: 10px;
+  content: "";
+  flex: 0 0 24px;
+  height: 24px;
+  border-radius: 20%;
+  border: 1px solid #5AA02D;
+  align-self: flex-start;
+}
+.agreement-label::after {
+  position: absolute;
+  content: "✓";
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25.24px;
+  height: 25.24px;
+  background-color: #5AA02D;
+  border-radius: 20%;
+  font-family: Raleway;
+  transform: scale(0);
+  transition: all 0.15s ease-in-out;
+}
+.agreement-link {
+  width: -moz-max-content;
+  width: max-content;
+  color: #5AA02D;
+}
+
 .map {
+  margin-top: 120px;
   width: 100%;
   height: 470px;
 }

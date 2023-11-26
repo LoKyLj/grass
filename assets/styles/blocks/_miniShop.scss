@@ -20,7 +20,7 @@
         &__item {
             width: fit-content;
             border-radius: 40px;
-            border: 2px solid #5AA02D;
+            border: 2px solid $lightGreen;
             overflow: hidden;
         }
     }
@@ -44,7 +44,7 @@
 
             &-price {
                 @include fontStyle(Montserrat, 500, 46);
-                color: #4E9B1C;
+                color: $lightGreen;
                 display: flex;
                 flex-direction: row;
                 margin-top: 20px;
@@ -59,7 +59,7 @@
             &-button {
                 @include fontStyle(Raleway, 500, 25);
                 color: white;
-                background-color: #5AA02D;
+                background-color: $lightGreen;
                 border-radius: 20px;
                 height: 80px;
                 width: 100%;
@@ -69,11 +69,11 @@
 
                 &:hover {
                     cursor: pointer;
-                    background-color: #447923;
+                    background-color: $mediumGreen;
                 }
 
                 &:active {
-                    background-color: #345d1a;
+                    background-color: $darkGreen;
                 }
             }
         }

@@ -29,7 +29,141 @@
     }
 }
 
+.form {
+    margin-top: 100px;
+
+    &-body {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 50px;
+        row-gap: 50px;
+    }
+
+    &-item {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        row-gap: 20px;
+        border-bottom: 2px solid black;
+
+        &--wide {
+            grid-column-start: 1;
+            grid-column-end: 3;
+
+            .form-input {
+                resize: vertical;
+                min-height: 80px;
+            }
+        }
+    }
+
+    &-label {
+        @include fontStyle(Raleway, 500, 24);
+    }
+
+    &-input {
+        width: 100%;
+        @include fontStyle(Montserrat, 300, 14);
+        padding: 0 0 12px 0;
+        border: none;
+    }
+
+    &-agreement {
+        display: flex;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    &-button {
+        width: 270px;
+        height: 70px;
+        @include fontStyle(Raleway, 500, 22);
+        border-radius: 20px;
+        cursor: pointer;
+        background-color: transparent;
+        border: 2px solid $lightGreen;
+        transition: all 0.15s ease-in-out;
+
+        &:hover {
+            color: white;
+            border: 2px solid $mediumGreen;
+            background-color: $mediumGreen;
+        }
+
+        &:active {
+            color: white;
+            border: 2px solid $darkGreen;
+            background-color: $darkGreen;
+        }
+    }
+}
+
+
+.agreement {
+
+    &-input {
+        align-self: flex-start;
+        width: auto;
+        cursor: pointer;
+        display: none;
+
+        &:checked + .agreement-label::after {
+            transform: scale(1);
+        }
+    }
+
+
+    &-label {
+        width: 100%;
+        @include fontStyle(Raleway, 300, 16);
+        display: flex;
+        align-items: center;
+        line-height: 140%;
+        position: relative;
+
+        & span {
+            display: flex;
+        }
+
+        &::before {
+            font-size: 0;
+            margin-right: 10px;
+            content: "";
+            flex: 0 0 24px;
+            height: 24px;
+            border-radius: 20%;
+            border: 1px solid $lightGreen;
+            align-self: flex-start;
+        }
+
+        &::after {
+            position: absolute;
+            content: "✓";
+            color: white;
+            @include flexCenter;
+            // width: 16px;
+            // height: 16px;
+            width: 25.24px;
+            height: 25.24px;
+            background-color: $lightGreen;
+            border-radius: 20%;
+            font-family: Raleway;
+            // top: 4.38px;
+            // left: 4.38px;
+            transform: scale(0);
+            transition: all 0.15s ease-in-out;
+        }
+    }
+
+    &-link {
+        width: max-content;
+        color:  $lightGreen;
+    }
+}
+
+
 .map {
+    margin-top: 120px;
     width: 100%;
     height: 470px;
 }
