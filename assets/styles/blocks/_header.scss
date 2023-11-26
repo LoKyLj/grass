@@ -43,16 +43,27 @@
     margin-left: -50px;
 
     &-item {
-        @include fontStyle(Raleway, 400, 18);
-        margin-right: 50px;
+        transition: all 0.15s ease-in-out;
+
+        &--wrapper {
+            @include fontStyle(Raleway, 400, 18);
+            margin-right: 50px;
+        }
 
         &:hover {
             cursor: pointer;
-            text-decoration: underline;
+            // text-decoration: underline;
         }
 
         &:last-child {
             margin-right: 0;
+        }
+
+        &--eng {
+
+            &:hover {
+                color: $lightGreen;
+            }
         }
     }
 }
@@ -63,15 +74,5 @@
 
 .cart-wrapper {
     margin-right: 20px;
-
-    &:hover {
-        cursor: pointer;
-    }
-}
-
-.profile-wrapper {
-    &:hover {
-        cursor: pointer;
-    }
 }
 

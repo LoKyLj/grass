@@ -48,6 +48,40 @@ h1, h2, h3, h4, h5, h6, p {
     color: #fff;
 }
 
+// clicable svg icons (use clicable-icon--wrapper and clicable-icon)
+
+.clicable-text {
+    transition: all 0.15s ease-in-out;
+}
+
+.clicable-icon--inner {
+    transition: all 0.15s ease-in-out;
+}
+
+.clicable-icon {
+    path {
+        transition: all 0.15s ease-in-out;
+    }
+
+    &--wrapper {
+        &:hover {
+            cursor: pointer;
+
+            .clicable-icon path {
+                stroke: $lightGreen;
+            }
+
+            .clicable-icon--inner {
+                fill: $lightGreen;
+            }
+
+            .clicable-text {
+                color: $lightGreen;
+            }
+        }
+    }
+}
+
 // container
 
 .container {
