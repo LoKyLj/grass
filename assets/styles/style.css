@@ -665,9 +665,11 @@ transition-none {
 .miniShop-item__info-button:hover {
   cursor: pointer;
   background-color: #447923;
+  transform: translateY(3px);
 }
 .miniShop-item__info-button:active {
   background-color: #345d1a;
+  transform: translateY(3px);
 }
 
 .contact {
@@ -714,10 +716,9 @@ transition-none {
 }
 .form-item {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   width: 100%;
   row-gap: 20px;
-  border-bottom: 2px solid black;
 }
 .form-item--wide {
   grid-column-start: 1;
@@ -739,6 +740,21 @@ transition-none {
   font-weight: 300;
   padding: 0 0 12px 0;
   border: none;
+  outline: none;
+  border-bottom: 2px solid black;
+}
+.form-input:focus {
+  border-bottom: 2px solid #5AA02D;
+  color: #5AA02D;
+}
+.form-input:focus::-moz-placeholder {
+  color: #5AA02D;
+}
+.form-input:focus::placeholder {
+  color: #5AA02D;
+}
+.form-input:focus + label {
+  color: #5AA02D;
 }
 .form-agreement {
   display: flex;
@@ -756,16 +772,21 @@ transition-none {
   background-color: transparent;
   border: 2px solid #5AA02D;
   transition: all 0.15s ease-in-out;
+  box-shadow: 0 5px 7px rgba(0, 0, 0, 0.152);
 }
 .form-button:hover {
   color: white;
   border: 2px solid #447923;
   background-color: #447923;
+  transform: translateY(3px);
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.152);
 }
 .form-button:active {
   color: white;
   border: 2px solid #345d1a;
   background-color: #345d1a;
+  transform: translateY(3px);
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.152);
 }
 
 .agreement-input {
@@ -878,6 +899,7 @@ transition-none {
 .footer-box__item-row {
   display: flex;
   margin-bottom: 12px;
+  align-items: center;
 }
 .footer-box__item-row:last-child {
   margin-bottom: 0;

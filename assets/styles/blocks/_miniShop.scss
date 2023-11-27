@@ -70,10 +70,13 @@
                 &:hover {
                     cursor: pointer;
                     background-color: $mediumGreen;
+                    transform:translateY(3px);
+                    
                 }
 
                 &:active {
                     background-color: $darkGreen;
+                    transform:translateY(3px);
                 }
             }
         }
