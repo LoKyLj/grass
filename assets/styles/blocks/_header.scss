@@ -40,7 +40,6 @@
 .nav {
     display: flex;
     align-items: center;
-    margin-left: -50px;
 
     &-item {
         transition: all 0.15s ease-in-out;
@@ -69,9 +68,31 @@
 
 .profile {
     display: flex;
+    align-items: center;
 }
 
-.cart-wrapper {
-    margin-right: 20px;
-}
+.language {
+    display: flex;
+    margin-right: 38px;
 
+    &-separator {
+        background-color: #fff;
+        width: 0px;
+        border: 1px solid #fff;
+        height: 20px;
+        margin: 0 6px;
+    }
+
+    &-item {
+        @include fontStyle(Raleway, 400, 18);
+        transition: all 0.15s ease-in-out;
+
+        &:hover {
+            color: $lightGreen;
+        }
+
+        &--checked {
+            color: $lightGreen;
+        }
+    }
+}

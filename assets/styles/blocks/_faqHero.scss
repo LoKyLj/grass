@@ -1,0 +1,121 @@
+.faqHero {
+    box-sizing: content-box;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    &--inner {
+        position: absolute;
+        background-color: black;
+        padding-bottom: 480px;
+        border-bottom-left-radius: 100%;
+        border-bottom-right-radius: 100%;
+        width: 100vw;
+    }
+
+    &-container {
+        position: absolute;
+        z-index: 12;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &-heading {
+        margin-top: 120px;
+        text-transform: uppercase;
+        text-align: center;
+        @include fontStyle(Raleway, 500, 46);
+    }
+
+    &-subheading {
+        @include fontStyle(Raleway, 500, 46);
+        margin-top: 40px;
+        text-align: center;
+        color: $lightGreen;
+    }
+
+    &-hand {
+        bottom: 10%;
+        right: 0;
+        position: absolute;
+    }
+}
+
+.accordion {
+    // display: flex;
+    // flex-direction: column;
+
+    &--wrapper {
+        padding-top: 480px;
+        width: 100%;
+        min-height: 500px;
+        background-color: white;
+    }
+
+    &-container {
+        margin-top: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    &-tab {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 12px;
+        background-color: $lightGreen;
+        border-radius: 20px;
+
+        &__heading {
+            position: relative;
+            display: flex;
+            align-items: center;
+            width: 900px;
+            padding: 25px 40px;
+            min-height: 82px;
+            @include fontStyle(Raleway, 600, 20);
+            color: white;
+            cursor: pointer;
+
+            &::after {
+                position: absolute;
+                content: "";
+                background-image: url('../images/icons/arrow.svg');
+                background-size: cover;
+                height: 30px;
+                width: 30px;
+                right: 30px;
+                transition: all 0.25s ease-in-out;
+            }
+
+        }
+
+        &__input {
+            display: none;
+
+            &:checked + label::after {
+                transform: rotateX(180deg);
+            }
+        }
+    }
+
+    &-panel {
+        max-height: 0;
+        opacity: 0;
+        width: 900px;
+        margin-bottom: 30px;
+        transition: all 0.25s ease-in-out;
+    }
+
+    &-item {
+        @include fontStyle(Raleway, 400, 18);
+        padding: 40px 45px;
+        color: black;
+        margin: 0 5px;
+        border: 2px solid $lightGreen;
+        border-top: none;
+        border-bottom: none;
+    }
+}

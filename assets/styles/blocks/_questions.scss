@@ -1,0 +1,56 @@
+.questions {
+    background-color: #fff;
+    padding: 120px 0;
+
+    &-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &-heading {
+        @include fontStyle(Raleway, 500, 46);
+        color: black;
+    }
+
+    &-subheading {
+        position: relative;
+        text-align: center;
+        margin-top: 25px;
+        width: 630px;
+        @include fontStyle(Raleway, 400, 18);
+        color: black;
+
+        &::after {
+            content: "";
+            position: absolute;
+            background-size: cover;
+            right: 100px;
+            top: 70px;
+            width: 100px;
+            height: 92px;
+            background-image: url('../images/icons/questionArrow.svg');
+        }
+    }
+
+    &-button {
+        border-radius: 20px;
+        @include fontStyle(Raleway, 500, 22);
+        margin-top: 70px;
+        padding: 18px 30px;
+        background: linear-gradient(100deg, #1F7225 5.98%, #5AA02D 51.37%, #A9D764 101.11%, #D6EF9C 152.42%);
+        transition: all 0.15s ease-in-out;
+
+        &:hover {
+            animation-name: buttonHover;
+            animation-duration: 0.25s;
+            background: $mediumGreen;
+            transform:translateY(3px);
+        }
+
+        &:active {
+            background: $darkGreen;
+            transform:translateY(3px);
+        }
+    }
+}

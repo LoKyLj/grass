@@ -135,6 +135,18 @@
 	}
 }
 
+@keyframes buttonHover {
+	0% {
+		background-color: $lightGreen;
+	}
+	1% {
+		background: $lightGreen;
+	}
+	100%{
+		background-color: $mediumGreen;
+	}
+}
+
 // Block that slides up in the viewport from bottom
 
 @keyframes slide-up {

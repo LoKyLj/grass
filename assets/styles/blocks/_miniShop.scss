@@ -67,6 +67,7 @@
                 border: none;
                 transition: all 0.15s ease-in-out;
 
+                //fix
                 &:hover {
                     cursor: pointer;
                     background-color: $mediumGreen;
