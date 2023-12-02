@@ -451,6 +451,16 @@ transition-none {
   width: 100vw;
   aspect-ratio: 16/9;
 }
+.hero-video::after {
+  content: "";
+  width: 140vw;
+  height: 50px;
+  position: absolute;
+  bottom: -30px;
+  left: -15vw;
+  background-color: black;
+  filter: blur(10px);
+}
 .hero-video__media {
   position: absolute;
   width: 100vw;
@@ -639,7 +649,7 @@ transition-none {
   margin-top: 45px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  row-gap: 50px;
+  row-gap: 30px;
   -moz-column-gap: 20px;
        column-gap: 20px;
 }

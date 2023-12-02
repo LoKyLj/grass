@@ -7,6 +7,17 @@
         width: 100vw;
         aspect-ratio: 16/9;
 
+        &::after {
+            content: "";
+            width: 140vw;
+            height: 50px;
+            position: absolute;
+            bottom: -30px;
+            left: -15vw;
+            background-color: black;
+            filter: blur(10px);
+        }
+
         &__media {
             position: absolute;
             width: 100vw;
