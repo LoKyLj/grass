@@ -867,8 +867,8 @@ transition-none {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 25.24px;
-  height: 25.24px;
+  width: 26px;
+  height: 26px;
   background-color: #5AA02D;
   border-radius: 20%;
   font-family: Raleway;
@@ -1062,17 +1062,41 @@ transition-none {
   width: 900px;
   margin-bottom: 30px;
   transition: all 0.25s ease-in-out;
+  overflow: hidden;
+}
+.accordion-list {
+  list-style: decimal;
+}
+.accordion-list .accordion-item {
+  margin-left: 25px;
 }
 .accordion-item {
-  font-family: Raleway;
+  font-family: Montserrat;
   font-size: 1.125rem;
   font-weight: 400;
-  padding: 40px 45px;
   color: black;
+  margin-bottom: 18px;
+}
+.accordion-item:last-child {
+  margin-bottom: 0;
+}
+.accordion-item--margin {
+  margin-bottom: 18px !important;
+}
+.accordion-item--wrapper {
+  padding: 40px 45px;
   margin: 0 5px;
   border: 2px solid #5AA02D;
   border-top: none;
   border-bottom: none;
+}
+.accordion-item--marked {
+  color: #5AA02D;
+}
+.accordion-item--inner {
+  font-family: Raleway;
+  font-size: 1.125rem;
+  font-weight: 400;
 }
 
 .questions {

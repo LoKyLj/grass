@@ -158,15 +158,11 @@
             content: "✓";
             color: white;
             @include flexCenter;
-            // width: 16px;
-            // height: 16px;
-            width: 25.24px;
-            height: 25.24px;
+            width: 26px;
+            height: 26px;
             background-color: $lightGreen;
             border-radius: 20%;
             font-family: Raleway;
-            // top: 4.38px;
-            // left: 4.38px;
             transform: scale(0);
             transition: all 0.15s ease-in-out;
         }

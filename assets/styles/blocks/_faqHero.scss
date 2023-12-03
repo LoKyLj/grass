@@ -107,15 +107,50 @@
         width: 900px;
         margin-bottom: 30px;
         transition: all 0.25s ease-in-out;
+        overflow: hidden;
+    }
+
+
+
+    &-list {
+        list-style: decimal;
+
+        .accordion-item {
+            margin-left: 25px;
+
+            // &:last-child {
+            //     margin-bottom: 0;
+            // }
+        }
     }
 
     &-item {
-        @include fontStyle(Raleway, 400, 18);
-        padding: 40px 45px;
+        @include fontStyle(Montserrat, 400, 18);
         color: black;
-        margin: 0 5px;
-        border: 2px solid $lightGreen;
-        border-top: none;
-        border-bottom: none;
+        margin-bottom: 18px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &--margin {
+            margin-bottom: 18px !important;
+        }
+
+        &--wrapper {
+            padding: 40px 45px;
+            margin: 0 5px;
+            border: 2px solid $lightGreen;
+            border-top: none;
+            border-bottom: none;
+        }
+
+        &--marked {
+            color: $lightGreen;
+        }
+
+        &--inner {
+            @include fontStyle(Raleway, 400, 18);
+        }
     }
 }
