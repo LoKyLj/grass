@@ -1,0 +1,204 @@
+.calculations {
+    margin-top: 120px;
+
+    &-container {
+        display: flex;
+        column-gap: 50px;
+    }
+
+    &-info {
+        width: 40%;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+
+        &__name {
+            @include fontStyle(Raleway, 600, 24);
+        }
+
+        &__price {
+            margin-top: 14px;
+            color: $mediumGreen;
+            @include fontStyle(Montserrat, 500, 20);
+
+            &--meter {
+                color: #fff;
+                margin-left: 8px;
+                @include fontStyle(Raleway, 400, 18);
+            }
+        }
+
+        &__item {
+            margin-top: 25px;
+
+            &-name {
+                @include fontStyle(Raleway, 400, 18);
+                margin-bottom: 15px;
+            }
+
+            &-quantity {
+                display: flex;
+                border: 1px solid $lightGreen;
+                height: 30px;
+                width: 90px;
+                border-radius: 8px;
+
+                &--minus, &--plus{
+                    height: 100%;
+                    width: 30px;
+                    color: white;
+                    cursor: pointer;
+                    padding: 0 3px;
+
+                    path {
+                        transition: all 0.15s ease-in-out;
+                    }
+
+                    &:hover {
+                        path {
+                            stroke: $lightGreen;
+                        }
+                    }
+
+                    &:active {
+                        path {
+                            stroke: $darkGreen;
+                        }
+                    }
+                }
+
+                &--text {
+                    color: white;
+                    background-color: transparent;
+                    outline: none;
+                    border: none;
+                    width: 100%;
+                    padding: 0;
+                    @include fontStyle(Montserrat, 400, 16);
+                    @include flexCenter;
+                    text-align: center;
+                }
+            }
+
+            &-select {
+                display: flex;
+                border: 1px solid $lightGreen;
+                height: 30px;
+                width: 90px;
+                border-radius: 8px;
+                background-color: transparent;
+                color: white;
+                outline: none;
+                text-align: center;
+                @include fontStyle(Montserrat, 400, 16);
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                cursor: pointer;
+
+                &:hover + .calculations-info__item-select--arrow{
+                    path {
+                        stroke: $lightGreen;
+                    }
+                }
+
+                &:active + .calculations-info__item-select--arrow{
+                    path {
+                        stroke: $darkGreen;
+                    }
+                }
+
+                &--wrapper {
+                    position: relative;
+                    width: fit-content;
+                }
+
+                &--arrow {
+                    position: absolute;
+                    top: 29%;
+                    right: 5%;
+                    width: 13px;
+                    height: 13px;
+                    cursor: pointer;
+
+                    path {
+                        transition: all 0.15s ease-in-out;
+                    }
+
+                    &:hover {
+                        path {
+                            stroke: $lightGreen;
+                        }
+                    }
+
+                    &:active {
+                        path {
+                            stroke: $darkGreen;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__cost {
+            margin-top: auto;
+            color: $mediumGreen;
+            @include fontStyle(Montserrat, 500, 24);
+
+            &-text {
+                color: white;
+                @include fontStyle(Raleway, 400, 18);
+                margin-right: 5px;
+            }
+        }
+
+        &__button {
+            margin-top: 24px;
+            justify-self: flex-end;
+            @include fontStyle(Raleway, 600, 25);
+            background-color: $lightGreen;
+            padding: 18px 30px;
+            width: 320px;
+            @include flexCenter;
+            border-radius: 20px;
+            transition: all 0.15s ease-in-out;
+
+            &:hover {
+                background: $mediumGreen;
+                transform:translateY(3px);
+            }
+    
+            &:active {
+                background: $darkGreen;
+                transform:translateY(3px);
+            }
+        }
+    }
+}
+
+.gallery {
+    width: 500px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 5px;
+    row-gap: 10px;
+    overflow: hidden;
+
+    &-item {
+        border-radius: 20px;
+        width: 100%;
+        overflow: hidden;
+        cursor: pointer;
+
+        &--horizontal {
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+    }
+
+    &-img {
+        height: 100%;
+        width: 100%;
+    }
+}

@@ -113,6 +113,17 @@ h1, h2, h3, h4, h5, h6, p {
   color: #fff;
 }
 
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+          appearance: textfield;
+}
+
 .clicable-text {
   transition: all 0.15s ease-in-out;
 }
@@ -633,6 +644,7 @@ transition-none {
 
 .miniShop {
   padding-top: 120px;
+  padding-bottom: 120px;
 }
 .miniShop-container {
   display: flex;
@@ -644,6 +656,12 @@ transition-none {
   font-family: Raleway;
   font-size: 2.875rem;
   font-weight: 500;
+}
+.miniShop-subheading {
+  font-family: Raleway;
+  font-size: 1.5rem;
+  font-weight: 600;
+  align-self: flex-start;
 }
 .miniShop-list {
   margin-top: 45px;
@@ -702,6 +720,9 @@ transition-none {
   margin-top: 40px;
   border: none;
   transition: all 0.15s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .miniShop-item__info-button:hover {
   cursor: pointer;
@@ -714,7 +735,6 @@ transition-none {
 }
 
 .contact {
-  margin-top: 120px;
   background-color: white;
 }
 .contact-container {
@@ -887,8 +907,11 @@ transition-none {
   height: 470px;
 }
 
+.footer {
+  border-top: 2px solid #5AA02D;
+}
 .footer-container {
-  margin-top: 120px;
+  margin-top: 100px;
   margin-bottom: 20px;
   display: flex;
   justify-content: space-between;
@@ -1153,4 +1176,194 @@ transition-none {
 .questions-button:active {
   background: #345d1a;
   transform: translateY(3px);
+}
+
+/* product card */
+.calculations {
+  margin-top: 120px;
+}
+.calculations-container {
+  display: flex;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+}
+.calculations-info {
+  width: 40%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+}
+.calculations-info__name {
+  font-family: Raleway;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.calculations-info__price {
+  margin-top: 14px;
+  color: #447923;
+  font-family: Montserrat;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+.calculations-info__price--meter {
+  color: #fff;
+  margin-left: 8px;
+  font-family: Raleway;
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+.calculations-info__item {
+  margin-top: 25px;
+}
+.calculations-info__item-name {
+  font-family: Raleway;
+  font-size: 1.125rem;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+.calculations-info__item-quantity {
+  display: flex;
+  border: 1px solid #5AA02D;
+  height: 30px;
+  width: 90px;
+  border-radius: 8px;
+}
+.calculations-info__item-quantity--minus, .calculations-info__item-quantity--plus {
+  height: 100%;
+  width: 30px;
+  color: white;
+  cursor: pointer;
+  padding: 0 3px;
+}
+.calculations-info__item-quantity--minus path, .calculations-info__item-quantity--plus path {
+  transition: all 0.15s ease-in-out;
+}
+.calculations-info__item-quantity--minus:hover path, .calculations-info__item-quantity--plus:hover path {
+  stroke: #5AA02D;
+}
+.calculations-info__item-quantity--minus:active path, .calculations-info__item-quantity--plus:active path {
+  stroke: #345d1a;
+}
+.calculations-info__item-quantity--text {
+  color: white;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  width: 100%;
+  padding: 0;
+  font-family: Montserrat;
+  font-size: 1rem;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.calculations-info__item-select {
+  display: flex;
+  border: 1px solid #5AA02D;
+  height: 30px;
+  width: 90px;
+  border-radius: 8px;
+  background-color: transparent;
+  color: white;
+  outline: none;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 1rem;
+  font-weight: 400;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+.calculations-info__item-select:hover + .calculations-info__item-select--arrow path {
+  stroke: #5AA02D;
+}
+.calculations-info__item-select:active + .calculations-info__item-select--arrow path {
+  stroke: #345d1a;
+}
+.calculations-info__item-select--wrapper {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.calculations-info__item-select--arrow {
+  position: absolute;
+  top: 29%;
+  right: 5%;
+  width: 13px;
+  height: 13px;
+  cursor: pointer;
+}
+.calculations-info__item-select--arrow path {
+  transition: all 0.15s ease-in-out;
+}
+.calculations-info__item-select--arrow:hover path {
+  stroke: #5AA02D;
+}
+.calculations-info__item-select--arrow:active path {
+  stroke: #345d1a;
+}
+.calculations-info__cost {
+  margin-top: auto;
+  color: #447923;
+  font-family: Montserrat;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.calculations-info__cost-text {
+  color: white;
+  font-family: Raleway;
+  font-size: 1.125rem;
+  font-weight: 400;
+  margin-right: 5px;
+}
+.calculations-info__button {
+  margin-top: 24px;
+  justify-self: flex-end;
+  font-family: Raleway;
+  font-size: 1.5625rem;
+  font-weight: 600;
+  background-color: #5AA02D;
+  padding: 18px 30px;
+  width: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  transition: all 0.15s ease-in-out;
+}
+.calculations-info__button:hover {
+  background: #447923;
+  transform: translateY(3px);
+}
+.calculations-info__button:active {
+  background: #345d1a;
+  transform: translateY(3px);
+}
+
+.gallery {
+  width: 500px;
+  height: 500px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+  row-gap: 10px;
+  overflow: hidden;
+}
+.gallery-item {
+  border-radius: 20px;
+  width: 100%;
+  overflow: hidden;
+  cursor: pointer;
+}
+.gallery-item--horizontal {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+.gallery-img {
+  height: 100%;
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */

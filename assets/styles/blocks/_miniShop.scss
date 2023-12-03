@@ -1,5 +1,6 @@
 .miniShop {
     padding-top: 120px;
+    padding-bottom: 120px;
 
     &-container {
         @include flexCenter;
@@ -8,6 +9,11 @@
 
     &-heading {
         @include fontStyle(Raleway, 500, 46);
+    }
+
+    &-subheading {
+        @include fontStyle(Raleway, 600, 24);
+        align-self: flex-start;
     }
 
     &-list {
@@ -66,8 +72,8 @@
                 margin-top: 40px;
                 border: none;
                 transition: all 0.15s ease-in-out;
+                @include flexCenter;
 
-                //fix
                 &:hover {
                     cursor: pointer;
                     background-color: $mediumGreen;
