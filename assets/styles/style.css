@@ -1268,6 +1268,7 @@ transition-none {
   border-radius: 8px;
   background-color: transparent;
   color: white;
+  background-color: black;
   outline: none;
   text-align: center;
   font-family: Montserrat;
