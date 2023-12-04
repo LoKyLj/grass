@@ -120,6 +120,7 @@
                     width: 13px;
                     height: 13px;
                     cursor: pointer;
+                    z-index: -1;
 
                     path {
                         transition: all 0.15s ease-in-out;

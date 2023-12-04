@@ -1,0 +1,115 @@
+.cardDescription {
+    margin-top: 120px;
+
+    &-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &-subheading {
+        @include fontStyle(Raleway, 600, 24);
+        align-self: flex-start;
+    }
+
+    &-items {
+        margin-top: 45px;
+        display: grid;
+        grid-template-columns: 1fr 0.75fr 1fr;
+        column-gap: 20px;
+        row-gap: 20px;
+    }
+
+    &-item {
+        background-color: $lightGreen;
+        min-height: 300px;
+        border-radius: 20px;
+        padding: 25px;
+        position: relative;
+
+        &--wide  {
+            grid-column: span 2;
+            background-color: transparent;
+            border: 1px solid $lightGreen;
+        }
+
+        &--tiny {
+            min-height: 140px;
+        }
+
+        &--double {
+            padding: 0;
+            background-color: transparent;
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+        }
+
+        .card {
+            &-heading {
+                width: fit-content;
+                @include fontStyle(Raleway, 600, 20);
+    
+                &--greenMark {
+                    padding: 0 4px;
+                    border-top-right-radius: 15px;
+                    border-bottom-left-radius: 15px;
+                    background-color: $darkGreen;
+                }
+    
+                &--whiteMark {
+                    padding: 0 4px;
+                    border-top-right-radius: 15px;
+                    border-bottom-left-radius: 15px;
+                    background-color: white;
+                    color: $lightGreen;
+                }
+            }
+
+            &-items {
+                margin-top: 20px;
+                display: flex;
+                flex-direction: column;
+                row-gap: 20px;
+
+                &--wrapper {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    column-gap: 40px;
+                }
+            }
+
+            &-item {
+                display: flex;
+
+                &__text {
+                    @include fontStyle(Raleway, 400, 18);
+
+                    &--big {
+                        @include fontStyle(Raleway, 700, 24);
+                        width: 330px;
+                        margin-top: 25px;
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            width: 340px;
+                            height: 300px;
+                            background-image: url('../images/icons/quality.svg');
+                            background-size: cover;
+                            bottom: 0;
+                            right: 0;
+                        }
+                    }
+
+                    &--marked {
+                        color: $lightGreen;
+                    }
+
+                    &--markedBig {
+                        font-size: 34px;
+                    }
+                }
+            }
+        }
+    }
+}

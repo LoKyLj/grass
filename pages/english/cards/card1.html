@@ -70,11 +70,11 @@
                 <div class="calculations-info__item">
                     <p class="calculations-info__item-name">Quantity</p>
                     <div class="calculations-info__item-quantity">
-                        <svg class="calculations-info__item-quantity--minus" viewBox="0 0 14 14" fill="none">
+                        <svg class="calculations-info__item-quantity--minus minus" viewBox="0 0 14 14" fill="none">
                             <path d="M3.5 7H10.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
-                        <input class="calculations-info__item-quantity--text" type="number" value="1">
-                        <svg class="calculations-info__item-quantity--plus" viewBox="0 0 14 14" fill="none">
+                        <input class="calculations-info__item-quantity--text" type="number" value="1" min="1" max="10">
+                        <svg class="calculations-info__item-quantity--plus plus" viewBox="0 0 14 14" fill="none">
                             <path d="M3.5 7H10.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                             <path d="M7 10.5V3.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
@@ -143,9 +143,88 @@
         </div>
     </section>
 
+    <section class="cardDescription">
+        <div class="cardDescription-container container">
+            <p class="cardDescription-subheading cardDescription-subheading--eng">Product description</p>
+            <div class="cardDescription-items">
+                <div class="cardDescription-item cardDescription-item--wide">
+                    <p class="card-heading card-heading--greenMark">Main characteristics</p>
+                    <div class="card-items--wrapper">
+                        <div class="card-items">
+                            <div class="card-item">
+                                <img class="card-item__icon" src="../../../assets/images/icons/" alt="">
+                                <p class="card-item__text">Width: 2 m <span class="card-item__text--marked">(fixed)</span></p>
+                            </div>
+                            <div class="card-item">
+                                <img class="card-item__icon" src="../../../assets/images/icons/" alt="">
+                                <p class="card-item__text">Material: polyethylene grass with improved UV-coating </p>
+                            </div>
+                            <div class="card-item">
+                                <img class="card-item__icon" src="../../../assets/images/icons/" alt="">
+                                <p class="card-item__text">Color: natural green color, with dark green and olive shades</p>
+                            </div>
+                        </div>
+                        <div class="card-items">
+                            <div class="card-item">
+                                <img class="card-item__icon" src="../../../assets/images/icons/" alt="">
+                                <p class="card-item__text">Pile thickness: 30mm for a dense and well-groomed look</p>
+                            </div>
+                            <div class="card-item">
+                                <img class="card-item__icon" src="../../../assets/images/icons/" alt="">
+                                <p class="card-item__text">Drainage: included drainage system for efficient water drainage, keeping your lawn in perfect condition even after rain.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cardDescription-item">
+                    <p class="card-heading card-heading--whiteMark">Weather resistance</p>
+                    <div class="card-items">
+                        <div class="card-item">
+                            <img class="card-item__icon" src="../../../assets/images/icons/" alt="">
+                            <p class="card-item__text">UV Resistance: guaranteed resistance to fading from sunlight.</p>
+                        </div>
+                        <div class="card-item">
+                            <img class="card-item__icon" src="../../../assets/images/icons/" alt="">
+                            <p class="card-item__text">Weather Resistance: capable of withstanding extreme temperatures, humidity, and windy conditions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cardDescription-item cardDescription-item--double">
+                    <div class="cardDescription-item cardDescription-item--tiny">
+                        <p class="card-heading card-heading--whiteMark">Environmental safety</p>
+                        <div class="card-items">
+                            <div class="card-item">
+                                <img class="card-item__icon" src="../../../assets/images/icons/" alt="">
+                                <p class="card-item__text">Made of environmentally friendly materials without harmful chemical additives.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cardDescription-item cardDescription-item--tiny">
+                        <p class="card-heading card-heading--whiteMark">Usage</p>
+                        <div class="card-items">
+                            <div class="card-item">
+                                <img class="card-item__icon" src="../../../assets/images/icons/" alt="">
+                                <p class="card-item__text">Suitable for use both inside and outside. Ideal for landscaping, balconies, terraces and play areas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cardDescription-item cardDescription-item--wide">
+                    <p class="card-heading card-heading--greenMark">Guarantee</p>
+                    <div class="card-items">
+                        <div class="card-item">
+                            <img class="card-item__icon" src="../../../assets/images/icons/" alt="">
+                            <p class="card-item__text card-item__text--big"><span class="card-item__text--marked card-item__text--markedBig">5 year</span> guarantee to maintain color and quality</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="miniShop">
         <div class="miniShop-container container">
-            <h2 class="miniShop-subheading miniShop-subheading--eng">See our other products:</h2>
+            <p class="miniShop-subheading miniShop-subheading--eng">See our other products:</p>
             <div class="miniShop-list">
                 <div class="miniShop-list__item">
                     <div class="miniShop-item__photo--wrapper">
