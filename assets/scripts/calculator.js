@@ -48,9 +48,9 @@ inputs.forEach(function(input) {
 });
 
 const calculateCost = () => {
-    let sum = calculationsLength.value*calculationsQuantity.value*calculationsPrice.innerHTML;
+    let sum = calculationsLength.value*2*calculationsQuantity.value*calculationsPrice.innerHTML;
     calculationsPriceStorage.innerHTML = sum;
 
-    let area = calculationsLength.value*calculationsQuantity.value;
+    let area = calculationsLength.value*2*calculationsQuantity.value;
     calculationsAreaStorage.innerHTML = area;
 }
