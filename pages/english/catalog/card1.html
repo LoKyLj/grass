@@ -66,14 +66,14 @@
             </div>
             <div class="calculations-info">
                 <p class="calculations-info__name calculations-info__name--eng">Prestige</p>
-                <p class="calculations-info__price">15,00€<span class="calculations-info__price--meter">per m²</span></p>
+                <p class="calculations-info__price"><span id="calculationsPrice">15</span>€<span class="calculations-info__price--meter">per m²</span></p>
                 <div class="calculations-info__item">
                     <p class="calculations-info__item-name">Quantity</p>
                     <div class="calculations-info__item-quantity">
                         <svg class="calculations-info__item-quantity--minus minus" viewBox="0 0 14 14" fill="none">
                             <path d="M3.5 7H10.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
-                        <input class="calculations-info__item-quantity--text" type="number" value="1" min="1" max="10">
+                        <input class="calculations-info__item-quantity--text" id="calculationsQuantity" type="number" value="1" min="1" max="10" onchange="calculateCost()">
                         <svg class="calculations-info__item-quantity--plus plus" viewBox="0 0 14 14" fill="none">
                             <path d="M3.5 7H10.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                             <path d="M7 10.5V3.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
@@ -83,7 +83,7 @@
                 <div class="calculations-info__item">
                     <p class="calculations-info__item-name">Length</p>
                     <div class="calculations-info__item-select--wrapper">
-                        <select class="calculations-info__item-select">
+                        <select class="calculations-info__item-select" id="calculationsLength" onchange="calculateCost()">
                             <option class="calculations-info__item-option" value="2">2 m</option>
                             <option class="calculations-info__item-option" value="2.5">2.5 m</option>
                             <option class="calculations-info__item-option" value="3">3 m</option>
@@ -137,7 +137,11 @@
                         </svg>
                     </div>
                 </div>
-                <p class="calculations-info__cost"><span class="calculations-info__cost-text calculations-info__cost-text--eng">Cost:</span><span class="calculations-info__cost-number">15,00€</span></p>
+                <p class="calculations-info__cost">
+                    <span class="calculations-info__cost-text calculations-info__cost-text--eng">Cost:</span><span class="calculations-info__cost-number"><span id="calculationsPriceStorage">0</span>€</span>
+                    <br>
+                    <span class="calculations-info__cost-text calculations-info__cost-text--eng">Area:</span><span class="calculations-info__cost-number"><span id="calculationsAreaStorage">0</span>m²</span>
+                </p>
                 <a class="calculations-info__button" href="./card1.html">Add to cart</a>
             </div>
         </div>
@@ -354,6 +358,36 @@
         </div>
     </footer>
 
+    <div class="modal">
+		<div class="closeButton">
+			<svg class="closeButton-pic" width="16" height="16" fill="gray" viewBox="0 0 16 16">
+				<path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z">
+				</path>
+			</svg>
+		</div>
+		
+		<div class="modal-content">
+			<div class="closeButton-box"></div>
+			<div class="prev--wrapper">
+				<svg class="prev" width="16" height="16" fill="gray" viewBox="0 0 256 256">
+					<path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z">
+					</path>
+				</svg>
+			</div>
+			<img class="modal-image" alt="" />
+			<video class="modal-video" controls style="display: none">
+				<source src="" type="video/mp4" />
+			</video>
+			<div class="next--wrapper">
+				<svg class="next" width="16" height="16" fill="gray" viewBox="0 0 256 256">
+					<path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z">
+					</path>
+				</svg>
+			</div>
+		</div>
+	</div>
+
     <script src="../../../assets/scripts/calculator.js"></script>
+    <script src="../../../assets/scripts/gallery.js"></script>
 </body>
 </html>

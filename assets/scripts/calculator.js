@@ -1,5 +1,10 @@
-const quantityNumber = document.querySelector('.calculations-info__item-quantity--text');
-const lengthSelect = document.querySelector('.calculations-info__item-select');
+const calculationsPrice = document.getElementById('calculationsPrice');
+const calculationsQuantity = document.getElementById('calculationsQuantity');
+const calculationsLength = document.getElementById('calculationsLength');
+const calculationsPriceStorage = document.getElementById('calculationsPriceStorage');
+const calculationsAreaStorage = document.getElementById('calculationsAreaStorage');
+
+
 
 const minusButtons = document.querySelectorAll('.minus');
 for (let i = 0; i < minusButtons.length; i++) {
@@ -25,20 +30,27 @@ for (let i = 0; i < plusButtons.length; i++) {
     });
 }
 
-var inputs = document.querySelectorAll("input");
+let inputs = document.querySelectorAll("input");
 
 inputs.forEach(function(input) {
     input.addEventListener("keydown", function() {
       // Save old value.
-        if (!input.value || (parseInt(input.value) <= 10 && parseInt(input.value) >= 0))
+        if (!input.value || (parseInt(input.value) <= 10 && parseInt(input.value) >= 0));
         input.dataset.old = input.value;
     });
 
-input.addEventListener("keyup", function() {
-      // Check correct, else revert back to old value.
-        if (!input.value || (parseInt(input.value) <= 10 && parseInt(input.value) >= 0))
-        ;
+    input.addEventListener("keyup", function() {
+        // Check correct, else revert back to old value.
+        if (!input.value || (parseInt(input.value) <= 10 && parseInt(input.value) >= 0));
         else
         input.value = input.dataset.old;
     });
 });
+
+const calculateCost = () => {
+    let sum = calculationsLength.value*calculationsQuantity.value*calculationsPrice.innerHTML;
+    calculationsPriceStorage.innerHTML = sum;
+
+    let area = calculationsLength.value*calculationsQuantity.value;
+    calculationsAreaStorage.innerHTML = area;
+}
