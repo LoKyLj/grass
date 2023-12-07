@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "name": "Prestige",
+        "price": 15,
+        "image": "prestige-1.webp"
+    },
+
+    {
+        "id": 2,
+        "name": "Prestige",
+        "price": 13,
+        "image": "prestige-1.webp"
+    },
+
+    {
+        "id": 3,
+        "name": "Prestige",
+        "price": 14,
+        "image": "prestige-1.webp"
+    },
+
+    {
+        "id": 4,
+        "name": "Prestige",
+        "price": 16,
+        "image": "prestige-1.webp"
+    }
+]

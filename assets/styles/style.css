@@ -434,7 +434,7 @@ transition-none {
 }
 .cart-wrapper::after {
   position: absolute;
-  content: "";
+  content: "0";
   height: 15px;
   width: 15px;
   background-color: red;
