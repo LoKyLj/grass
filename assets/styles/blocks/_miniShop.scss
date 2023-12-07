@@ -31,6 +31,31 @@
         }
     }
 
+    &-link {
+        position: relative;
+        margin-top: 100px;
+        width: fit-content;
+        @include fontStyle(Raleway, 500, 24);
+        align-self: flex-end;
+        transition: all 0.15s ease-in-out;
+
+        &::before {
+            position: absolute;
+            content: "";
+            left: -160px;
+            top: -40px;
+            background-image: url('../images/icons/arrowGreen.svg');
+            width: 140px;
+            height: 80px;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        &:hover {
+            color: $lightGreen;
+        }
+    }
+
     &-item {
 
         &__photo {

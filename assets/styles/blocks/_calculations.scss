@@ -39,13 +39,13 @@
             &-quantity {
                 display: flex;
                 border: 1px solid $lightGreen;
-                height: 30px;
-                width: 90px;
+                height: 35px;
+                width: 100px;
                 border-radius: 8px;
 
                 &--minus, &--plus{
                     height: 100%;
-                    width: 30px;
+                    width: 50px;
                     color: white;
                     cursor: pointer;
                     padding: 0 3px;
@@ -83,8 +83,8 @@
             &-select {
                 display: flex;
                 border: 1px solid $lightGreen;
-                height: 30px;
-                width: 90px;
+                height: 35px;
+                width: 100px;
                 border-radius: 8px;
                 background-color: transparent;
                 color: white;
@@ -118,8 +118,8 @@
                     position: absolute;
                     top: 29%;
                     right: 5%;
-                    width: 13px;
-                    height: 13px;
+                    width: 16px;
+                    height: 16px;
                     cursor: pointer;
                     pointer-events: none;
 
@@ -322,6 +322,6 @@
         width: 100vw;
         height: 100vh;
         left: 0;
-        z-index: 14;
+        // z-index: 14;
     }
 }
