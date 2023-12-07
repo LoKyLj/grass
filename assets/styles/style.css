@@ -876,9 +876,10 @@ transition-none {
   position: absolute;
   content: "";
   width: 110px;
-  height: 110px;
+  height: 112px;
   background-image: url("../images/icons/success.svg");
   top: 25px;
+  background-size: cover;
 }
 .contact-modal__content::after {
   position: absolute;
