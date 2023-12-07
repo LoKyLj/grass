@@ -59,10 +59,22 @@
     &-item {
 
         &__photo {
-            width: 100%;
+            height: 100%;
+            transition: all 0.2s ease-in-out;
+
 
             &--wrapper {
+                height: 328px;
                 overflow: hidden;
+                cursor: pointer;
+                overflow: hidden;
+
+                &:hover {
+                    .miniShop-item__photo {
+                        transform: scale(1.07);
+                        background-color: black;
+                    }
+                }
             }
         }
 

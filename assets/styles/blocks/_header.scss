@@ -71,6 +71,26 @@
     align-items: center;
 }
 
+.cart {
+    &-wrapper {
+        position: relative;
+        
+        &::after {
+            position: absolute;
+            content: "";
+            height: 15px;
+            width: 15px;
+            background-color: red;
+            top: -5px;
+            right: -5px;
+            border-radius: 50%;
+            color: white;
+            @include flexCenter;
+            @include fontStyle(Montserrat, 400, 10);
+        }
+    }
+}
+
 .language {
     display: flex;
     margin-right: 38px;
