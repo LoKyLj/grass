@@ -44,6 +44,19 @@
             row-gap: 20px;
         }
 
+        &--guarantee {
+            &::after {
+                content: "";
+                position: absolute;
+                width: 340px;
+                height: 300px;
+                background-image: url('../images/icons/quality.svg');
+                background-size: cover;
+                bottom: 0;
+                right: 0;
+            }
+        }
+
         .card {
             &-heading {
                 width: fit-content;
@@ -80,25 +93,98 @@
 
             &-item {
                 display: flex;
+                position: relative;
+                align-items: center;
+
+                &::before {
+                    position: absolute;
+                    content: "";
+                    left: 0;
+                    top: 0;
+                    width: 24px;
+                    height: 24px;
+                }
+
+                &--ruler {
+                    &::before {
+                        top: -2px;
+                        background-image:  url('../images/icons/ruler.svg');
+                    }
+                }
+
+                &--leaf {
+                    &::before {
+                        top: 7px;
+                        background-image:  url('../images/icons/leaf.svg');
+                    }
+                }
+
+                &--paintbrush {
+                    &::before {
+                        top: 7px;
+                        background-image:  url('../images/icons/paintbrush.svg');
+                    }
+                }
+
+                &--rulerPen {
+                    &::before {
+                        top: 7px;
+                        background-image:  url('../images/icons/ruler&pen.svg');
+                    }
+                }
+
+                &--layer {
+                    &::before {
+                        top: 30px;
+                        background-image:  url('../images/icons/layer.svg');
+                    }
+                }
+
+                &--sun {
+                    &::before {
+                        top: 7px;
+                        background-image:  url('../images/icons/sun.svg');
+                    }
+                }
+
+                &--cloudSun {
+                    &::before {
+                        top: 18px;
+                        background-image:  url('../images/icons/cloud-sunny.svg');
+                    }
+                }
+
+                &--tree {
+                    &::before {
+                        top: 18px;
+                        background-image:  url('../images/icons/tree.svg');
+                    }
+                }
+
+                &--checkbox {
+                    &::before {
+                        top: 18px;
+                        background-image:  url('../images/icons/checkbox.svg');
+                    }
+                }
+
+                &--verify {
+                    &::before {
+                        top: 36px;
+                        background-image:  url('../images/icons/verify.svg');
+                    }
+                }
 
                 &__text {
                     @include fontStyle(Raleway, 400, 18);
+                    margin-left: 34px;
 
                     &--big {
                         @include fontStyle(Raleway, 700, 24);
                         width: 330px;
                         margin-top: 25px;
 
-                        &::after {
-                            content: "";
-                            position: absolute;
-                            width: 340px;
-                            height: 300px;
-                            background-image: url('../images/icons/quality.svg');
-                            background-size: cover;
-                            bottom: 0;
-                            right: 0;
-                        }
+
                     }
 
                     &--marked {
