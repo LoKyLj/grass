@@ -65,6 +65,14 @@
     display: none;
   }
 }
+@keyframes loader {
+  0% {
+    box-shadow: 0 15px 0 -15px #ffffff;
+  }
+  100% {
+    box-shadow: 0 15px 0 #ffffff;
+  }
+}
 :root {
   --body-color: #000000;
   --basic-font: 16px, sans-serif;
@@ -972,6 +980,12 @@ transition-none {
   resize: vertical;
   min-height: 80px;
 }
+.form ._error .form-label {
+  color: rgb(247, 121, 121);
+}
+.form ._error .form-input {
+  border-bottom: 2px solid rgb(247, 121, 121);
+}
 .form-label {
   font-family: Raleway;
   font-size: 1.5rem;
@@ -980,12 +994,22 @@ transition-none {
 .form-input {
   width: 100%;
   font-family: Montserrat;
-  font-size: 0.875rem;
+  font-size: 1.125rem;
   font-weight: 300;
   padding: 0 0 12px 0;
   border: none;
   outline: none;
   border-bottom: 2px solid black;
+}
+.form-input::-moz-placeholder {
+  font-family: Montserrat;
+  font-size: 0.875rem;
+  font-weight: 300;
+}
+.form-input::placeholder {
+  font-family: Montserrat;
+  font-size: 0.875rem;
+  font-weight: 300;
 }
 .form-input:focus {
   border-bottom: 2px solid #5AA02D;
@@ -1029,6 +1053,22 @@ transition-none {
   border: 2px solid #345d1a;
   background-color: #345d1a;
   transform: translateY(3px);
+}
+.form-button--wrapper {
+  width: -moz-min-content;
+  width: min-content;
+  position: relative;
+}
+.form ._sending {
+  color: #345d1a;
+  border: 2px solid #345d1a;
+  background-color: #345d1a;
+  transform: translateY(3px);
+}
+
+.form-agreement._error .agreement-label::before {
+  box-shadow: inset 0px 0px 5px rgb(247, 121, 121);
+  border: 1px solid rgb(247, 121, 121);
 }
 
 .agreement-input {
@@ -1089,6 +1129,49 @@ transition-none {
   margin-top: 120px;
   width: 100%;
   height: 470px;
+}
+
+.loader {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  border-radius: 50%;
+  position: relative;
+  animation: loader 0.9s 0.35s ease alternate infinite;
+  margin: -20px auto 0;
+}
+.loader::after, .loader::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  animation: loader 0.9s ease alternate infinite;
+  -webkit-animation: loader 0.9s ease alternate infinite;
+}
+.loader::before {
+  left: -20px;
+  animation-delay: 0.2s;
+}
+.loader::after {
+  right: -20px;
+  animation-delay: 0.5s;
+}
+.loader-container {
+  font-size: 10px;
+  position: absolute;
+  width: 100%;
+  height: 70px;
+  display: inline-block;
+  text-align: center;
+  border-collapse: collapse;
+  bottom: -3px;
+  left: 0;
+  display: none;
+}
+.loader-container--sending {
+  display: block;
 }
 
 .footer {

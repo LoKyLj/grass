@@ -181,6 +181,7 @@
         width: 100%;
         row-gap: 20px;
 
+
         &--wide {
             grid-column-start: 1;
             grid-column-end: 3;
@@ -192,17 +193,32 @@
         }
     }
 
+    ._error {
+        .form-label {
+            color: rgb(247, 121, 121);
+        }
+
+        .form-input {
+            border-bottom: 2px solid rgb(247, 121, 121);
+        }
+    }
+    
+
     &-label {
         @include fontStyle(Raleway, 500, 24);
     }
 
     &-input {
         width: 100%;
-        @include fontStyle(Montserrat, 300, 14);
+        @include fontStyle(Montserrat, 300, 18);
         padding: 0 0 12px 0;
         border: none;
         outline: none;
         border-bottom: 2px solid black;
+
+        &::placeholder {
+            @include fontStyle(Montserrat, 300, 14);
+        }
 
         &:focus {
             border-bottom: 2px solid $lightGreen;
@@ -248,9 +264,30 @@
             background-color: $darkGreen;
             transform:translateY(3px);
         }
+
+        &--wrapper {
+            width: min-content;
+            position: relative;
+        }
+    }
+
+    ._sending {
+        color: $darkGreen;
+        border: 2px solid $darkGreen;
+        background-color: $darkGreen;
+        transform:translateY(3px);
     }
 }
 
+
+.form-agreement._error {
+    .agreement-label {
+        &::before {
+                box-shadow: inset 0px 0px 5px rgb(247, 121, 121);
+                border: 1px solid rgb(247, 121, 121);
+        }
+    }
+}
 
 .agreement {
 
@@ -311,9 +348,57 @@
     }
 }
 
-
 .map {
     margin-top: 120px;
     width: 100%;
     height: 470px;
+}
+
+.loader {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 50%;
+    border-radius: 50%;
+    position: relative;
+    -webkit-animation: loader 0.9s 0.35s ease alternate infinite;
+    animation: loader 0.9s 0.35s ease alternate infinite;
+    margin: -20px auto 0;
+
+    &::after, &::before {
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        animation: loader 0.9s ease alternate infinite;
+        -webkit-animation: loader 0.9s ease alternate infinite;
+    }
+
+    &::before {
+        left: -20px;
+        animation-delay: 0.2s;
+    }
+
+    &::after {
+        right: -20px;
+        animation-delay: 0.5s;
+    }
+
+    &-container {
+        font-size: 10px;
+        position: absolute;
+        width: 100%;
+        height: 70px;
+        display: inline-block;
+        text-align: center;
+        border-collapse: collapse;
+        bottom: -3px;
+        left: 0;
+        display: none;
+
+        &--sending {
+            display: block;
+        }
+    }
 }

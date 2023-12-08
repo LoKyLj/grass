@@ -206,3 +206,21 @@
 		display: none;
 	}
 }
+
+@keyframes loader {
+	0% {
+		box-shadow: 0 15px 0 -15px #ffffff;
+	}
+	100% {
+		box-shadow: 0 15px 0 #ffffff;
+	}
+}
+
+@-webkit-keyframes loader {
+	0% {
+		box-shadow: 0 15px 0 -15px #ffffff;
+	}
+	100% {
+		box-shadow: 0 15px 0 #ffffff;
+	}
+}
