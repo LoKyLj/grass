@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (error===0) {
             formButton.classList.add('_sending');
             loaderContainer.classList.add('loader-container--sending');
-            let response = await fetch("send.php", {
+            let response = await fetch("../../sendCart.php", {
                 method: "POST",
                 body: formData
             });

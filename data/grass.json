@@ -3,27 +3,30 @@
         "id": 1,
         "name": "Prestige",
         "price": 15,
-        "image": "prestige-1.webp"
+        "img": "turf-example.webp",
+        "img2" : "grass-example2.webp",
+        "img3" : "grass-example3.webp",
+        "img4" : "grass-example4.webp"
     },
 
     {
         "id": 2,
-        "name": "Prestige",
+        "name": "Amazing",
         "price": 13,
-        "image": "prestige-1.webp"
+        "img": "turf-example.webp"
     },
 
     {
         "id": 3,
-        "name": "Prestige",
+        "name": "Beautiful",
         "price": 14,
-        "image": "prestige-1.webp"
+        "img": "turf-example.webp"
     },
 
     {
         "id": 4,
-        "name": "Prestige",
+        "name": "Premium",
         "price": 16,
-        "image": "prestige-1.webp"
+        "img": "turf-example.webp"
     }
 ]

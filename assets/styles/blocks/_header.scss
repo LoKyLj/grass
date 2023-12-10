@@ -1,6 +1,17 @@
 .header {
     display: flex;
     justify-content: center;
+    transition: transform 0.2s linear;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background-color: black;
+    z-index: 20;
+
+    &--hiden {
+        transform: translateY(-$headerHeight);
+    }
 
     &-container {
             display: flex;
@@ -74,20 +85,19 @@
 .cart {
     &-wrapper {
         position: relative;
-        
-        &::after {
-            position: absolute;
-            content: "0";
-            height: 15px;
-            width: 15px;
-            background-color: red;
-            top: -5px;
-            right: -5px;
-            border-radius: 50%;
-            color: white;
-            @include flexCenter;
-            @include fontStyle(Montserrat, 400, 10);
-        }
+    }
+
+    &-count {
+        position: absolute;
+        height: 15px;
+        width: 15px;
+        background-color: red;
+        top: -5px;
+        right: -5px;
+        border-radius: 50%;
+        color: white;
+        @include flexCenter;
+        @include fontStyle(Montserrat, 400, 10);
     }
 }
 

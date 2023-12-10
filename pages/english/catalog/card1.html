@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grass Luxury Turf</title>
     <link rel="stylesheet" href="../../../assets/styles/style.css">
+    <script src="../../../assets/scripts/productsCard.js" type="module" defer></script>
 </head>
-<body>
+<body data-product-id="1">
     <header class="header">
         <div class="header-container container">
             <a class="logo-wrapper" href="../../../index.html">
@@ -42,7 +43,8 @@
                         <path d="M9.00001 22.5H15C19.02 22.5 19.74 20.89 19.95 18.93L20.7 12.93C20.97 10.49 20.27 8.5 16 8.5H8.00001C3.73001 8.5 3.03001 10.49 3.30001 12.93L4.05001 18.93C4.26001 20.89 4.98001 22.5 9.00001 22.5Z" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M15.4955 12.5H15.5045" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M8.49451 12.5H8.50349" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+                    </svg>
+                    <p class="cart-count">0</p>
                 </a>
             </div>
         </div>
@@ -51,22 +53,11 @@
     <section class="calculations">
         <div class="calculations-container container">
             <div class="gallery">
-                <div class="gallery-item gallery-item--horizontal">
-                    <img class="gallery-img" src="../../../assets/images/grass-example1.webp" alt="grass-example">
-                </div>
-                <div class="gallery-item">
-                    <img class="gallery-img" src="../../../assets/images/grass-example2.webp" alt="grass-example">
-                </div>
-                <div class="gallery-item">
-                    <img class="gallery-img" src="../../../assets/images/grass-example3.webp" alt="grass-example">
-                </div>
-                <div class="gallery-item">
-                    <img class="gallery-img" src="../../../assets/images/grass-example4.webp" alt="grass-example">
+                <div class="gallery-item gallery-item--hiden">
+                    <!-- <img class="gallery-img" src="../../../" alt="grass-example"> -->
                 </div>
             </div>
             <div class="calculations-info">
-                <p class="calculations-info__name calculations-info__name--eng">Prestige</p>
-                <p class="calculations-info__price"><span id="calculationsPrice">15</span>€<span class="calculations-info__price--meter">per m²</span></p>
                 <div class="calculations-info__item">
                     <p class="calculations-info__item-name">Quantity</p>
                     <div class="calculations-info__item-quantity">
@@ -157,7 +148,7 @@
                         <div class="card-items">
                             <div class="card-item  card-item--ruler">
                                 <img class="card-item__icon" src="../../../assets/images/icons/" alt="">
-                                <p class="card-item__text">Width: 2 m <span class="card-item__text--marked">(fixed)</span></p>
+                                <p class="card-item__text">Width: 2 m or 4 m</p>
                             </div>
                             <div class="card-item card-item--leaf">
                                 <img class="card-item__icon" src="../../../assets/images/icons/" alt="">
@@ -175,7 +166,7 @@
                             </div>
                             <div class="card-item  card-item--layer">
                                 <img class="card-item__icon" src="../../../assets/images/icons/" alt="">
-                                <p class="card-item__text">Drainage: included drainage system for efficient water drainage, keeping your lawn in perfect condition even after rain.</p>
+                                <p class="card-item__text">Drainage: included drainage system for efficient water drainage, keeping your lawn in perfect condition even after rain</p>
                             </div>
                         </div>
                     </div>
@@ -185,11 +176,11 @@
                     <div class="card-items">
                         <div class="card-item card-item--sun">
                             <img class="card-item__icon" src="../../../assets/images/icons/" alt="">
-                            <p class="card-item__text">UV Resistance: guaranteed resistance to fading from sunlight.</p>
+                            <p class="card-item__text">UV Resistance: guaranteed resistance to fading from sunlight</p>
                         </div>
                         <div class="card-item card-item--cloudSun">
                             <img class="card-item__icon" src="../../../assets/images/icons/" alt="">
-                            <p class="card-item__text">Weather Resistance: capable of withstanding extreme temperatures, humidity, and windy conditions.</p>
+                            <p class="card-item__text">Weather Resistance: capable of withstanding extreme temperatures, humidity, and windy conditions</p>
                         </div>
                     </div>
                 </div>
@@ -199,7 +190,7 @@
                         <div class="card-items">
                             <div class="card-item  card-item--tree">
                                 <img class="card-item__icon" src="../../../assets/images/icons/" alt="">
-                                <p class="card-item__text">Made of environmentally friendly materials without harmful chemical additives.</p>
+                                <p class="card-item__text">Made of environmentally friendly materials without harmful chemical additives</p>
                             </div>
                         </div>
                     </div>
@@ -208,7 +199,7 @@
                         <div class="card-items">
                             <div class="card-item card-item--checkbox">
                                 <img class="card-item__icon" src="../../../assets/images/icons/" alt="">
-                                <p class="card-item__text">Suitable for use both inside and outside. Ideal for landscaping, balconies, terraces and play areas.</p>
+                                <p class="card-item__text">Suitable for use both inside and outside. Ideal for landscaping, balconies, terraces and play areas</p>
                             </div>
                         </div>
                     </div>
@@ -230,7 +221,7 @@
         <div class="miniShop-container container">
             <p class="miniShop-subheading miniShop-subheading--eng">See our other products:</p>
             <div class="miniShop-list">
-                <div class="miniShop-list__item">
+                <!-- <div class="miniShop-list__item">
                     <div class="miniShop-item__photo--wrapper">
                         <img class="miniShop-item__photo" src="../../../assets/images/turf-example.webp" alt="turf picture">
                     </div>
@@ -259,7 +250,7 @@
                         <p class="miniShop-item__info-price">15,00€<span class="miniShop-item__info-price--meter">per m²</span></p>
                         <a class="miniShop-item__info-button">Calculate</a>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>        
     </section>
@@ -388,7 +379,6 @@
 		</div>
 	</div>
 
-    <script src="../../../assets/scripts/calculator.js"></script>
-    <script src="../../../assets/scripts/gallery.js"></script>
+    <script src="../../../assets/scripts/header.js"></script>
 </body>
 </html>

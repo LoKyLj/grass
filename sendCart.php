@@ -13,6 +13,7 @@ if (!error_get_last()) {
     $phone = $_POST['phone'];
     $address = $_POST['address'];
     $message = $_POST['message'];
+    $products = $_POST['products'];
     $file = $_FILES['myfile'];
     
     
@@ -25,6 +26,7 @@ if (!error_get_last()) {
     <b>Phone:</b> $phone<br>
     <b>Address:</b> $address<br><br>
     <b>Message:</b> $message<br>
+    <b>Order:</b> $products<br>
     ";
     
     // Настройки PHPMailer
