@@ -31,6 +31,11 @@
         &__item {
             margin-top: 25px;
 
+            &--wide {
+                display: flex;
+                column-gap: 50px;
+            }
+
             &-name {
                 @include fontStyle(Raleway, 400, 18);
                 margin-bottom: 15px;
@@ -138,6 +143,47 @@
                             stroke: $darkGreen;
                         }
                     }
+                }
+            }
+
+            &-radiobuttons {
+                position: relative;
+                background-color: transparent;
+                border: 1px solid $lightGreen;
+                height: 35px;
+                width: 100px;
+                border-radius: 8px;
+                display: flex;
+                overflow: hidden;
+            }
+
+            &-radiobutton {
+                height: 100%;
+                margin: 0;
+                border: none;
+                outline: none;
+                display: none;
+
+                &:checked + .calculations-info__item-label{
+                    background-color: $darkGreen;
+                }
+            }
+
+            &-label {
+                height: 100%;
+                width: 50%;
+                color: white;
+                @include fontStyle(Montserrat, 400, 16);
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                cursor: pointer;
+                transition: all 0.15s ease-in-out;
+                text-align: center;
+                @include flexCenter;
+
+                &:hover {
+                    background-color: $mediumGreen !important;
                 }
             }
         }

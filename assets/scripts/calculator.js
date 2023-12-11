@@ -1,6 +1,7 @@
 const calculationsPrice = document.getElementById('calculationsPrice');
 const calculationsQuantity = document.getElementById('calculationsQuantity');
 const calculationsLength = document.getElementById('calculationsLength');
+const calculationsWidth = document.querySelectorAll('.calculations-info__item-radiobutton');
 const calculationsPriceStorage = document.getElementById('calculationsPriceStorage');
 const calculationsAreaStorage = document.getElementById('calculationsAreaStorage');
 
@@ -48,9 +49,18 @@ inputs.forEach(function(input) {
 });
 
 const calculateCost = () => {
-    let sum = calculationsLength.value*2*calculationsQuantity.value*calculationsPrice.innerHTML;
+    let widthValue;
+    for (let index = 0; index < calculationsWidth.length; index++) {
+        const element = calculationsWidth[index];
+        
+        if (element.checked) {
+            widthValue = element.value;
+        }
+    }
+
+    let sum = calculationsLength.value*widthValue*calculationsQuantity.value*calculationsPrice.innerHTML;
     calculationsPriceStorage.innerHTML = sum;
 
-    let area = calculationsLength.value*2*calculationsQuantity.value;
+    let area = calculationsLength.value*widthValue*calculationsQuantity.value;
     calculationsAreaStorage.innerHTML = area;
 }

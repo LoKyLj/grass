@@ -58,6 +58,74 @@
                 </div>
             </div>
             <div class="calculations-info">
+                <div class="calculations-info__item calculations-info__item--wide">
+                    <div class="calculations-info__item-container">
+                        <p class="calculations-info__item-name">Length</p>
+                        <div class="calculations-info__item-select--wrapper">
+                            <select class="calculations-info__item-select" id="calculationsLength" onchange="calculateCost()">
+                                <option class="calculations-info__item-option" value="2">2 m</option>
+                                <option class="calculations-info__item-option" value="2.5">2.5 m</option>
+                                <option class="calculations-info__item-option" value="3">3 m</option>
+                                <option class="calculations-info__item-option" value="3.5">3.5 m</option>
+                                <option class="calculations-info__item-option" value="4">4 m</option>
+                                <option class="calculations-info__item-option" value="4.5">4.5 m</option>
+                                <option class="calculations-info__item-option" value="5">5 m</option>
+                                <option class="calculations-info__item-option" value="5.5">5.5 m</option>
+                                <option class="calculations-info__item-option" value="6">6 m</option>
+                                <option class="calculations-info__item-option" value="6.5">6.5 m</option>
+                                <option class="calculations-info__item-option" value="7">7 m</option>
+                                <option class="calculations-info__item-option" value="7.5">7.5 m</option>
+                                <option class="calculations-info__item-option" value="8">8 m</option>
+                                <option class="calculations-info__item-option" value="8.5">8.5 m</option>
+                                <option class="calculations-info__item-option" value="9">9 m</option>
+                                <option class="calculations-info__item-option" value="9.5">9.5 m</option>
+                                <option class="calculations-info__item-option" value="10">10 m</option>
+                                <option class="calculations-info__item-option" value="10.5">10.5 m</option>
+                                <option class="calculations-info__item-option" value="11">11 m</option>
+                                <option class="calculations-info__item-option" value="11.5">11.5 m</option>
+                                <option class="calculations-info__item-option" value="12">12 m</option>
+                                <option class="calculations-info__item-option" value="12.5">12.5 m</option>
+                                <option class="calculations-info__item-option" value="13">13 m</option>
+                                <option class="calculations-info__item-option" value="13.5">13.5 m</option>
+                                <option class="calculations-info__item-option" value="14">14 m</option>
+                                <option class="calculations-info__item-option" value="14.5">14.5 m</option>
+                                <option class="calculations-info__item-option" value="15">15 m</option>
+                                <option class="calculations-info__item-option" value="15.5">15.5 m</option>
+                                <option class="calculations-info__item-option" value="16">16 m</option>
+                                <option class="calculations-info__item-option" value="16.5">16.5 m</option>
+                                <option class="calculations-info__item-option" value="17">17 m</option>
+                                <option class="calculations-info__item-option" value="17.5">17.5 m</option>
+                                <option class="calculations-info__item-option" value="18">18 m</option>
+                                <option class="calculations-info__item-option" value="18.5">18.5 m</option>
+                                <option class="calculations-info__item-option" value="19">19 m</option>
+                                <option class="calculations-info__item-option" value="19.5">19.5 m</option>
+                                <option class="calculations-info__item-option" value="20">20 m</option>
+                                <option class="calculations-info__item-option" value="20.5">20.5 m</option>
+                                <option class="calculations-info__item-option" value="21">21 m</option>
+                                <option class="calculations-info__item-option" value="21.5">21.5 m</option>
+                                <option class="calculations-info__item-option" value="22">22 m</option>
+                                <option class="calculations-info__item-option" value="22.5">22.5 m</option>
+                                <option class="calculations-info__item-option" value="23">23 m</option>
+                                <option class="calculations-info__item-option" value="23.5">23.5 m</option>
+                                <option class="calculations-info__item-option" value="24">24 m</option>
+                                <option class="calculations-info__item-option" value="24.5">24.5 m</option>
+                                <option class="calculations-info__item-option" value="25">25 m</option>
+                            </select>
+                            <svg class="calculations-info__item-select--arrow" viewBox="0 0 16 17" fill="none">
+                                <path d="M13.28 6.46655L8.9333 10.8132C8.41997 11.3266 7.57997 11.3266 7.06664 10.8132L2.71997 6.46655" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="calculations-info__item-container">
+                        <p class="calculations-info__item-name">Width</p>
+                        <div class="calculations-info__item-radiobuttons">
+                            <input class="calculations-info__item-radiobutton" type="radio" name="width" value="2" id="2m" checked onchange="calculateCost()">
+                            <label class="calculations-info__item-label" for="2m">2 m</label>
+                            <input class="calculations-info__item-radiobutton" type="radio" name="width" value="4" id="4m" onchange="calculateCost()">
+                            <label class="calculations-info__item-label" for="4m">4 m</label>
+                        </div>
+                    </div>
+                </div>
                 <div class="calculations-info__item">
                     <p class="calculations-info__item-name">Quantity</p>
                     <div class="calculations-info__item-quantity">
@@ -68,63 +136,6 @@
                         <svg class="calculations-info__item-quantity--plus plus" viewBox="0 0 14 14" fill="none">
                             <path d="M3.5 7H10.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                             <path d="M7 10.5V3.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                </div>
-                <div class="calculations-info__item">
-                    <p class="calculations-info__item-name">Length</p>
-                    <div class="calculations-info__item-select--wrapper">
-                        <select class="calculations-info__item-select" id="calculationsLength" onchange="calculateCost()">
-                            <option class="calculations-info__item-option" value="2">2 m</option>
-                            <option class="calculations-info__item-option" value="2.5">2.5 m</option>
-                            <option class="calculations-info__item-option" value="3">3 m</option>
-                            <option class="calculations-info__item-option" value="3.5">3.5 m</option>
-                            <option class="calculations-info__item-option" value="4">4 m</option>
-                            <option class="calculations-info__item-option" value="4.5">4.5 m</option>
-                            <option class="calculations-info__item-option" value="5">5 m</option>
-                            <option class="calculations-info__item-option" value="5.5">5.5 m</option>
-                            <option class="calculations-info__item-option" value="6">6 m</option>
-                            <option class="calculations-info__item-option" value="6.5">6.5 m</option>
-                            <option class="calculations-info__item-option" value="7">7 m</option>
-                            <option class="calculations-info__item-option" value="7.5">7.5 m</option>
-                            <option class="calculations-info__item-option" value="8">8 m</option>
-                            <option class="calculations-info__item-option" value="8.5">8.5 m</option>
-                            <option class="calculations-info__item-option" value="9">9 m</option>
-                            <option class="calculations-info__item-option" value="9.5">9.5 m</option>
-                            <option class="calculations-info__item-option" value="10">10 m</option>
-                            <option class="calculations-info__item-option" value="10.5">10.5 m</option>
-                            <option class="calculations-info__item-option" value="11">11 m</option>
-                            <option class="calculations-info__item-option" value="11.5">11.5 m</option>
-                            <option class="calculations-info__item-option" value="12">12 m</option>
-                            <option class="calculations-info__item-option" value="12.5">12.5 m</option>
-                            <option class="calculations-info__item-option" value="13">13 m</option>
-                            <option class="calculations-info__item-option" value="13.5">13.5 m</option>
-                            <option class="calculations-info__item-option" value="14">14 m</option>
-                            <option class="calculations-info__item-option" value="14.5">14.5 m</option>
-                            <option class="calculations-info__item-option" value="15">15 m</option>
-                            <option class="calculations-info__item-option" value="15.5">15.5 m</option>
-                            <option class="calculations-info__item-option" value="16">16 m</option>
-                            <option class="calculations-info__item-option" value="16.5">16.5 m</option>
-                            <option class="calculations-info__item-option" value="17">17 m</option>
-                            <option class="calculations-info__item-option" value="17.5">17.5 m</option>
-                            <option class="calculations-info__item-option" value="18">18 m</option>
-                            <option class="calculations-info__item-option" value="18.5">18.5 m</option>
-                            <option class="calculations-info__item-option" value="19">19 m</option>
-                            <option class="calculations-info__item-option" value="19.5">19.5 m</option>
-                            <option class="calculations-info__item-option" value="20">20 m</option>
-                            <option class="calculations-info__item-option" value="20.5">20.5 m</option>
-                            <option class="calculations-info__item-option" value="21">21 m</option>
-                            <option class="calculations-info__item-option" value="21.5">21.5 m</option>
-                            <option class="calculations-info__item-option" value="22">22 m</option>
-                            <option class="calculations-info__item-option" value="22.5">22.5 m</option>
-                            <option class="calculations-info__item-option" value="23">23 m</option>
-                            <option class="calculations-info__item-option" value="23.5">23.5 m</option>
-                            <option class="calculations-info__item-option" value="24">24 m</option>
-                            <option class="calculations-info__item-option" value="24.5">24.5 m</option>
-                            <option class="calculations-info__item-option" value="25">25 m</option>
-                        </select>
-                        <svg class="calculations-info__item-select--arrow" viewBox="0 0 16 17" fill="none">
-                            <path d="M13.28 6.46655L8.9333 10.8132C8.41997 11.3266 7.57997 11.3266 7.06664 10.8132L2.71997 6.46655" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
                 </div>
