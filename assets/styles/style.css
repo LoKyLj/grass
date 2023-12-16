@@ -839,6 +839,9 @@ transition-none {
 .features-card:hover .features-card__info {
   color: #345d1a;
 }
+.features-card:hover::before {
+  opacity: 0;
+}
 .features-card--heading {
   cursor: default;
   overflow: visible;

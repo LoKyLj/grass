@@ -29,6 +29,10 @@
             }
         }
 
+        &:hover::before {
+            opacity: 0;
+        }
+
         &--heading {
             cursor: default;
             overflow: visible;
