@@ -1,5 +1,6 @@
 const header = document.querySelector('.header');
 let lastScroll = 0;
+let lastScrollPosition;
 let defaultOffset = 200;
 
 const scrollPosition = () => {
