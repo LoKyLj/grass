@@ -1,4 +1,16 @@
 const startGallery = () => {
+    if (document.querySelectorAll('.gallery-item')) {
+        const galleryList = document.querySelectorAll('.gallery-item');
+        const galleryListArray = Array.from(galleryList);
+
+        for (let index = 0; index < galleryListArray.length; index++) {
+            const element = galleryListArray[index];
+            if (element.querySelector('img').src.includes('undefined')) {
+                element.classList.remove('gallery-item')
+            }
+        }
+    }
+
     const galleryItems = document.querySelectorAll('.gallery-item');
     const modal = document.querySelector('.modal');
     const modalImage = document.querySelector('.modal-image');
@@ -10,10 +22,10 @@ const startGallery = () => {
     let currentImageIndex = -1;
 
     function openModal(index) {
-        if (index < 0) {
+        if (index < 1) {
             index = galleryItems.length - 1;
         } else if (index >= galleryItems.length) {
-            index = 0;
+            index = 1;
         }
 
         const content = galleryItems[index].querySelector('img, video');
@@ -26,6 +38,8 @@ const startGallery = () => {
             modalImage.style.display = 'none';
             modalVideo.style.display = 'block';
         }
+
+        // console.log(content.src);
 
         modal.classList.remove('modal--hide');
         modal.classList.add('modal--display');
@@ -53,7 +67,6 @@ const startGallery = () => {
     closeBtn.forEach(element => {
         element.addEventListener('click', closeModal);
     });
-    // closeBtn.addEventListener('click', closeModal);
     closeBtnBox.addEventListener('click', closeModal);
     prevBtn.addEventListener('click', showPrevious);
     nextBtn.addEventListener('click', showNext);

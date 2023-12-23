@@ -16,7 +16,8 @@
 
         &__item {
             width: 100%;
-            display: flex;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
 
             &--wrapper {
                 width: 100%;
@@ -44,9 +45,97 @@
     &-title {
         color: black;
         @include fontStyle(Raleway, 500, 24);
+        @include flexCenter;
 
         &--name {
-            padding-right: 100px;
+            grid-column-end: span 2;
+        }
+    }
+
+    &-product {
+        height: 155px;
+        align-items: center;
+        border-bottom: 2px solid black;
+        position: relative;
+
+        &__image {
+            width: 100%;
+            border-radius: 20px;
+
+            &-wrapper {
+                width: 140px;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                @include flexCenter;
+            }
+
+            &--container {
+                grid-column-end: span 2;
+            }
+        }
+
+        &__name {
+            padding-left: 160px;
+            color: black;
+            @include fontStyle(Raleway, 500, 24);
+            transition: all 0.15s ease-in-out;
+
+            &:hover {
+                color: $darkGreen;
+            }
+        }
+
+        &__length {
+            margin: 0 auto;
+
+            &-select {
+                background-color: white;
+                color: black;
+            }
+        }
+
+        &__width {
+
+            &-radiobutton:checked + .cartContact-product__width-label {
+                color: white;
+            }
+
+            &-label {
+                color: black;
+
+                &:hover {
+                    color: white;
+                }
+            }
+        }
+
+        &__item {
+            @include flexCenter;
+            margin-top: 0;
+
+            &-quantity {
+                &--text {
+                    color: black;
+                }
+            }
+        }
+
+        &__info {
+            &-cost {
+                flex-direction: column;
+                justify-content: center;
+                margin-top: 0;
+            }
+        }
+    }
+
+    &-closeButton {
+        &:hover {
+            svg {
+                fill: $mediumGreen !important;
+            }
         }
     }
 

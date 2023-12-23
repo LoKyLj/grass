@@ -58,9 +58,9 @@ const calculateCost = () => {
         }
     }
 
-    let sum = Math.round(calculationsLength.value*widthValue*calculationsQuantity.value*calculationsPrice.innerHTML * 100) / 100;
+    let sum = calculationsLength.value*widthValue*calculationsQuantity.value*calculationsPrice.innerHTML;
     calculationsPriceStorage.innerHTML = sum;
 
-    let area = Math.round(calculationsLength.value*widthValue*calculationsQuantity.value * 100) / 100;
+    let area = calculationsLength.value*widthValue*calculationsQuantity.value;
     calculationsAreaStorage.innerHTML = area;
 }

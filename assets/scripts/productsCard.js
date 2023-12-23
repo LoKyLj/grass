@@ -54,7 +54,7 @@ function renderStartPage (data) {
 // Render Gallery Container
 
 function createGallery(data) {
-    const { img, img2, img3, img4 } = data;
+    const { img, img2, img3, img4, img5, img6, img7, img8, img9} = data;
     const galleryItem = 
     `
     <div class="gallery-item gallery-item--horizontal">
@@ -68,6 +68,21 @@ function createGallery(data) {
     </div>
     <div class="gallery-item">
         <img class="gallery-img" src="../../../assets/images/${img4}" alt="grass-example">
+    </div>
+    <div class="gallery-item gallery-item--hiden">
+        <img class="gallery-img" src="../../../assets/images/${img5}" alt="grass-example">
+    </div>
+    <div class="gallery-item gallery-item--hiden">
+        <img class="gallery-img" src="../../../assets/images/${img6}" alt="grass-example">
+    </div>
+    <div class="gallery-item gallery-item--hiden">
+        <img class="gallery-img" src="../../../assets/images/${img7}" alt="grass-example">
+    </div>
+    <div class="gallery-item gallery-item--hiden">
+        <img class="gallery-img" src="../../../assets/images/${img8}" alt="grass-example">
+    </div>
+    <div class="gallery-item gallery-item--hiden">
+        <img class="gallery-img" src="../../../assets/images/${img9}" alt="grass-example">
     </div>
     `;
     galleryContainer.insertAdjacentHTML('beforeend', galleryItem);
@@ -115,4 +130,3 @@ function loadScript(src, callback) {
 
 loadScript('../../../assets/scripts/gallery.js');
 loadScript('../../../assets/scripts/calculator.js');
-
