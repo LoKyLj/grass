@@ -2432,6 +2432,9 @@ transition-none {
   justify-content: center;
   margin-top: 0;
 }
+.cartContact-closeButton {
+  z-index: 19;
+}
 .cartContact-closeButton:hover svg {
   fill: #447923 !important;
 }

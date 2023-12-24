@@ -132,6 +132,7 @@
     }
 
     &-closeButton {
+        z-index: 19;
         &:hover {
             svg {
                 fill: $mediumGreen !important;
