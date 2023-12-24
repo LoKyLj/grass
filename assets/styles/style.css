@@ -469,6 +469,7 @@ transition-none {
   font-family: Montserrat;
   font-size: 0.625rem;
   font-weight: 400;
+  display: none;
 }
 
 .language {
@@ -2001,6 +2002,7 @@ transition-none {
   justify-content: center;
   border-radius: 20px;
   transition: all 0.15s ease-in-out;
+  cursor: pointer;
 }
 .calculations-info__button:hover {
   background: #447923;
@@ -2312,6 +2314,99 @@ transition-none {
   font-size: 34px;
 }
 
+.productAdd-modal, .productChange-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 21;
+}
+.productAdd-modal--display, .productChange-modal--display {
+  display: block;
+  animation-name: modal-show;
+  animation-duration: 0.315s;
+}
+.productAdd-modal--hide, .productChange-modal--hide {
+  display: none;
+  animation-name: modal-hide;
+  animation-duration: 0.315s;
+}
+.productAdd-modal .closeButton-pic, .productChange-modal .closeButton-pic {
+  fill: black;
+}
+.productAdd-modal .closeButton:hover .closeButton-pic, .productChange-modal .closeButton:hover .closeButton-pic {
+  fill: #447923;
+}
+.productAdd-modal--inner, .productChange-modal--inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+}
+.productAdd-modal__content, .productChange-modal__content {
+  position: relative;
+  width: 600px;
+  height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 40px;
+  border: 2px solid #5AA02D;
+  overflow: hidden;
+}
+.productAdd-modal__content::before, .productChange-modal__content::before {
+  position: absolute;
+  content: "";
+  width: 110px;
+  height: 112px;
+  background-image: url("../images/icons/success.svg");
+  top: 25px;
+  background-size: cover;
+}
+.productAdd-modal__content::after, .productChange-modal__content::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 75px;
+  background-image: url("../images/icons/grass.svg");
+  bottom: 0;
+}
+.productAdd-modal__heading, .productChange-modal__heading {
+  margin-top: 20px;
+  color: black;
+  font-family: Raleway;
+  font-size: 2.875rem;
+  font-weight: 500;
+}
+.productAdd-modal__subheading, .productChange-modal__subheading {
+  margin-top: 30px;
+  font-family: Raleway;
+  font-size: 1.375rem;
+  font-weight: 500;
+  color: #5AA02D;
+}
+.productAdd-modal__info, .productChange-modal__info {
+  font-family: Raleway;
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin-top: 4px;
+  color: black;
+}
+.productAdd-modal__info--marked, .productChange-modal__info--marked {
+  color: #5AA02D;
+}
+
 /* cart */
 .cartContact {
   background-color: white;
@@ -2339,7 +2434,7 @@ transition-none {
   width: 100%;
 }
 .cartContact-subheading {
-  margin-bottom: 40px;
+  margin-bottom: 80px;
   font-family: Raleway;
   font-size: 1.625rem;
   font-weight: 400;
@@ -2360,7 +2455,7 @@ transition-none {
   color: black;
   font-family: Raleway;
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: 600;
   display: flex;
   align-items: center;
   justify-content: center;

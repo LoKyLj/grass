@@ -140,11 +140,11 @@
                     </div>
                 </div>
                 <p class="calculations-info__cost">
-                    <span class="calculations-info__cost-text calculations-info__cost-text--eng">Total:</span><span class="calculations-info__cost-number"><span id="calculationsPriceStorage">0</span>€</span>
+                    <span class="calculations-info__cost-text calculations-info__cost-text--eng">Total:</span><span class="calculations-info__cost-number"><span class="calculationsPriceStorage" id="calculationsPriceStorage">0</span>€</span>
                     <br>
-                    <span class="calculations-info__cost-text calculations-info__cost-text--eng">Area:</span><span class="calculations-info__cost-number"><span id="calculationsAreaStorage">0</span>m²</span>
+                    <span class="calculations-info__cost-text calculations-info__cost-text--eng">Area:</span><span class="calculations-info__cost-number"><span class="calculationsAreaStorage" id="calculationsAreaStorage">0</span>m²</span>
                 </p>
-                <a class="calculations-info__button" href="./card1.html">Add to cart</a>
+                <a class="calculations-info__button">Add to cart</a>
             </div>
         </div>
     </section>
@@ -389,6 +389,38 @@
 			</div>
 		</div>
 	</div>
+
+    <div class="productAdd-modal">
+        <div class="productAdd-modal--inner">
+			<div class="addProductCloseButton-box closeButton-box"></div>
+            <div class="productAdd-modal__content">
+                <div class="addProductCloseButton closeButton productAddModal-closeButton">
+                    <svg class="closeButton-pic" width="16" height="16" fill="gray" viewBox="0 0 16 16">
+                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z">
+                        </path>
+                    </svg>
+                </div>
+                <p class="productAdd-modal__subheading">The product is successfully added to cart!</p>
+                <p class="productAdd-modal__info">Visit the shopping cart or proceed with exploring products</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="productChange-modal">
+        <div class="productChange-modal--inner">
+			<div class="changeProductCloseButton-box closeButton-box"></div>
+            <div class="productChange-modal__content">
+                <div class="changeProductCloseButton closeButton productChangeModal-closeButton">
+                    <svg class="closeButton-pic" width="16" height="16" fill="gray" viewBox="0 0 16 16">
+                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z">
+                        </path>
+                    </svg>
+                </div>
+                <p class="productChange-modal__subheading">The product is successfully changed!</p>
+                <p class="productChange-modal__info">Visit the shopping cart or proceed with exploring products</p>
+            </div>
+        </div>
+    </div>
 
     <script src="../../../assets/scripts/header.js"></script>
 </body>

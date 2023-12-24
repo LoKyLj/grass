@@ -1,0 +1,100 @@
+.productAdd-modal, .productChange-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 21;
+
+    &--display {
+        display: block;
+        animation-name: modal-show;
+        animation-duration: 0.315s;
+    }
+
+    &--hide {
+        display: none;
+        animation-name: modal-hide;
+        animation-duration: 0.315s;
+    }
+
+    .closeButton {
+        &-pic {
+            fill: black ;
+        }
+
+        &:hover {
+            .closeButton-pic {
+                    fill: $mediumGreen;
+            }
+        }
+    }
+
+    &--inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 999;
+    }
+    
+    &__content {
+        position: relative;
+        width: 600px;
+        height: 380px;
+        @include flexCenter;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 40px;
+        border: 2px solid $lightGreen;
+        overflow: hidden;
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 110px;
+            height: 112px;
+            background-image: url('../images/icons/success.svg');
+            top: 25px;
+            background-size: cover;
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 75px;
+            background-image: url('../images/icons/grass.svg');
+            bottom: 0;
+        }
+    }
+
+    &__heading {
+        margin-top: 20px;
+        color: black;
+        @include fontStyle(Raleway, 500, 46);
+    }
+
+    &__subheading {
+        margin-top: 30px;
+        @include fontStyle(Raleway, 500, 22);
+        color: $lightGreen;
+    }
+
+    &__info {
+        @include fontStyle(Raleway, 400, 14);
+        margin-top: 4px;
+        color: black;
+
+        &--marked {
+            color: $lightGreen;
+        }
+    }
+}

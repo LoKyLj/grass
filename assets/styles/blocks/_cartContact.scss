@@ -26,7 +26,7 @@
     }
 
     &-subheading {
-        margin-bottom: 40px;
+        margin-bottom: 80px;
         @include fontStyle(Raleway, 400, 26);
         text-align: center;
         width: fit-content;
@@ -44,7 +44,7 @@
     
     &-title {
         color: black;
-        @include fontStyle(Raleway, 500, 24);
+        @include fontStyle(Raleway, 600, 24);
         @include flexCenter;
 
         &--name {

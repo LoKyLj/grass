@@ -21,3 +21,12 @@ window.addEventListener('scroll', () => {
     lastScroll = scrollPosition();
 })
 
+if (localStorage.getItem('basket')) {
+    if (JSON.parse(localStorage.getItem('basket')).length) {
+        document.querySelector('.cart-count').innerHTML=JSON.parse(localStorage.getItem('basket')).length;
+        document.querySelector('.cart-count').style.display = "flex";
+    }
+} else {
+    document.querySelector('.cart-count').style.display = "none";
+}
+

@@ -95,9 +95,123 @@ function createCalculations(data) {
     const galleryItem = 
     `
         <p class="calculations-info__name calculations-info__name--eng">${name}</p>
-        <p class="calculations-info__price"><span id="calculationsPrice">${price}</span>€<span class="calculations-info__price--meter">per m²</span></p>
+        <p class="calculations-info__price"><span class="calculationsPrice" id="calculationsPrice">${price}</span>€<span class="calculations-info__price--meter">per m²</span></p>
     `;
     calculationsContainer.insertAdjacentHTML('afterbegin', galleryItem);
+
+    document.querySelector('.calculationsPriceStorage').innerHTML = price*4;
+    document.querySelector('.calculationsAreaStorage').innerHTML = 4;
+
+
+}
+
+// Push Product to basket Modals
+
+// Add Modal
+const addProductModal = document.querySelector('.productAdd-modal');
+const addProductCloseBtn = document.querySelectorAll('.addProductCloseButton');
+const addProductCloseBtnBox = document.querySelector('.addProductCloseButton-box');
+
+function addProductOpenModal(index) {
+    addProductModal.classList.remove('productAdd-modal--hide');
+    addProductModal.classList.add('productAdd-modal--display');
+}
+
+function addProductCloseModal() {
+    addProductModal.classList.add('productAdd-modal--hide');
+}
+
+addProductCloseBtn.forEach(element => {
+    element.addEventListener('click', addProductCloseModal);
+});
+addProductCloseBtnBox.addEventListener('click', addProductCloseModal);
+
+document.addEventListener('keydown', function (e) {
+    if (e.key === "Escape") {
+        addProductCloseModal();
+    }
+});
+
+//Change Modal
+const changeProductModal = document.querySelector('.productChange-modal');
+const changeProductCloseBtn = document.querySelectorAll('.changeProductCloseButton');
+const changeProductCloseBtnBox = document.querySelector('.changeProductCloseButton-box');
+
+function changeProductOpenModal(index) {
+    changeProductModal.classList.remove('productChange-modal--hide');
+    changeProductModal.classList.add('productChange-modal--display');
+}
+
+function changeProductCloseModal() {
+    changeProductModal.classList.add('productChange-modal--hide');
+}
+
+changeProductCloseBtn.forEach(element => {
+    element.addEventListener('click', changeProductCloseModal);
+});
+changeProductCloseBtnBox.addEventListener('click', changeProductCloseModal);
+
+document.addEventListener('keydown', function (e) {
+    if (e.key === "Escape") {
+        changeProductCloseModal();
+    }
+});
+
+// Add Product to Basket
+
+const addProductButton = document.querySelector('.calculations-info__button');
+addProductButton.addEventListener('click', addProductBasket)
+function addProductBasket(event) {
+    if (!addProductButton) return;
+    const productWidthNode = document.querySelectorAll('.calculations-info__item-radiobutton');
+    const productWidthList = Array.from(productWidthNode);
+
+    const productName = document.querySelector('.calculations-info__name').innerHTML;
+    const productId = document.querySelector('body').dataset.productId-0;
+    const productPrice = document.querySelector('.calculationsPrice').innerHTML-0;
+    const productLength = document.querySelector('.calculations-info__item-select').value-0;
+    const productWidth = productWidthList.find(element => element.checked).value-0;
+    const productQuantity = document.querySelector('.calculations-info__item-quantity--text').value-0;
+    const productTotal = document.querySelector('.calculationsPriceStorage').innerHTML-0;
+    const productArea = document.querySelector('.calculationsAreaStorage').innerHTML-0;
+
+    const productObject = {
+        id: productId,
+        name: productName,
+        price: productPrice,
+        length: productLength,
+        width: productWidth,
+        quantity: productQuantity,
+        area: productArea,
+        total: productTotal
+    }
+
+    let parsedBasket;
+
+    if (localStorage.getItem('basket')) {
+        parsedBasket = JSON.parse(localStorage.getItem('basket'));
+
+        if (parsedBasket.some(obj => obj.id === productId)) {
+            parsedBasket.splice(parsedBasket.indexOf(parsedBasket.find(obj => obj.id === productId)), 1);
+            const setProductToBasket = [];
+            setProductToBasket.push(productObject)
+            localStorage.setItem('basket', JSON.stringify(setProductToBasket));
+            changeProductOpenModal();
+        } else if (!parsedBasket.some(obj => obj.id === productId)) {
+            parsedBasket.push(productObject);
+            localStorage.setItem('basket', JSON.stringify(parsedBasket));
+            addProductOpenModal();
+        }
+    } else if (!localStorage.getItem('basket')) {
+            const setProductToBasket = [];
+            setProductToBasket.push(productObject)
+            localStorage.setItem('basket', JSON.stringify(setProductToBasket));
+            addProductOpenModal();
+    }
+
+    // const basket = getBasketLocalStorage();
+    document.querySelector('.cart-count').innerHTML=JSON.parse(localStorage.getItem('basket')).length;
+    document.querySelector('.cart-count').style.display = "flex";
 }
 
 // Render Cards Main
