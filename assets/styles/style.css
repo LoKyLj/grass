@@ -915,7 +915,7 @@ transition-none {
   position: absolute;
   background-image: url("../images/icons/sun.svg");
   content: "";
-  z-index: 20;
+  z-index: 19;
 }
 .features-card--3 {
   background-size: cover;
@@ -932,7 +932,7 @@ transition-none {
   position: absolute;
   background-image: url("../images/icons/kid.svg");
   content: "";
-  z-index: 20;
+  z-index: 19;
 }
 .features-card--4::before {
   width: 175px;
@@ -993,7 +993,7 @@ transition-none {
   position: absolute;
   background-image: url("../images/icons/animal.svg");
   content: "";
-  z-index: 20;
+  z-index: 19;
 }
 .features-card__heading {
   font-family: Raleway;
@@ -1070,6 +1070,67 @@ transition-none {
   font-family: Raleway;
   font-size: 1.125rem;
   font-weight: 500;
+}
+
+.perfectFor {
+  background-color: white;
+}
+.perfectFor-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.perfectFor-heading {
+  color: black;
+  font-family: Raleway;
+  font-size: 2.875rem;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 130px;
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.perfectFor-heading::after {
+  position: absolute;
+  content: "";
+  background-image: url("../images/icons/arrowGreenRound.svg");
+  width: 120px;
+  height: 80px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  right: -70%;
+  top: 30px;
+}
+.perfectFor-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.perfectFor-item__img {
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+.perfectFor-item__name {
+  font-family: Raleway;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: black;
+  text-align: center;
+  margin-top: 8px;
+}
+.perfectFor-item--container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  -moz-column-gap: 135px;
+       column-gap: 135px;
+  row-gap: 80px;
+  margin-top: 100px;
 }
 
 .contact {

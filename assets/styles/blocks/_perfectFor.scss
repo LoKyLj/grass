@@ -1,0 +1,56 @@
+.perfectFor {
+    background-color: white;
+
+    &-container {
+        @include flexCenter;
+        flex-direction: column;
+    }
+
+    &-heading {
+        color: black;
+        @include fontStyle(Raleway, 500, 46);
+        text-align: center;
+        margin-top: 130px;
+        position: relative;
+        width: fit-content;
+
+        &::after {
+            position: absolute;
+            content: '';
+            background-image: url('../images/icons/arrowGreenRound.svg');
+            width: 120px;
+            height: 80px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            right: -70%;
+            top: 30px;
+        }
+    }
+
+    &-item {
+        @include flexCenter;
+        flex-direction: column;
+        width: fit-content;
+
+        &__img {
+            width: 100%;
+            aspect-ratio: 1/1;
+        }
+
+        &__name {
+            @include fontStyle(Raleway, 500, 24);
+            color: black;
+            text-align: center;
+            margin-top: 8px;
+        }
+
+        &--container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            width: 100%;
+            column-gap: 135px;
+            row-gap: 80px;
+            margin-top: 100px;
+        }
+    }
+}
