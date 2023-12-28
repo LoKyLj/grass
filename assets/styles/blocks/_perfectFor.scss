@@ -16,16 +16,16 @@
         width: fit-content;
 
         @include netbook {
-            @include fontStyle(Raleway, 400, 42);
+            @include fontStyle(Raleway, 500, 42);
         }
 
         @include tablet {
             margin-top: 100px;
-            @include fontStyle(Raleway, 400, 36);
+            @include fontStyle(Raleway, 500, 36);
         }
 
         @include mobile {
-            @include fontStyle(Raleway, 400, 28);
+            @include fontStyle(Raleway, 500, 30);
         }
 
         &::after {

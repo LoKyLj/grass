@@ -19,12 +19,13 @@
         }
 
         @include tablet {
-            @include fontSize(30);
+            width: 300px;
+            @include fontSize(36);
         }
 
         @include mobile {
             width: 250px;
-            @include fontSize(28);
+            @include fontSize(30);
         }
     }
 

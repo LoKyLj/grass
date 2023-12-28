@@ -19,15 +19,15 @@
         text-align: center;
 
         @include netbook {
-            @include fontStyle(Raleway, 400, 42);
+            @include fontStyle(Raleway, 500, 42);
         }
 
         @include tablet {
-            @include fontStyle(Raleway, 400, 36);
+            @include fontStyle(Raleway, 500, 36);
         }
 
         @include mobile {
-            @include fontStyle(Raleway, 400, 28);
+            @include fontStyle(Raleway, 500, 30);
         }
     }
 
@@ -269,6 +269,10 @@
 
     &-label {
         @include fontStyle(Raleway, 500, 24);
+
+        @include tablet {
+            @include fontSize(20);
+        }
     }
 
     &-input {

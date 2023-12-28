@@ -46,9 +46,42 @@
                     </svg>
                     <p class="cart-count">0</p>
                 </a>
+                <div class="burger">
+                    <input id="menuToggle" type="checkbox" onchange="burgerLogic()">
+                    <label class="menu-button" for="menuToggle"><span></span></label>
+                </div>
             </div>
         </div>
     </header>
+
+    <div class="sidebar sidebar--hiden">
+        <div class="sidebar-container container">
+            <label class="menu-button--close" for="menuToggle"><span></span></label>
+            <div class="language">
+                <a class="language-item--wrapper" href="../../index.html">
+                    <p class="language-item  language-item--checked">EN</p>
+                </a>
+                <hr class="language-separator">
+                <a class="language-item--wrapper" href="../../indexGr.html">
+                    <p class="language-item">GR</p>
+                </a>
+            </div>
+            <nav class="nav">
+                <a class="nav-item--wrapper" href="../../index.html#about" onclick="uncheckBurgerInput()">
+                    <p class="nav-item nav-item--eng">About</p>
+                </a>
+                <a class="nav-item--wrapper" href="./catalog.html">
+                    <p class="nav-item nav-item--eng">Catalog</p>
+                </a>
+                <a class="nav-item--wrapper" href="./faq.html">
+                    <p class="nav-item nav-item--eng">FAQ</p>
+                </a>
+                <a class="nav-item--wrapper" href="../../index.html#contact" onclick="uncheckBurgerInput()">
+                    <p class="nav-item nav-item--eng">Contact</p>
+                </a>
+            </nav>
+        </div>
+    </div>
 
     <section class="miniShop">
         <div class="miniShop-container container">

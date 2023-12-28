@@ -20,11 +20,11 @@
         }
 
         @include tablet {
-            @include fontSize(30);
+            @include fontSize(36);
         }
 
         @include mobile {
-            @include fontSize(28);
+            @include fontSize(30);
         }
     }
 

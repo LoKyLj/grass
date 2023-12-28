@@ -30,3 +30,23 @@ if (localStorage.getItem('basket')) {
     document.querySelector('.cart-count').style.display = "none";
 }
 
+// burger logic
+
+const burgerInput = document.getElementById('menuToggle');
+const sidebar = document.querySelector('.sidebar');
+
+const burgerLogic = () => {
+    if (burgerInput.checked) {
+        sidebar.classList.remove('sidebar--hiden');
+        sidebar.classList.add('sidebar--visible');
+    } else if (!burgerInput.checked) {
+        sidebar.classList.add('sidebar--hiden');
+        sidebar.classList.remove('sidebar--visible');
+    }
+}
+
+const uncheckBurgerInput = () => {
+    burgerInput.checked = false;
+    sidebar.classList.add('sidebar--hiden');
+    sidebar.classList.remove('sidebar--visible');
+}
