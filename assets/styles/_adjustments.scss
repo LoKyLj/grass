@@ -21,11 +21,18 @@ html, body {
     overflow-x: hidden;
     z-index: 10;
     scroll-behavior: smooth;
-    min-width: 320px;
 }
 
 body {
     padding-top: $headerHeight;
+
+    @include tablet {
+        padding-top: 98px;
+    }
+
+    @include mobile {
+        padding-top: 95px;
+    }
 }
 
 .main {

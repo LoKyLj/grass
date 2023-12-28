@@ -11,6 +11,14 @@
 
     &--hiden {
         transform: translateY(-$headerHeight);
+
+        @include tablet {
+            transform: translateY(-98px);
+        }
+
+        @include mobile {
+            transform: translateY(-95px);
+        }
     }
 
     &-container {
@@ -25,17 +33,9 @@
                 height: 98px;
             }
 
-            @include wideMobile {
+            @include mobile {
                 height: 95px;
                 justify-content: end;
-            }
-
-            @include mediumMobile {
-                height: 85px;
-            }
-
-            @include tinyMobile {
-                height: 70px;
             }
     }
 }

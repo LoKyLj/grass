@@ -7,6 +7,14 @@
         width: 100vw;
         aspect-ratio: 16/9;
 
+        @include tablet {
+            width: 200vw;
+        }
+
+        @include mobile {
+            width: 280vw;
+        }
+
         &::after {
             content: "";
             width: 140vw;
@@ -24,6 +32,17 @@
             height: auto;
             min-width: 320px;
             min-height: 180px;
+
+            @include tablet {
+                width: 200vw;
+                right: -50%;
+            }
+
+
+            @include mobile {
+                width: 280vw;
+                right: -90%;
+            }
         }
     }
 
@@ -44,9 +63,29 @@
         @include fontStyle(Raleway, 500, 80);
         flex-direction: column;
         text-shadow: 0px 4px 4px rgb(0, 0, 0);
+
+        @include netbook {
+            @include fontStyle(Raleway, 400, 60);
+        }
+
+        @include tablet {
+            @include fontStyle(Raleway, 400, 56);
+        }
+
+        @include mobile {
+            @include fontStyle(Raleway, 400, 40);
+        }
     }
 
     &-subheading {
         @include fontStyle(Raleway, 400, 26);
+
+        @include tablet {
+            @include fontStyle(Raleway, 400, 20);
+        }
+
+        @include mobile {
+            @include fontStyle(Raleway, 400, 18);
+        }
     }
 }

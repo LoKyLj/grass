@@ -2,6 +2,11 @@
     padding-top: 120px;
     padding-bottom: 120px;
 
+    @include tablet {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
     &-container {
         @include flexCenter;
         flex-direction: column;
@@ -9,6 +14,18 @@
 
     &-heading {
         @include fontStyle(Raleway, 500, 46);
+
+        @include netbook {
+            @include fontSize(42);
+        }
+
+        @include tablet {
+            @include fontSize(30);
+        }
+
+        @include mobile {
+            @include fontSize(28);
+        }
     }
 
     &-subheading {
@@ -22,6 +39,11 @@
         grid-template-columns: 1fr 1fr 1fr;
         row-gap: 30px;
         column-gap: 20px;
+
+        @include tablet {
+            grid-template-columns: 1fr;
+            row-gap: 20px;
+        }
         
         &__item {
             width: fit-content;
@@ -29,6 +51,11 @@
             border: 2px solid $lightGreen;
             overflow: hidden;
             height: fit-content;
+
+            @include tablet {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
         }
     }
 
@@ -40,6 +67,14 @@
         align-self: flex-end;
         transition: all 0.15s ease-in-out;
 
+        @include tablet {
+            @include fontSize(22);
+        }
+
+        @include mobile {
+            @include fontSize(20);
+        }
+
         &::before {
             position: absolute;
             content: "";
@@ -50,6 +85,13 @@
             height: 80px;
             background-size: contain;
             background-repeat: no-repeat;
+
+            @include tablet {
+                width: 100px;
+                height: 60px;
+                left: -140px;
+                top: -30px;
+            }
         }
 
         &:hover {
@@ -71,6 +113,18 @@
                 cursor: pointer;
                 overflow: hidden;
 
+                @include netbook {
+                    height: 236px;
+                }
+
+                @include tablet {
+                    height: 197px;
+                }
+
+                @include mobile {
+                    height: 170px;
+                }
+
                 &:hover {
                     .miniShop-item__photo {
                         transform: scale(1.07);
@@ -81,10 +135,31 @@
         }
 
         &__info {
+            position: relative;
             margin: 20px 15px 15px 15px;
+
+            @include tablet {
+                margin: 17px 17px 17px 20px;
+            }
+
+            @include mobile {
+                margin: 15px 15px 15px 17px;
+            }
 
             &-name {
                 @include fontStyle(Raleway, 500, 26);
+
+                @include netbook {
+                    @include fontSize(24);
+                }
+        
+                @include tablet {
+                    @include fontSize(22);
+                }
+        
+                @include mobile {
+                    @include fontSize(20);
+                }
             }
 
             &-price {
@@ -94,10 +169,31 @@
                 flex-direction: row;
                 margin-top: 20px;
 
+                @include netbook {
+                    @include fontSize(34);
+                }
+        
+                @include tablet {
+                    margin-top: 15px;
+                    @include fontSize(30);
+                }
+        
+                @include mobile {
+                    @include fontSize(28);
+                }
+
                 &--meter {
                     @include fontStyle(Raleway, 400, 18);
                     color: white;
                     margin-left: 10px;
+
+                    @include tablet {
+                        @include fontSize(16);
+                    }
+            
+                    @include mobile {
+                        @include fontSize(14);
+                    }
                 }
             }
 
@@ -112,6 +208,24 @@
                 border: none;
                 transition: all 0.15s ease-in-out;
                 @include flexCenter;
+
+                @include netbook {
+                    @include fontSize(22);
+                    margin-top: 25px;
+                    height: 60px;   
+                }
+        
+                @include tablet {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    @include fontSize(20);
+                }
+        
+                @include mobile {
+                    height: 51px;   
+                    @include fontSize(18);
+                }
 
                 &:hover {
                     cursor: pointer;

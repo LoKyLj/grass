@@ -1,6 +1,10 @@
 .intro {
     margin-top: 120px;
 
+    @include tablet {
+        margin-top: 100px;
+    }
+
     &-container {
         @include flexCenter;
         flex-direction: column;
@@ -8,6 +12,18 @@
 
     &-heading {
         @include fontStyle(Raleway, 500, 46);
+
+        @include netbook {
+            @include fontSize(42);
+        }
+
+        @include tablet {
+            @include fontSize(30);
+        }
+
+        @include mobile {
+            @include fontSize(28);
+        }
     }
 
     &-subheading {
@@ -19,6 +35,20 @@
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+
+        @include netbook {
+            @include fontSize(26);
+        }
+
+        @include tablet {
+            width: 450px;
+            @include fontSize(20);
+        }
+
+        @include mobile {
+            width: 329px;
+            @include fontSize(18);
+        }
     }
 
     &-item {
@@ -27,16 +57,33 @@
         width: 60%;
         margin-top: 80px;
 
+        @include netbook {
+            width: 100%;
+            @include fontSize(16);
+        }
+
+        @include mobile {
+            @include fontSize(14);
+        }
+
         &:last-child {
             margin-top: 60px;
         }
 
         &--left {
             align-self: flex-start;
+
+            @include netbook {
+                align-self: flex-start;
+            }
         }
 
         &--right {
             align-self: flex-end;
+
+            @include netbook {
+                align-self: flex-start;
+            }
         }
 
         &--marked {
@@ -54,12 +101,20 @@
         object-fit: cover;
         border-radius: 40px;
 
+        @include netbook {
+            height: 100%;
+        }
+
         &--wrapper {
             position: relative;
             width: 100vw;
             aspect-ratio: 32/13;
             margin-top: 120px;
             margin-bottom: -40px;
+
+            @include netbook {
+                aspect-ratio: 16/9;
+            }
         }
     }
 }

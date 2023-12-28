@@ -14,6 +14,14 @@
         flex-direction: column;
         align-items: center;
 
+        &--full {
+            display: none;
+        }
+
+        &--empty {
+            display: none;
+        }
+
         &__item {
             width: 100%;
             display: grid;
@@ -34,6 +42,15 @@
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+    }
+
+    &-emptyCart {
+        width: 100%;
+
+        &--wrapper {
+            @include flexCenter;
+            width: fit-content;
+        }
     }
 
     &-titles {
