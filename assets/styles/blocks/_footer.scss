@@ -7,11 +7,24 @@
         display: flex;
         justify-content: space-between;
 
+        @include tablet {
+            flex-direction: column;
+        }
+
         .logo-wrapper {
             align-self: center;
 
+            @include tablet {
+                align-self: flex-start;
+                margin-bottom: 55px;
+            }
+
             .logo{
                 width: 240px;
+
+                @include netbook {
+                    width: 164px;
+                }
             }
         }
     }
@@ -43,12 +56,28 @@
         column-gap: 50px;
         row-gap: 50px;
 
+        @include tinyDesktop {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @include netbook {
+            column-gap: 40px;
+        }
+
+        @include mobile {
+            grid-template-columns: 1fr;
+        }
+
         &__item {
             display: flex;
             flex-direction: column;
 
             &-heading {
                 @include fontStyle(Raleway, 500, 20);
+
+                @include netbook {
+                    @include fontSize(18);
+                }
             }
 
             &-inner {
@@ -80,8 +109,16 @@
             &-info {
                 @include fontStyle(Raleway, 400, 18);
 
+                @include netbook {
+                    @include fontSize(16);
+                }
+
                 &--number {
                     @include fontStyle(Montserrat, 400, 18);
+
+                    @include netbook {
+                        @include fontSize(16);
+                    }
                 }
             }
         }

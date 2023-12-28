@@ -529,6 +529,11 @@ transition-none {
   background-color: black;
   filter: blur(10px);
 }
+@media screen and (max-width: 768px) {
+  .hero-video::after {
+    content: none;
+  }
+}
 .hero-video__media {
   position: absolute;
   width: 100vw;
@@ -627,6 +632,7 @@ transition-none {
   flex-direction: column;
 }
 .intro-heading {
+  text-align: center;
   font-family: Raleway;
   font-size: 2.875rem;
   font-weight: 500;
@@ -643,6 +649,7 @@ transition-none {
 }
 @media screen and (max-width: 480px) {
   .intro-heading {
+    width: 250px;
     font-size: 1.75rem;
   }
 }
@@ -1288,6 +1295,7 @@ transition-none {
 .features-card--image:hover {
   background-size: 0px;
   background-color: white;
+  border: 4px solid #2F7F2B;
 }
 .features-card--1::before {
   width: 127px;
@@ -2289,11 +2297,27 @@ transition-none {
   display: flex;
   justify-content: space-between;
 }
+@media screen and (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+  }
+}
 .footer-container .logo-wrapper {
   align-self: center;
 }
+@media screen and (max-width: 768px) {
+  .footer-container .logo-wrapper {
+    align-self: flex-start;
+    margin-bottom: 55px;
+  }
+}
 .footer-container .logo-wrapper .logo {
   width: 240px;
+}
+@media screen and (max-width: 1024px) {
+  .footer-container .logo-wrapper .logo {
+    width: 164px;
+  }
 }
 .footer-content {
   display: flex;
@@ -2319,6 +2343,22 @@ transition-none {
        column-gap: 50px;
   row-gap: 50px;
 }
+@media screen and (max-width: 1280px) {
+  .footer-box {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .footer-box {
+    -moz-column-gap: 40px;
+         column-gap: 40px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .footer-box {
+    grid-template-columns: 1fr;
+  }
+}
 .footer-box__item {
   display: flex;
   flex-direction: column;
@@ -2327,6 +2367,11 @@ transition-none {
   font-family: Raleway;
   font-size: 1.25rem;
   font-weight: 500;
+}
+@media screen and (max-width: 1024px) {
+  .footer-box__item-heading {
+    font-size: 1.125rem;
+  }
 }
 .footer-box__item-inner {
   margin-top: 22px;
@@ -2353,10 +2398,20 @@ transition-none {
   font-size: 1.125rem;
   font-weight: 400;
 }
+@media screen and (max-width: 1024px) {
+  .footer-box__item-info {
+    font-size: 1rem;
+  }
+}
 .footer-box__item-info--number {
   font-family: Montserrat;
   font-size: 1.125rem;
   font-weight: 400;
+}
+@media screen and (max-width: 1024px) {
+  .footer-box__item-info--number {
+    font-size: 1rem;
+  }
 }
 
 .JDDesign {

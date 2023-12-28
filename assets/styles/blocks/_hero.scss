@@ -24,6 +24,10 @@
             left: -15vw;
             background-color: black;
             filter: blur(10px);
+
+            @include tablet {
+                content: none;
+            }
         }
 
         &__media {

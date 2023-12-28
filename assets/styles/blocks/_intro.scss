@@ -11,6 +11,7 @@
     }
 
     &-heading {
+        text-align: center;
         @include fontStyle(Raleway, 500, 46);
 
         @include netbook {
@@ -22,6 +23,7 @@
         }
 
         @include mobile {
+            width: 250px;
             @include fontSize(28);
         }
     }
