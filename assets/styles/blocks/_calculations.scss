@@ -71,11 +71,12 @@
 
             &--lone {
                 @include netbook {
-                    margin-top: -72px;
+                    margin-top: -71px;
                     margin-left: 300px;
                 }
 
                 @include mobile {
+                    margin-top: -68.5px;
                     margin-left: 240px;
                 }
             }

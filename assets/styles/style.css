@@ -3029,12 +3029,13 @@ transition-none {
 }
 @media screen and (max-width: 1024px) {
   .calculations-info__item--lone {
-    margin-top: -72px;
+    margin-top: -71px;
     margin-left: 300px;
   }
 }
 @media screen and (max-width: 480px) {
   .calculations-info__item--lone {
+    margin-top: -68.5px;
     margin-left: 240px;
   }
 }
