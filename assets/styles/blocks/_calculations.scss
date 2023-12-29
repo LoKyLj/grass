@@ -1,9 +1,18 @@
 .calculations {
     margin-top: 120px;
 
+    @include netbook {
+        margin-top: 160px;
+    }
+
     &-container {
+        position: relative;
         display: flex;
         column-gap: 50px;
+
+        @include netbook {
+            flex-direction: column;
+        }
     }
 
     &-info {
@@ -12,14 +21,34 @@
         display: flex;
         flex-direction: column;
 
+        @include netbook{
+            height: fit-content;
+        }
+
         &__name {
             @include fontStyle(Raleway, 600, 24);
+
+            @include netbook {
+                position: absolute;
+                top: -80px;
+                left: 10px;
+            }
+
+            @include tablet {
+                @include fontSize(20);
+            }
         }
 
         &__price {
             margin-top: 14px;
             color: $mediumGreen;
             @include fontStyle(Montserrat, 500, 20);
+
+            @include netbook {
+                position: absolute;
+                top: -60px;
+                left: 10px;
+            }
 
             &--meter {
                 color: #fff;
@@ -34,11 +63,30 @@
             &--wide {
                 display: flex;
                 column-gap: 50px;
+
+                @include mobile {
+                    column-gap: 20px;
+                }
+            }
+
+            &--lone {
+                @include netbook {
+                    margin-top: -72px;
+                    margin-left: 300px;
+                }
+
+                @include mobile {
+                    margin-left: 240px;
+                }
             }
 
             &-name {
                 @include fontStyle(Raleway, 400, 18);
                 margin-bottom: 15px;
+
+                @include tablet {
+                    @include fontSize(16);
+                }
             }
 
             &-quantity {
@@ -193,17 +241,25 @@
             color: $mediumGreen;
             @include fontStyle(Montserrat, 500, 24);
 
+            @include netbook {
+                margin-top: 45px;
+            }
+
             &-text {
                 color: white;
                 @include fontStyle(Raleway, 400, 18);
                 margin-right: 5px;
+
+                @include tablet {
+                    @include fontSize(16);
+                }
             }
         }
 
         &__button {
             margin-top: 24px;
             justify-self: flex-end;
-            @include fontStyle(Raleway, 600, 25);
+            @include fontStyle(Raleway, 600, 26);
             background-color: $lightGreen;
             padding: 18px 30px;
             width: 320px;
@@ -211,6 +267,11 @@
             border-radius: 20px;
             transition: all 0.15s ease-in-out;
             cursor: pointer;
+
+            @include netbook {
+                width: 210px;
+                @include fontSize(22);
+            }
 
             &:hover {
                 background: $mediumGreen;
@@ -233,6 +294,14 @@
     column-gap: 5px;
     row-gap: 10px;
     overflow: hidden;
+
+    @include tablet {
+        width: 100%;
+    }
+
+    @include mobile {
+        height: 400px;
+    }
 
     &-item {
         border-radius: 20px;
