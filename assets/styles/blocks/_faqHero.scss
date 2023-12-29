@@ -10,7 +10,12 @@
         padding-bottom: 480px;
         border-bottom-left-radius: 100%;
         border-bottom-right-radius: 100%;
-        width: 100vw;
+        width: 140vw;
+
+        @include tablet {
+            border-bottom-left-radius: 50%;
+            border-bottom-right-radius: 50%;
+        }
     }
 
     &-container {
@@ -25,6 +30,18 @@
         text-transform: uppercase;
         text-align: center;
         @include fontStyle(Raleway, 500, 46);
+
+        @include netbook {
+            @include fontSize(44);
+        }
+
+        @include tablet {
+            @include fontSize(40);
+        }
+
+        @include mobile {
+            @include fontSize(30);
+        }
     }
 
     &-subheading {
@@ -32,18 +49,48 @@
         margin-top: 40px;
         text-align: center;
         color: $lightGreen;
+
+        @include netbook {
+            @include fontSize(38);
+        }
+
+        @include tablet {
+            @include fontSize(30);
+        }
+
+        @include mobile {
+            @include fontSize(26);
+        }
     }
 
     &-hand {
         bottom: 10%;
-        right: 0;
+        right: 13%;
         position: absolute;
+
+        @include tinyDesktop {
+            width: 280px;
+            height: 260px;
+            right: 11%;
+            bottom: 5%;
+        }
+        
+        @include netbook {
+            width: 212px;
+            height: 200px;
+        }
+
+        @include tablet {
+            bottom: -10%;
+        }
+
+        @include mobile {
+            right: 6%;
+        }
     }
 }
 
 .accordion {
-    // display: flex;
-    // flex-direction: column;
 
     &--wrapper {
         padding-top: 480px;
@@ -78,6 +125,20 @@
             @include fontStyle(Raleway, 600, 20);
             color: white;
             cursor: pointer;
+            margin-right: 25px;
+
+            @include tinyDesktop {
+                width: 838px;
+            }
+
+            @include netbook {
+                width: 100%;
+                @include fontSize(18);
+            }
+
+            @include mobile {
+                @include fontSize(16);
+            }
 
             &::after {
                 position: absolute;
@@ -88,6 +149,7 @@
                 width: 30px;
                 right: 30px;
                 transition: all 0.25s ease-in-out;
+                right: 0;
             }
 
         }
@@ -108,6 +170,14 @@
         margin-bottom: 30px;
         transition: all 0.25s ease-in-out;
         overflow: hidden;
+
+        @include tinyDesktop {
+            width: 838px;
+        }
+
+        @include netbook {
+            width: 100%;
+        }
     }
 
 
@@ -128,6 +198,14 @@
         @include fontStyle(Montserrat, 400, 18);
         color: black;
         margin-bottom: 18px;
+
+        @include netbook {
+            @include fontSize(16);
+        }
+
+        @include mobile {
+            @include fontSize(14);
+        }
 
         &:last-child {
             margin-bottom: 0;
@@ -151,6 +229,14 @@
 
         &--inner {
             @include fontStyle(Raleway, 400, 18);
+
+            @include netbook {
+                @include fontSize(16);
+            }
+    
+            @include mobile {
+                @include fontSize(14);
+            }
         }
     }
 }

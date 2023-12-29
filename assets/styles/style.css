@@ -1118,6 +1118,7 @@ transition-none {
 }
 @media screen and (max-width: 768px) {
   .miniShop-list__item {
+    border-radius: 30px;
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
@@ -2585,7 +2586,13 @@ transition-none {
   padding-bottom: 480px;
   border-bottom-left-radius: 100%;
   border-bottom-right-radius: 100%;
-  width: 100vw;
+  width: 140vw;
+}
+@media screen and (max-width: 768px) {
+  .faqHero--inner {
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+  }
 }
 .faqHero-container {
   position: absolute;
@@ -2601,6 +2608,21 @@ transition-none {
   font-size: 2.875rem;
   font-weight: 500;
 }
+@media screen and (max-width: 1024px) {
+  .faqHero-heading {
+    font-size: 2.75rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .faqHero-heading {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .faqHero-heading {
+    font-size: 1.875rem;
+  }
+}
 .faqHero-subheading {
   font-family: Raleway;
   font-size: 2.875rem;
@@ -2609,10 +2631,49 @@ transition-none {
   text-align: center;
   color: #5AA02D;
 }
+@media screen and (max-width: 1024px) {
+  .faqHero-subheading {
+    font-size: 2.375rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .faqHero-subheading {
+    font-size: 1.875rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .faqHero-subheading {
+    font-size: 1.625rem;
+  }
+}
 .faqHero-hand {
   bottom: 10%;
-  right: 0;
+  right: 13%;
   position: absolute;
+}
+@media screen and (max-width: 1280px) {
+  .faqHero-hand {
+    width: 280px;
+    height: 260px;
+    right: 11%;
+    bottom: 5%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .faqHero-hand {
+    width: 212px;
+    height: 200px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .faqHero-hand {
+    bottom: -10%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .faqHero-hand {
+    right: 6%;
+  }
 }
 
 .accordion--wrapper {
@@ -2648,6 +2709,23 @@ transition-none {
   font-weight: 600;
   color: white;
   cursor: pointer;
+  margin-right: 25px;
+}
+@media screen and (max-width: 1280px) {
+  .accordion-tab__heading {
+    width: 838px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .accordion-tab__heading {
+    width: 100%;
+    font-size: 1.125rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .accordion-tab__heading {
+    font-size: 1rem;
+  }
 }
 .accordion-tab__heading::after {
   position: absolute;
@@ -2658,6 +2736,7 @@ transition-none {
   width: 30px;
   right: 30px;
   transition: all 0.25s ease-in-out;
+  right: 0;
 }
 .accordion-tab__input {
   display: none;
@@ -2673,6 +2752,16 @@ transition-none {
   transition: all 0.25s ease-in-out;
   overflow: hidden;
 }
+@media screen and (max-width: 1280px) {
+  .accordion-panel {
+    width: 838px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .accordion-panel {
+    width: 100%;
+  }
+}
 .accordion-list {
   list-style: decimal;
 }
@@ -2685,6 +2774,16 @@ transition-none {
   font-weight: 400;
   color: black;
   margin-bottom: 18px;
+}
+@media screen and (max-width: 1024px) {
+  .accordion-item {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .accordion-item {
+    font-size: 0.875rem;
+  }
 }
 .accordion-item:last-child {
   margin-bottom: 0;
@@ -2707,10 +2806,26 @@ transition-none {
   font-size: 1.125rem;
   font-weight: 400;
 }
+@media screen and (max-width: 1024px) {
+  .accordion-item--inner {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .accordion-item--inner {
+    font-size: 0.875rem;
+  }
+}
 
 .questions {
   background-color: #fff;
   padding: 120px 0;
+  margin-top: -1px;
+}
+@media screen and (max-width: 1024px) {
+  .questions {
+    padding: 80px 0;
+  }
 }
 .questions-container {
   display: flex;
@@ -2723,6 +2838,21 @@ transition-none {
   font-weight: 500;
   color: black;
 }
+@media screen and (max-width: 1024px) {
+  .questions-heading {
+    font-size: 2.375rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .questions-heading {
+    font-size: 1.875rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .questions-heading {
+    font-size: 1.625rem;
+  }
+}
 .questions-subheading {
   position: relative;
   text-align: center;
@@ -2733,15 +2863,48 @@ transition-none {
   font-weight: 400;
   color: black;
 }
+@media screen and (max-width: 1024px) {
+  .questions-subheading {
+    width: 100%;
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .questions-subheading {
+    font-size: 0.875rem;
+  }
+}
 .questions-subheading::after {
   content: "";
   position: absolute;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   right: 100px;
   top: 70px;
   width: 100px;
   height: 92px;
   background-image: url("../images/icons/questionArrow.svg");
+}
+@media screen and (max-width: 1024px) {
+  .questions-subheading::after {
+    width: 80px;
+    height: 70px;
+    right: 170px;
+    top: 60px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .questions-subheading::after {
+    width: 60px;
+    height: 50px;
+    right: 50px;
+    top: 80px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .questions-subheading::after {
+    right: 15px;
+  }
 }
 .questions-button {
   border-radius: 20px;
@@ -2752,6 +2915,22 @@ transition-none {
   padding: 18px 30px;
   background: linear-gradient(100deg, #1F7225 5.98%, #5AA02D 51.37%, #A9D764 101.11%, #D6EF9C 152.42%);
   transition: all 0.15s ease-in-out;
+}
+@media screen and (max-width: 1024px) {
+  .questions-button {
+    margin-top: 50px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .questions-button {
+    margin-top: 40px;
+    font-size: 1.25rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .questions-button {
+    font-size: 1.125rem;
+  }
 }
 .questions-button:hover {
   animation-name: buttonHover;

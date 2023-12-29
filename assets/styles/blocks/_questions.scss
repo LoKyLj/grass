@@ -1,6 +1,11 @@
 .questions {
     background-color: #fff;
     padding: 120px 0;
+    margin-top: -1px;
+
+    @include netbook {
+        padding: 80px 0;
+    }
 
     &-container {
         display: flex;
@@ -11,6 +16,18 @@
     &-heading {
         @include fontStyle(Raleway, 500, 46);
         color: black;
+
+        @include netbook {
+            @include fontSize(38);
+        }
+
+        @include tablet {
+            @include fontSize(30);
+        }
+
+        @include mobile {
+            @include fontSize(26);
+        }
     }
 
     &-subheading {
@@ -21,15 +38,43 @@
         @include fontStyle(Raleway, 400, 18);
         color: black;
 
+        @include netbook {
+            width: 100%;
+            @include fontSize(16);
+        }
+
+        @include mobile {
+            @include fontSize(14);
+        }
+
         &::after {
             content: "";
             position: absolute;
-            background-size: cover;
+            background-size: contain;
+            background-repeat: no-repeat;
             right: 100px;
             top: 70px;
             width: 100px;
             height: 92px;
             background-image: url('../images/icons/questionArrow.svg');
+
+            @include netbook {
+                width: 80px;
+                height: 70px;
+                right: 170px;
+                top: 60px;
+            }
+
+            @include tablet {
+                width: 60px;
+                height: 50px;
+                right: 50px;
+                top: 80px;
+            }
+
+            @include mobile {
+                right: 15px;
+            }
         }
     }
 
@@ -40,6 +85,19 @@
         padding: 18px 30px;
         background: linear-gradient(100deg, #1F7225 5.98%, #5AA02D 51.37%, #A9D764 101.11%, #D6EF9C 152.42%);
         transition: all 0.15s ease-in-out;
+
+        @include netbook {
+            margin-top: 50px;
+        }
+
+        @include tablet {
+            margin-top: 40px;
+            @include fontSize(20);
+        }
+
+        @include mobile {
+            @include fontSize(18);
+        }
 
         &:hover {
             animation-name: buttonHover;
