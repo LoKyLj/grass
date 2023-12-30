@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 loaderContainer.classList.remove('loader-container--sending');
                 form.reset();
                 openModal();
-                // let result = await response.json();
+                let result = await response.json();
             } else {
             }
         } else {
