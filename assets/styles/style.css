@@ -1212,23 +1212,13 @@ transition-none {
   }
 }
 .miniShop-item__info-name {
-  font-family: Raleway;
+  font-family: Montserrat;
   font-size: 1.625rem;
   font-weight: 500;
 }
 @media screen and (max-width: 1024px) {
   .miniShop-item__info-name {
-    font-size: 1.5rem;
-  }
-}
-@media screen and (max-width: 768px) {
-  .miniShop-item__info-name {
-    font-size: 1.375rem;
-  }
-}
-@media screen and (max-width: 480px) {
-  .miniShop-item__info-name {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
   }
 }
 .miniShop-item__info-price {
@@ -1253,7 +1243,8 @@ transition-none {
 }
 @media screen and (max-width: 480px) {
   .miniShop-item__info-price {
-    font-size: 1.75rem;
+    margin-top: 5px;
+    font-size: 1.625rem;
   }
 }
 .miniShop-item__info-price--meter {
@@ -1939,7 +1930,7 @@ transition-none {
 }
 @media screen and (max-width: 1024px) {
   .contact-container {
-    margin-top: 100px;
+    padding-top: 100px;
   }
 }
 .contact-heading {
@@ -2099,6 +2090,16 @@ transition-none {
   border: 2px solid #5AA02D;
   overflow: hidden;
 }
+@media screen and (max-width: 768px) {
+  .contact-modal__content {
+    width: 450px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .contact-modal__content {
+    width: 350px;
+  }
+}
 .contact-modal__content::before {
   position: absolute;
   content: "";
@@ -2107,6 +2108,13 @@ transition-none {
   background-image: url("../images/icons/success.svg");
   top: 25px;
   background-size: cover;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 768px) {
+  .contact-modal__content::before {
+    width: 90px;
+    height: 93px;
+  }
 }
 .contact-modal__content::after {
   position: absolute;
@@ -2122,6 +2130,17 @@ transition-none {
   font-family: Raleway;
   font-size: 2.875rem;
   font-weight: 500;
+  text-align: center;
+}
+@media screen and (max-width: 1024px) {
+  .contact-modal__heading {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .contact-modal__heading {
+    font-size: 2.25rem;
+  }
 }
 .contact-modal__subheading {
   margin-top: 4px;
@@ -2129,6 +2148,12 @@ transition-none {
   font-size: 1.375rem;
   font-weight: 500;
   color: #5AA02D;
+  text-align: center;
+}
+@media screen and (max-width: 1024px) {
+  .contact-modal__subheading {
+    font-size: 1.25rem;
+  }
 }
 .contact-modal__info {
   font-family: Raleway;
@@ -2136,6 +2161,7 @@ transition-none {
   font-weight: 400;
   margin-top: 4px;
   color: black;
+  text-align: center;
 }
 .contact-modal__info--marked {
   color: #5AA02D;
@@ -2976,7 +3002,7 @@ transition-none {
   }
 }
 .calculations-info__name {
-  font-family: Raleway;
+  font-family: Montserrat;
   font-size: 1.5rem;
   font-weight: 600;
 }
@@ -3020,6 +3046,8 @@ transition-none {
   display: flex;
   -moz-column-gap: 50px;
        column-gap: 50px;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
 }
 @media screen and (max-width: 480px) {
   .calculations-info__item--wide {
@@ -3099,6 +3127,8 @@ transition-none {
   background-color: black;
   outline: none;
   text-align: center;
+  -moz-text-align-last: center;
+       text-align-last: center;
   font-family: Montserrat;
   font-size: 1rem;
   font-weight: 400;
@@ -3593,6 +3623,16 @@ transition-none {
   border: 2px solid #5AA02D;
   overflow: hidden;
 }
+@media screen and (max-width: 768px) {
+  .productAdd-modal__content, .productChange-modal__content {
+    width: 450px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .productAdd-modal__content, .productChange-modal__content {
+    width: 350px;
+  }
+}
 .productAdd-modal__content::before, .productChange-modal__content::before {
   position: absolute;
   content: "";
@@ -3601,6 +3641,13 @@ transition-none {
   background-image: url("../images/icons/success.svg");
   top: 25px;
   background-size: cover;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 768px) {
+  .productAdd-modal__content::before, .productChange-modal__content::before {
+    width: 90px;
+    height: 93px;
+  }
 }
 .productAdd-modal__content::after, .productChange-modal__content::after {
   position: absolute;
@@ -3617,12 +3664,24 @@ transition-none {
   font-size: 2.875rem;
   font-weight: 500;
 }
+@media screen and (max-width: 1024px) {
+  .productAdd-modal__heading, .productChange-modal__heading {
+    font-size: 2.5rem;
+  }
+}
 .productAdd-modal__subheading, .productChange-modal__subheading {
+  width: 80%;
   margin-top: 30px;
   font-family: Raleway;
   font-size: 1.375rem;
   font-weight: 500;
   color: #5AA02D;
+  text-align: center;
+}
+@media screen and (max-width: 1024px) {
+  .productAdd-modal__subheading, .productChange-modal__subheading {
+    font-size: 1.25rem;
+  }
 }
 .productAdd-modal__info, .productChange-modal__info {
   font-family: Raleway;
@@ -3630,6 +3689,7 @@ transition-none {
   font-weight: 400;
   margin-top: 4px;
   color: black;
+  text-align: center;
 }
 .productAdd-modal__info--marked, .productChange-modal__info--marked {
   color: #5AA02D;
@@ -3646,6 +3706,21 @@ transition-none {
   font-size: 2.875rem;
   font-weight: 500;
   text-align: center;
+}
+@media screen and (max-width: 1024px) {
+  .cartContact-heading {
+    font-size: 2.75rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .cartContact-heading {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .cartContact-heading {
+    font-size: 1.875rem;
+  }
 }
 .cartContact-table {
   margin-top: 44px;
@@ -3680,6 +3755,27 @@ transition-none {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+@media screen and (max-width: 1024px) {
+  .cartContact-subheading {
+    font-family: Raleway;
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+}
+@media screen and (max-width: 768px) {
+  .cartContact-subheading {
+    font-family: Raleway;
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
+}
+@media screen and (max-width: 480px) {
+  .cartContact-subheading {
+    font-family: Raleway;
+    font-size: 1.125rem;
+    font-weight: 400;
+  }
+}
 .cartContact-emptyCart {
   width: 100%;
 }
@@ -3689,6 +3785,11 @@ transition-none {
   justify-content: center;
   width: -moz-fit-content;
   width: fit-content;
+}
+@media screen and (max-width: 768px) {
+  .cartContact-emptyCart--wrapper {
+    width: 200px;
+  }
 }
 .cartContact-titles {
   border-bottom: 2px solid #5AA02D;
@@ -3704,14 +3805,42 @@ transition-none {
   align-items: center;
   justify-content: center;
 }
+@media screen and (max-width: 1024px) {
+  .cartContact-title {
+    font-size: 1.25rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .cartContact-title {
+    font-size: 1.125rem;
+    grid-column-end: span 2;
+  }
+  .cartContact-title:last-child {
+    display: none;
+  }
+}
 .cartContact-title--name {
   grid-column-end: span 2;
+}
+@media screen and (max-width: 768px) {
+  .cartContact-title--name {
+    display: none;
+  }
 }
 .cartContact-product {
   height: 155px;
   align-items: center;
   border-bottom: 2px solid black;
   position: relative;
+  transition: all 0.25s ease-in-out;
+  max-height: 155px;
+}
+@media screen and (max-width: 768px) {
+  .cartContact-product {
+    max-height: 255px;
+    height: 255px;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 .cartContact-product__image {
   width: 100%;
@@ -3727,16 +3856,41 @@ transition-none {
   align-items: center;
   justify-content: center;
 }
+@media screen and (max-width: 768px) {
+  .cartContact-product__image-wrapper {
+    height: 110px;
+  }
+}
 .cartContact-product__image--container {
   grid-column-end: span 2;
+}
+@media screen and (max-width: 768px) {
+  .cartContact-product__image--container {
+    position: relative;
+    height: 110px;
+    grid-column-end: span 3;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+  }
 }
 .cartContact-product__name {
   padding-left: 160px;
   color: black;
-  font-family: Raleway;
+  font-family: Montserrat;
   font-size: 1.5rem;
   font-weight: 500;
   transition: all 0.15s ease-in-out;
+}
+@media screen and (max-width: 1024px) {
+  .cartContact-product__name {
+    font-size: 1.25rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .cartContact-product__name {
+    font-size: 1.125rem;
+  }
 }
 .cartContact-product__name:hover {
   color: #2F7F2B;
@@ -3771,6 +3925,16 @@ transition-none {
   justify-content: center;
   margin-top: 0;
 }
+@media screen and (max-width: 768px) {
+  .cartContact-product__info-cost {
+    margin: 15px 0;
+    grid-column-start: 3;
+  }
+}
+.cartContact-product--deleting {
+  max-height: 0;
+  opacity: 0;
+}
 .cartContact-closeButton {
   z-index: 19;
 }
@@ -3797,4 +3961,9 @@ transition-none {
   font-size: 2.5rem;
   font-weight: 600;
   color: black;
+}
+
+.calculationsPrice {
+  max-height: 0;
+  overflow: hidden;
 }/*# sourceMappingURL=style.css.map */

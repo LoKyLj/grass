@@ -26,7 +26,7 @@
         }
 
         &__name {
-            @include fontStyle(Raleway, 600, 24);
+            @include fontStyle(Montserrat, 600, 24);
 
             @include netbook {
                 position: absolute;
@@ -63,6 +63,8 @@
             &--wide {
                 display: flex;
                 column-gap: 50px;
+                flex-direction: row-reverse;
+                justify-content: flex-end;
 
                 @include mobile {
                     column-gap: 20px;
@@ -145,6 +147,7 @@
                 background-color: black;
                 outline: none;
                 text-align: center;
+                text-align-last: center;
                 @include fontStyle(Montserrat, 400, 16);
                 -webkit-appearance: none;
                 -moz-appearance: none;

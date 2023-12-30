@@ -6,6 +6,18 @@
         color: black;
         @include fontStyle(Raleway, 500, 46);
         text-align: center;
+
+        @include netbook {
+            @include fontSize(44);
+        }
+
+        @include tablet {
+            @include fontSize(40);
+        }
+
+        @include mobile {
+            @include fontSize(30);
+        }
     }
 
     &-table {
@@ -42,6 +54,18 @@
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+
+        @include netbook {
+            @include fontStyle(Raleway, 400, 24);
+        }
+
+        @include tablet {
+            @include fontStyle(Raleway, 400, 20);
+        }
+
+        @include mobile {
+            @include fontStyle(Raleway, 400, 18);
+        }
     }
 
     &-emptyCart {
@@ -50,6 +74,10 @@
         &--wrapper {
             @include flexCenter;
             width: fit-content;
+
+            @include tablet {
+                width: 200px;
+            }
         }
     }
 
@@ -59,13 +87,30 @@
         padding-bottom: 20px;
     }
     
-    &-title {
+    &-title { 
         color: black;
         @include fontStyle(Raleway, 600, 24);
         @include flexCenter;
 
+        @include netbook {
+            @include fontSize(20);
+        }
+
+        @include tablet {
+            @include fontSize(18);
+            grid-column-end: span 2;
+
+            &:last-child {
+                display: none;
+            }
+        }
+
         &--name {
             grid-column-end: span 2;
+
+            @include tablet {
+                display: none;
+            }
         }
     }
 
@@ -74,6 +119,14 @@
         align-items: center;
         border-bottom: 2px solid black;
         position: relative;
+        transition: all 0.25s ease-in-out;
+        max-height: 155px;
+
+        @include tablet {
+            max-height: 255px;
+            height: 255px;
+            grid-template-columns: repeat(3, 1fr);
+        }
 
         &__image {
             width: 100%;
@@ -86,18 +139,39 @@
                 top: 0;
                 left: 0;
                 @include flexCenter;
+
+                @include tablet {
+                    height: 110px;
+                }
             }
 
             &--container {
                 grid-column-end: span 2;
+
+                @include tablet {
+                    position: relative;
+                    height: 110px;
+                    grid-column-end: span 3;
+                    display: flex;
+                    align-items: center;
+                    margin: 10px 0;
+                }
             }
         }
 
         &__name {
             padding-left: 160px;
             color: black;
-            @include fontStyle(Raleway, 500, 24);
+            @include fontStyle(Montserrat, 500, 24);
             transition: all 0.15s ease-in-out;
+
+            @include netbook {
+                @include fontSize(20);
+            }
+
+            @include tablet {
+                @include fontSize(18);
+            }
 
             &:hover {
                 color: $darkGreen;
@@ -144,7 +218,17 @@
                 flex-direction: column;
                 justify-content: center;
                 margin-top: 0;
+
+                @include tablet {
+                    margin: 15px 0;
+                    grid-column-start: 3;
+                }
             }
+        }
+
+        &--deleting {
+            max-height: 0;
+            opacity: 0;
         }
     }
 
@@ -174,4 +258,9 @@
             color: black;
         }
     }
+}
+
+.calculationsPrice {
+    max-height: 0;
+    overflow: hidden;
 }

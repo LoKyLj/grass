@@ -148,18 +148,13 @@
             }
 
             &-name {
-                @include fontStyle(Raleway, 500, 26);
+                @include fontStyle(Montserrat, 500, 26);
 
                 @include netbook {
-                    @include fontSize(24);
-                }
-        
-                @include tablet {
-                    @include fontSize(22);
+                    @include fontSize(18);
                 }
         
                 @include mobile {
-                    @include fontSize(20);
                 }
             }
 
@@ -180,7 +175,8 @@
                 }
         
                 @include mobile {
-                    @include fontSize(28);
+                    margin-top: 5px;
+                    @include fontSize(26);
                 }
 
                 &--meter {

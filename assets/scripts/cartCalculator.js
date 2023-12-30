@@ -1,12 +1,3 @@
-const calculationsPrice = document.getElementById('calculationsPrice');
-const calculationsQuantity = document.getElementById('calculationsQuantity');
-const calculationsLength = document.getElementById('calculationsLength');
-const calculationsWidth = document.querySelectorAll('.calculations-info__item-radiobutton');
-const calculationsPriceStorage = document.getElementById('calculationsPriceStorage');
-const calculationsAreaStorage = document.getElementById('calculationsAreaStorage');
-
-
-
 const minusButtons = document.querySelectorAll('.minus');
 for (let i = 0; i < minusButtons.length; i++) {
     minusButtons[i].addEventListener('click', function() {
@@ -48,19 +39,53 @@ inputs.forEach(function(input) {
     });
 });
 
-const calculateCost = () => {
-    let widthValue;
-    for (let index = 0; index < calculationsWidth.length; index++) {
-        const element = calculationsWidth[index];
-        
-        if (element.checked) {
-            widthValue = element.value;
+// calculate price after load
+
+const productsSpecs = document.querySelectorAll('.cartContact-product__item-button');
+productsSpecs.forEach(function calculateCostCart (button) {
+    button.addEventListener("change", function() {
+        const calculationsPrice = button.closest('.cartContact-product').querySelector('.calculationsPrice').innerHTML-0;
+        const calculationsQuantity = button.closest('.cartContact-product').querySelector('.calculations-info__item-quantity--text').value-0;
+        const calculationsLength = button.closest('.cartContact-product').querySelector('.cartContact-product__length-select').value-0;
+        const calculationsWidthButtons = button.closest('.cartContact-product').querySelectorAll('.calculations-info__item-radiobutton');
+        let calculationsWidth;
+        for (let index = 0; index < calculationsWidthButtons.length; index++) {
+            const element = calculationsWidthButtons[index];
+            if (element.checked) {
+                calculationsWidth = element.value-0;
+            }
         }
-    }
+        const calculationsPriceStorage = button.closest('.cartContact-product').querySelector('.calculationsPriceStorage');
+        const calculationsAreaStorage = button.closest('.cartContact-product').querySelector('.calculationsAreaStorage');
 
-    let sum = calculationsLength.value*widthValue*calculationsQuantity.value*calculationsPrice.innerHTML;
-    calculationsPriceStorage.innerHTML = sum;
+        calculationsPriceStorage.innerHTML = Math.round(calculationsPrice*calculationsWidth*calculationsLength*calculationsQuantity*100)/100;
+        calculationsAreaStorage.innerHTML = Math.round(calculationsWidth*calculationsLength*calculationsQuantity*100)/100;
 
-    let area = calculationsLength.value*widthValue*calculationsQuantity.value;
-    calculationsAreaStorage.innerHTML = area;
-}
+        const subtotal = document.querySelector('.cartContact-subtotal__price--inner');
+        const totalStorages = document.querySelectorAll('.calculationsPriceStorage');
+        let sum = 0;
+        for (let index = 0; index < totalStorages.length; index++) {
+            const element = totalStorages[index];
+            sum = Math.round((sum + Number(element.innerHTML))*100)/100;
+        }
+        subtotal.innerHTML = sum;
+    })
+})
+
+
+// const calculateCost = () => {
+//     let widthValue;
+//     for (let index = 0; index < calculationsWidth.length; index++) {
+//         const element = calculationsWidth[index];
+        
+//         if (element.checked) {
+//             widthValue = element.value;
+//         }
+//     }
+
+//     let sum = calculationsLength.value*widthValue*calculationsQuantity.value*calculationsPrice.innerHTML;
+//     calculationsPriceStorage.innerHTML = sum;
+
+//     let area = calculationsLength.value*widthValue*calculationsQuantity.value;
+//     calculationsAreaStorage.innerHTML = area;
+// }

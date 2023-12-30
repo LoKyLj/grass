@@ -9,7 +9,7 @@
         justify-content: center;
 
         @include netbook {
-            margin-top: 100px;
+            padding-top: 100px;
         }
     }
 
@@ -156,6 +156,14 @@
         border: 2px solid $lightGreen;
         overflow: hidden;
 
+        @include tablet {
+            width: 450px;
+        }
+
+        @include mobile {
+            width: 350px;
+        }
+
         &::before {
             position: absolute;
             content: "";
@@ -164,6 +172,12 @@
             background-image: url('../images/icons/success.svg');
             top: 25px;
             background-size: cover;
+            background-repeat: no-repeat;
+
+            @include tablet {
+                width: 90px;
+                height: 93px;
+            }
         }
 
         &::after {
@@ -180,18 +194,33 @@
         margin-top: 20px;
         color: black;
         @include fontStyle(Raleway, 500, 46);
+        text-align: center;
+
+        @include netbook {
+            @include fontSize(40);
+        }
+
+        @include tablet {
+            @include fontSize(36);
+        }
     }
 
     &__subheading {
         margin-top: 4px;
         @include fontStyle(Raleway, 500, 22);
         color: $lightGreen;
+        text-align: center;
+
+        @include netbook {
+            @include fontSize(20);
+        }
     }
 
     &__info {
         @include fontStyle(Raleway, 400, 14);
         margin-top: 4px;
         color: black;
+        text-align: center;
 
         &--marked {
             color: $lightGreen;

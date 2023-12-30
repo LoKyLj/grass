@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "name": "Real S",
+        "name": "Real 30mm",
         "price": 15.2,
         "img": "products/REAL 30mm/01.webp",
         "img2" : "products/REAL 30mm/02.webp",
@@ -14,7 +14,7 @@
 
     {
         "id": 2,
-        "name": "Real M",
+        "name": "Real 35mm",
         "price": 18.6,
         "img": "products/REAL 35mm/01.webp",
         "img2" : "products/REAL 35mm/02.webp",
@@ -25,7 +25,20 @@
 
     {
         "id": 3,
-        "name": "Diamond",
+        "name": "BELVEDERE 36mm",
+        "price": 27.3,
+        "img": "products/BELVEDERE 36mm/01.webp",
+        "img2" : "products/BELVEDERE 36mm/02.webp",
+        "img3" : "products/BELVEDERE 36mm/03.webp",
+        "img4" : "products/BELVEDERE 36mm/04.webp",
+        "img5" : "products/BELVEDERE 36mm/05.webp",
+        "img6" : "products/BELVEDERE 36mm/06.webp",
+        "img7" : "products/BELVEDERE 36mm/07.webp"
+    },
+
+    {
+        "id": 4,
+        "name": "Diamond 40mm",
         "price": 23.6,
         "img": "products/DIAMOND 40mm/01.webp",
         "img2" : "products/DIAMOND 40mm/02.webp",
@@ -36,8 +49,8 @@
     },
 
     {
-        "id": 4,
-        "name": "Natural S",
+        "id": 5,
+        "name": "Natural 3S 45mm",
         "price": 33.5,
         "img": "products/NATURAL 3S 45mm/01.webp",
         "img2" : "products/NATURAL 3S 45mm/02.webp",
@@ -48,8 +61,8 @@
     },
 
     {
-        "id": 5,
-        "name": "Natural M",
+        "id": 6,
+        "name": "NATURAL 4S 50mm",
         "price": 37.6,
         "img": "products/NATURAL 4S 50mm/01.webp",
         "img2" : "products/NATURAL 4S 50mm/02.webp",
@@ -60,8 +73,8 @@
     },
 
     {
-        "id": 6,
-        "name": "Katana",
+        "id": 7,
+        "name": "KATANA 55mm",
         "price": 37.6,
         "img": "products/KATANA 55mm/01.webp",
         "img2" : "products/KATANA 55mm/02.webp",
@@ -72,26 +85,13 @@
     },
 
     {
-        "id": 7,
-        "name": "Bella Vista",
+        "id": 8,
+        "name": "BELLA VISTA 48mm",
         "price": 33.5,
         "img": "products/BELLA VISTA 48mm/01.webp",
         "img2" : "products/BELLA VISTA 48mm/02.webp",
         "img3" : "products/BELLA VISTA 48mm/03.webp",
         "img4" : "products/BELLA VISTA 48mm/04.webp",
         "img5" : "products/BELLA VISTA 48mm/05.webp"
-    },
-
-    {
-        "id": 8,
-        "name": "Belvedere",
-        "price": 27.3,
-        "img": "products/BELVEDERE 36mm/01.webp",
-        "img2" : "products/BELVEDERE 36mm/02.webp",
-        "img3" : "products/BELVEDERE 36mm/03.webp",
-        "img4" : "products/BELVEDERE 36mm/04.webp",
-        "img5" : "products/BELVEDERE 36mm/05.webp",
-        "img6" : "products/BELVEDERE 36mm/06.webp",
-        "img7" : "products/BELVEDERE 36mm/07.webp"
     }
 ]

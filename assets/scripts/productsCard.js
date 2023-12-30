@@ -99,10 +99,8 @@ function createCalculations(data) {
     `;
     calculationsContainer.insertAdjacentHTML('afterbegin', galleryItem);
 
-    document.querySelector('.calculationsPriceStorage').innerHTML = price*4;
-    document.querySelector('.calculationsAreaStorage').innerHTML = 4;
-
-
+    document.querySelector('.calculationsPriceStorage').innerHTML = price;
+    document.querySelector('.calculationsAreaStorage').innerHTML = 1;
 }
 
 // Push Product to basket Modals
