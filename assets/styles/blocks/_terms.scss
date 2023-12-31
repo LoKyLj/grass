@@ -1,0 +1,94 @@
+.terms {
+    background-color: white;
+
+    &-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 120px 0;
+
+        @include tablet {
+            padding: 100px 0;
+        }
+    }
+
+    &-heading {
+        width: 100%;
+        margin-bottom: 100px;
+        color: $lightGreen;
+        @include fontStyle(Raleway, 500, 46);
+        text-align: center;
+
+        @include netbook {
+            @include fontSize(44);
+        }
+
+        @include tablet {
+            @include fontSize(40);
+        }
+
+        @include mobile {
+            @include fontSize(30);
+        }
+    }
+
+    &-item {
+        width: 100%;
+        margin-bottom: 60px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &__heading {
+            color: black;
+            @include fontStyle(Raleway, 500, 24);
+
+            @include netbook {
+                @include fontSize(22);
+            }
+    
+            @include tablet {
+                @include fontSize(20);
+            }
+    
+            @include mobile {
+                @include fontSize(18);
+            }
+        }
+
+        &__paragraph {
+            color: black;
+            margin-top: 20px;
+            padding-left: 2%;
+            @include fontStyle(Raleway, 400, 18);
+
+            @include netbook {
+                @include fontSize(16);
+            }
+    
+            @include tablet {
+                @include fontSize(14);
+            }
+        }
+
+        &__list {
+            margin-top: 20px;
+            list-style-type: disc;
+            padding-left: 5%;
+
+            &-item {
+                @include fontStyle(Raleway, 400, 18);
+                margin-top: 5px;
+
+                @include netbook {
+                    @include fontSize(16);
+                }
+        
+                @include tablet {
+                    @include fontSize(14);
+                }
+            }
+        }
+    }
+}

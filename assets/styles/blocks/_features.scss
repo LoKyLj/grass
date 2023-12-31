@@ -112,6 +112,10 @@
             }
         }
 
+        &--heading {
+            justify-content: flex-start;
+        }
+
         &--image {
             background-color: $darkGreen;
             border: 10px solid $darkGreen;

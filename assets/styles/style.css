@@ -1167,6 +1167,7 @@ transition-none {
   color: #5AA02D;
 }
 .miniShop-item__photo {
+  max-width: 409px;
   width: 100%;
   height: 100%;
   transition: all 0.2s ease-in-out;
@@ -1417,6 +1418,9 @@ transition-none {
 }
 .features-card--transparent:hover::before {
   opacity: 0;
+}
+.features-card--heading {
+  justify-content: flex-start;
 }
 .features-card--image {
   background-color: #2F7F2B;
@@ -3966,4 +3970,111 @@ transition-none {
 .calculationsPrice {
   max-height: 0;
   overflow: hidden;
+}
+
+/* terms and conditions */
+.terms {
+  background-color: white;
+}
+.terms-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 120px 0;
+}
+@media screen and (max-width: 768px) {
+  .terms-container {
+    padding: 100px 0;
+  }
+}
+.terms-heading {
+  width: 100%;
+  margin-bottom: 100px;
+  color: #5AA02D;
+  font-family: Raleway;
+  font-size: 2.875rem;
+  font-weight: 500;
+  text-align: center;
+}
+@media screen and (max-width: 1024px) {
+  .terms-heading {
+    font-size: 2.75rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .terms-heading {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .terms-heading {
+    font-size: 1.875rem;
+  }
+}
+.terms-item {
+  width: 100%;
+  margin-bottom: 60px;
+}
+.terms-item:last-child {
+  margin-bottom: 0;
+}
+.terms-item__heading {
+  color: black;
+  font-family: Raleway;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+@media screen and (max-width: 1024px) {
+  .terms-item__heading {
+    font-size: 1.375rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .terms-item__heading {
+    font-size: 1.25rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .terms-item__heading {
+    font-size: 1.125rem;
+  }
+}
+.terms-item__paragraph {
+  color: black;
+  margin-top: 20px;
+  padding-left: 2%;
+  font-family: Raleway;
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+@media screen and (max-width: 1024px) {
+  .terms-item__paragraph {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .terms-item__paragraph {
+    font-size: 0.875rem;
+  }
+}
+.terms-item__list {
+  margin-top: 20px;
+  list-style-type: disc;
+  padding-left: 5%;
+}
+.terms-item__list-item {
+  font-family: Raleway;
+  font-size: 1.125rem;
+  font-weight: 400;
+  margin-top: 5px;
+}
+@media screen and (max-width: 1024px) {
+  .terms-item__list-item {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .terms-item__list-item {
+    font-size: 0.875rem;
+  }
 }/*# sourceMappingURL=style.css.map */

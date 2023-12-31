@@ -22,7 +22,7 @@ for (let i = 0; i < plusButtons.length; i++) {
     });
 }
 
-let inputs = document.querySelectorAll("input");
+let inputs = document.querySelectorAll(".cartContact-product__item-quantity--text");
 
 inputs.forEach(function(input) {
     input.addEventListener("keydown", function() {
@@ -71,21 +71,3 @@ productsSpecs.forEach(function calculateCostCart (button) {
         subtotal.innerHTML = sum;
     })
 })
-
-
-// const calculateCost = () => {
-//     let widthValue;
-//     for (let index = 0; index < calculationsWidth.length; index++) {
-//         const element = calculationsWidth[index];
-        
-//         if (element.checked) {
-//             widthValue = element.value;
-//         }
-//     }
-
-//     let sum = calculationsLength.value*widthValue*calculationsQuantity.value*calculationsPrice.innerHTML;
-//     calculationsPriceStorage.innerHTML = sum;
-
-//     let area = calculationsLength.value*widthValue*calculationsQuantity.value;
-//     calculationsAreaStorage.innerHTML = area;
-// }

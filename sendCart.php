@@ -39,15 +39,15 @@ if (!error_get_last()) {
     $mail->Debugoutput = function($str, $level) {$GLOBALS['data']['debug'][] = $str;};
     
     // Настройки вашей почты
-    $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
-    $mail->Username   = 'kyljs2d@gmail.com'; // Логин на почте
-    $mail->Password   = 'womg chge qjaf gqbk'; // Пароль на почте
+    $mail->Host       = 'mail.grassluxuryturf.com'; // SMTP сервера вашей почты
+    $mail->Username   = 'smtpmail@grassluxuryturf.com'; // Логин на почте
+    $mail->Password   = '***'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
-    $mail->setFrom('kyljs2d@gmail.com', 'Grass Luxury Turf'); // Адрес самой почты и имя отправителя
+    $mail->setFrom('smtpmail@grassluxuryturf.com', 'Grass Luxury Turf'); // Адрес самой почты и имя отправителя
     
     // Получатель письма
-    $mail->addAddress('kyljs3d@gmail.com');  
+    $mail->addAddress('orders@grassluxuryturf.com');  
     // $mail->addAddress('poluchatel2@gmail.com'); // Ещё один, если нужен
     
     // Прикрипление файлов к письму
