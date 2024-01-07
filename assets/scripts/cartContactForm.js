@@ -8,6 +8,46 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
 
         let error = formValidate(form);
+        
+        // insert products info here
+        const getProducts = () => {
+            const products = document.querySelectorAll('.cartContact-product')
+
+            // const = 
+            for (let index = 0; index < products.length; index++) {
+                const element = products[index];
+                const name = element.querySelector('.cartContact-product__name').innerHTML;
+                const widthList = element.querySelectorAll('.cartContact-product__width-radiobutton');
+                const width = Array.from(widthList).find((input) => input.checked === true).value;
+                const length = element.querySelector('.cartContact-product__length-select').value;
+                const quantity = element.querySelector('.cartContact-product__item-quantity--text').value;
+                const total = element.querySelector('.calculationsPriceStorage').innerHTML;
+                const area = element.querySelector('.calculationsAreaStorage').innerHTML;
+
+                const hiddenDiv = document.querySelector('.hiddenDiv');
+                const newProduct = 
+                `
+                <div>
+                    <br><p>Product: ${name}</p>
+                    <p>Width: ${width}m</p>
+                    <p>Length: ${length}m</p>
+                    <p>Quantity: ${quantity}</p>
+                    <p>Total: ${total}€</p>
+                    <p>Area: ${area}m2</p>
+                </div><br>
+                `;
+                hiddenDiv.insertAdjacentHTML('beforeend', newProduct);
+            }
+            const hiddenDiv = document.querySelector('.hiddenDiv');
+            const subtotal = document.querySelector('.cartContact-subtotal__price--inner').innerHTML;
+            const subtotalHTML = 
+            `
+            <p><b>Subtotal: ${subtotal}€</b></p>
+            `;
+            hiddenDiv.insertAdjacentHTML('beforeend', subtotalHTML);
+            document.getElementById('formHiddenMessage').value = hiddenDiv.innerHTML;
+        };
+        getProducts();
 
         let formData = new FormData(form);
 
@@ -22,6 +62,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 formButton.classList.remove('_sending');
                 loaderContainer.classList.remove('loader-container--sending');
                 form.reset();
+
+                localStorage.removeItem('basket');
+                document.querySelector('.cartContact-table--full').remove();
+                document.querySelector('.cart-count').style.display = 'none';
+                document.querySelector('.cartContact-table--empty').style.display = 'flex';
+
                 openModal();
                 // let result = await response.json();
             } else {
@@ -29,6 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
 
         }
+        document.querySelector('.hiddenDiv').innerHTML = '';
     }
 
     const formValidate = (form) => {

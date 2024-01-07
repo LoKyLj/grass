@@ -84,6 +84,10 @@
             font-weight: 600;
         }
 
+        &:hover::after {
+            transform: rotateZ(-65deg) scale(1.1);
+        }
+
         &::after {
             content: "";
             position: absolute;
@@ -94,6 +98,7 @@
             height: 92px;
             background-image: url('../images/icons/questionArrow.svg');
             transform: rotate(-80deg);
+            transition: all 0.25s ease-in-out;
         }
     }
 }
@@ -225,6 +230,10 @@
         &--marked {
             color: $lightGreen;
         }
+    }
+
+    &__infoGR {
+        padding: 0 10px;
     }
 }
 
@@ -455,6 +464,12 @@
             font-family: Raleway;
             transform: scale(0);
             transition: all 0.15s ease-in-out;
+        }
+    }
+
+    &-labelGR {
+        span {
+            display: block;
         }
     }
 

@@ -9,6 +9,19 @@
     &-subheading {
         @include fontStyle(Raleway, 600, 24);
         align-self: flex-start;
+        margin-top: 40px;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        @include netbook {
+            @include fontSize(22);
+        }
+
+        @include tablet {
+            @include fontSize(20);
+        }
     }
 
     &-items {
@@ -17,23 +30,73 @@
         grid-template-columns: 1fr 0.75fr 1fr;
         column-gap: 20px;
         row-gap: 20px;
+
+        @include netbook {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @include tablet {
+            column-gap: 15px;
+            row-gap: 15px;
+        }
+
+        @include mobile {
+            grid-template-rows: 1fr fit-content fit-content 1fr;
+        }
     }
 
     &-item {
         background-color: $lightGreen;
-        min-height: 300px;
         border-radius: 20px;
         padding: 25px;
         position: relative;
+        overflow: hidden;
+
+        @include netbook {
+            padding: 20px;
+        }
+
+        @include tablet {
+            padding: 15px;
+        }
+
+        @include mobile {
+            width: 340px;
+            grid-column-end: span 2;
+        }
 
         &--wide  {
             grid-column: span 2;
             background-color: transparent;
-            border: 1px solid $lightGreen;
+            border: 2px solid $lightGreen;
+            overflow: hidden;
+
+            @include mobile {
+                width: 340px;
+            }
         }
 
         &--tiny {
             min-height: 140px;
+        }
+
+        &--bottomGrass {
+            padding-bottom: 80px !important;
+            position: relative;
+
+            @include mobile {
+                padding-bottom: 100px !important;
+            }
+
+            &::after {
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 75px;
+                background-image: url('../images/icons/darkGrass.svg');
+                bottom: 0;
+                left: 0;
+            }
         }
 
         &--double {
@@ -42,9 +105,15 @@
             display: flex;
             flex-direction: column;
             row-gap: 20px;
+
+            @include tablet {
+                row-gap: 15px;
+            }
         }
 
         &--guarantee {
+            min-height: 280px;
+
             &::after {
                 content: "";
                 position: absolute;
@@ -54,146 +123,216 @@
                 background-size: cover;
                 bottom: 0;
                 right: 0;
+
+                @include tinyDesktop {
+                    width: 240px;
+                    height: 200px;
+                    right: -2%;
+                }
+
+                @include tablet {
+                    width: 180px;
+                    height: 160px;
+                    right: -1%;
+                }
+
+                @include mobile {
+                    width: 160px;
+                    height: 140px;
+                }
+            }
+        }
+    }
+}
+
+.card {
+    &-heading {
+        width: fit-content;
+        @include fontStyle(Raleway, 600, 20);
+
+        @include netbook {
+            @include fontSize(18);
+        }
+
+        @include tablet {
+            @include fontSize(16);
+        }
+
+        &--greenMark {
+            padding: 0 4px;
+            border-top-right-radius: 15px;
+            border-bottom-left-radius: 15px;
+            background-color: $darkGreen;
+        }
+
+        &--whiteMark {
+            padding: 0 4px;
+            border-top-right-radius: 15px;
+            border-bottom-left-radius: 15px;
+            background-color: white;
+            color: $lightGreen;
+        }
+    }
+
+    &-description {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+        margin-top: 20px;
+
+        @include tablet {
+            row-gap: 15px;
+            margin-top: 15px;
+        }
+
+        .card-item__text {
+            margin-left: 10px;
+        }
+
+        p {
+            font-family: "Montserrat";
+        }
+    }
+
+    &-items {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+
+        &--wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 40px;
+
+            @include mobile {
+                grid-template-columns: 1fr;
             }
         }
 
-        .card {
-            &-heading {
-                width: fit-content;
-                @include fontStyle(Raleway, 600, 20);
-    
-                &--greenMark {
-                    padding: 0 4px;
-                    border-top-right-radius: 15px;
-                    border-bottom-left-radius: 15px;
-                    background-color: $darkGreen;
+        &--list2 {
+            @include mobile {
+                margin-top: 0;
+            }
+        }
+    }
+
+    &-item {
+        flex-direction: column;
+        display: flex;
+        position: relative;
+        align-items: center;
+
+        &::before {
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 0;
+            width: 24px;
+            height: 24px;
+        }
+
+        &--sun {
+            &::before {
+                top: 7px;
+                background-image:  url('../images/icons/sun.svg');
+            }
+        }
+
+        &--cloudSun {
+            &::before {
+                top: 18px;
+                background-image:  url('../images/icons/cloud-sunny.svg');
+            }
+        }
+
+        &--tree {
+            &::before {
+                top: 18px;
+                background-image:  url('../images/icons/tree.svg');
+
+                @include mobile {
+                    top: 5px;
                 }
-    
-                &--whiteMark {
-                    padding: 0 4px;
-                    border-top-right-radius: 15px;
-                    border-bottom-left-radius: 15px;
-                    background-color: white;
-                    color: $lightGreen;
+            }
+        }
+
+        &--checkbox {
+            &::before {
+                top: 18px;
+                background-image:  url('../images/icons/checkbox.svg');
+
+                @include mobile {
+                    top: 8px;
+                }
+            }
+        }
+
+        &--verify {
+            width: fit-content;
+            &::before {
+                top: 36px;
+                background-image:  url('../images/icons/verify.svg');
+            }
+        }
+
+        li {
+            width: 100%;
+            list-style: disc;
+            margin-top: 12px;
+            margin-left: 0px;
+            list-style-position: inside;
+            font-family: "Montserrat";
+        }
+
+        &__text {
+            color: white;
+            @include fontStyle(Raleway, 400, 18);
+            margin-left: 34px;
+
+            @include netbook {
+                @include fontSize(16);
+            }
+
+            @include tablet {
+                @include fontSize(14);
+            }
+
+            &--big {
+                @include fontStyle(Raleway, 700, 24);
+                width: 330px;
+                margin-top: 25px;
+
+                @include netbook {
+                    @include fontSize(22);
+                }
+
+                @include tablet {
+                    @include fontSize(18);
+                }
+
+                @include mobile {
+                    width: 270px;
                 }
             }
 
-            &-items {
-                margin-top: 20px;
-                display: flex;
-                flex-direction: column;
-                row-gap: 20px;
-
-                &--wrapper {
-                    display: grid;
-                    grid-template-columns: 1fr 1fr;
-                    column-gap: 40px;
-                }
+            &--number {
+                font-family: 'Montserrat';
             }
 
-            &-item {
-                display: flex;
-                position: relative;
-                align-items: center;
+            &--marked {
+                color: $lightGreen;
+            }
 
-                &::before {
-                    position: absolute;
-                    content: "";
-                    left: 0;
-                    top: 0;
-                    width: 24px;
-                    height: 24px;
+            &--markedBig {
+                font-size: 34px;
+
+                @include netbook {
+                    @include fontSize(30);
                 }
 
-                &--ruler {
-                    &::before {
-                        top: -2px;
-                        background-image:  url('../images/icons/ruler.svg');
-                    }
-                }
-
-                &--leaf {
-                    &::before {
-                        top: 7px;
-                        background-image:  url('../images/icons/leaf.svg');
-                    }
-                }
-
-                &--paintbrush {
-                    &::before {
-                        top: 7px;
-                        background-image:  url('../images/icons/paintbrush.svg');
-                    }
-                }
-
-                &--rulerPen {
-                    &::before {
-                        top: 7px;
-                        background-image:  url('../images/icons/ruler&pen.svg');
-                    }
-                }
-
-                &--layer {
-                    &::before {
-                        top: 30px;
-                        background-image:  url('../images/icons/layer.svg');
-                    }
-                }
-
-                &--sun {
-                    &::before {
-                        top: 7px;
-                        background-image:  url('../images/icons/sun.svg');
-                    }
-                }
-
-                &--cloudSun {
-                    &::before {
-                        top: 18px;
-                        background-image:  url('../images/icons/cloud-sunny.svg');
-                    }
-                }
-
-                &--tree {
-                    &::before {
-                        top: 18px;
-                        background-image:  url('../images/icons/tree.svg');
-                    }
-                }
-
-                &--checkbox {
-                    &::before {
-                        top: 18px;
-                        background-image:  url('../images/icons/checkbox.svg');
-                    }
-                }
-
-                &--verify {
-                    &::before {
-                        top: 36px;
-                        background-image:  url('../images/icons/verify.svg');
-                    }
-                }
-
-                &__text {
-                    @include fontStyle(Raleway, 400, 18);
-                    margin-left: 34px;
-
-                    &--big {
-                        @include fontStyle(Raleway, 700, 24);
-                        width: 330px;
-                        margin-top: 25px;
-
-
-                    }
-
-                    &--marked {
-                        color: $lightGreen;
-                    }
-
-                    &--markedBig {
-                        font-size: 34px;
-                    }
+                @include tablet {
+                    @include fontSize(26);
                 }
             }
         }

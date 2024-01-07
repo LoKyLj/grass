@@ -58,11 +58,27 @@
     align-items: center;
 
     &-item {
+        text-align: center;
         transition: all 0.15s ease-in-out;
+
+        &:hover {
+            color: $lightGreen;
+        }
 
         &--wrapper {
             @include fontStyle(Raleway, 400, 18);
             margin-right: 50px;
+        }
+
+        &--greekWrapper {
+            @include netbook {
+                margin-right: 20px;
+                width: min-content;
+            }
+
+            @include mobile {
+                @include fontSize(14)
+            }
         }
 
         &:hover {
@@ -73,11 +89,8 @@
             margin-right: 0;
         }
 
-        &--eng {
-
-            &:hover {
-                color: $lightGreen;
-            }
+        &--greek {
+            font-family: 'Manrope';
         }
     }
 }
@@ -87,19 +100,20 @@
     right: 0;
     z-index: 21;
     width: 100vw;
-    height: 100vh;
+    height: 120vh;
     transition: all 0.25s ease-in-out;
     position: fixed;
     // background-color: rgba(103, 30, 30, 0.396);
     background-color: black;
 
     &--visible {
+        opacity: 1;
         display: flex;
     }
 
     &--hiden {
-        // display: none;
-        top: -100vh;
+        opacity: 0;
+        top: -120vh;
     }
 }
 

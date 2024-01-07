@@ -50,14 +50,14 @@ function createCards(data) {
         const {id, name, price, img} = card;
         const cardItem  = 
         `
-            <div class="miniShop-list__item" data-product-id="${id}">
-                <a class="miniShop-item__photo--wrapper" href="./pages/english/catalog/card${id}.html">
+            <div class="miniShop-list__item revealByScrollDown" data-product-id="${id}">
+                <a class="miniShop-item__photo--wrapper" href="./pages/english/catalog/${name}.html">
                     <img class="miniShop-item__photo" src="./assets/images/${img}" alt="${name}turf picture">
                 </a>
                 <div class="miniShop-item__info">
                     <p class="miniShop-item__info-name miniShop-item__info-name--eng">${name}</p>
                     <p class="miniShop-item__info-price">${price}€<span class="miniShop-item__info-price--meter">per m²</span></p>
-                    <a class="miniShop-item__info-button" href="./pages/english/catalog/card${id}.html">Calculate</a>
+                    <a class="miniShop-item__info-button" href="./pages/english/catalog/${name}.html">Shop now</a>
                 </div>
             </div>
         `;

@@ -95,7 +95,7 @@ function createCalculations(data) {
     const galleryItem = 
     `
         <p class="calculations-info__name calculations-info__name--eng">${name}</p>
-        <p class="calculations-info__price"><span class="calculationsPrice" id="calculationsPrice">${price}</span>€<span class="calculations-info__price--meter">per m²</span></p>
+        <p class="calculations-info__price"><span class="calculationsPrice" id="calculationsPrice">${price}</span>€<span class="calculations-info__price--meter greekLocalization">ανά m²</span></p>
     `;
     calculationsContainer.insertAdjacentHTML('afterbegin', galleryItem);
 
@@ -219,13 +219,13 @@ function createCards(data) {
         const cardItem  = 
         `
             <div class="miniShop-list__item revealByScrollDown" data-product-id="${id}">
-                <a class="miniShop-item__photo--wrapper" href="../../../pages/english/catalog/${name}.html">
+                <a class="miniShop-item__photo--wrapper" href="../../../pages/greek/catalog/${name}.html">
                     <img class="miniShop-item__photo" src="../../../assets/images/${img}" alt="${name}turf picture">
                 </a>
                 <div class="miniShop-item__info">
                     <p class="miniShop-item__info-name miniShop-item__info-name--eng">${name}</p>
-                    <p class="miniShop-item__info-price">${price}€<span class="miniShop-item__info-price--meter">per m²</span></p>
-                    <a class="miniShop-item__info-button" href="../../../pages/english/catalog/${name}.html">Shop now</a>
+                    <p class="miniShop-item__info-price">${price}€<span class="miniShop-item__info-price--meter greekLocalization">ανά m²</span></p>
+                    <a class="miniShop-item__info-button greekLocalization" href="../../../pages/greek/catalog/${name}.html">Αγοράστε τώρα</a>
                 </div>
             </div>
         `;

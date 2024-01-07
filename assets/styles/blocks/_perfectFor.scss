@@ -14,6 +14,7 @@
         margin-top: 120px;
         position: relative;
         width: fit-content;
+        transition: all 0.15s ease-in-out;
 
         @include netbook {
             @include fontStyle(Raleway, 500, 42);
@@ -28,6 +29,10 @@
             @include fontStyle(Raleway, 500, 30);
         }
 
+        &:hover::after {
+            transform: scale(1.1) rotateZ(10deg);
+        }
+
         &::after {
             position: absolute;
             content: '';
@@ -38,6 +43,7 @@
             background-size: contain;
             right: -70%;
             top: 30px;
+            transition: all 0.25s ease-in-out;
 
             @include netbook {
                 width: 90px;

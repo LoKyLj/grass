@@ -177,6 +177,12 @@
             }
         }
 
+        &--2GR {
+            &::before {
+                top: 13px;
+            }
+        }
+
         &--3 {
             background-size: cover;
             background-repeat: no-repeat;
@@ -205,6 +211,12 @@
                     height: 18px;
                     top: 8px;
                 }
+            }
+        }
+
+        &--3GR {
+            &::before {
+                top: 13px;
             }
         }
 
@@ -338,6 +350,12 @@
             }
         }
 
+        &--8GR {
+            &::before {
+                top: 13px;
+            }
+        }
+
         &__heading {
             @include fontStyle(Raleway, 500, 68);
             color: $darkGreen;
@@ -416,9 +434,22 @@
                 }
             }
 
+            &--4GR {
+                top: 22%;
+            }
+
             &--5 {
                 top: 38%;
                 right: 20%;
+            }
+
+            &--5GR {
+                top: 25%;
+                right: 10%;
+
+                @include tablet {
+                    right: 8%;
+                }
             }
 
             &--6 {
@@ -442,6 +473,12 @@
                 }
             }
 
+            &--7GR {
+                @include tablet {
+                    left: 6px;
+                }
+            }
+
             &--8 {
                 top: 0;
                 left: 0;
@@ -452,6 +489,20 @@
                 @include mobile {
                     padding-left: 24px;
                 }
+            }
+        }
+
+        &__titleGR {
+            @include tinyDesktop {
+                @include fontSize(20);
+            }
+
+            @include netbook {
+                @include fontSize(18);
+            }
+
+            @include mobile {
+                @include fontSize(14);
             }
         }
 
@@ -472,6 +523,19 @@
             @include mobile {
                 @include fontSize(13);
                 padding: 0 10px;
+            }
+        }
+
+        &__infoGR {
+            color: transparent;
+
+            @include tinyDesktop {
+                padding: 0 10px;
+                @include fontSize(16);
+            }
+
+            @include mobile {
+                @include fontSize(12);
             }
         }
     }

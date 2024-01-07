@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="el">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,36 +14,36 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="../../assets/styles/style.css">
     <script src="../../assets/scripts/animations.js"  type="module" defer></script>
-    <script src="../../assets/scripts/cartProductsCards.js"  type="module" defer></script>
+    <script src="../../assets/scripts/cartProductsCardsGR.js"  type="module" defer></script>
 </head>
 <body>
     <header class="header">
         <div class="header-container container">
-            <a class="logo-wrapper" href="../../en.html">
+            <a class="logo-wrapper" href="../../gr.html">
                 <img class="logo" src="../../assets/images/icons/logo.svg" alt="logo">
             </a>
             <nav class="nav">
-                <a class="nav-item--wrapper" href="../../en.html#about">
-                    <p class="nav-item nav-item--eng">About</p>
+                <a class="nav-item--wrapper nav-item--greekWrapper" href="../../gr.html#about">
+                    <p class="nav-item nav-item--greek">Σχετικά με εμάς</p>
                 </a>
-                <a class="nav-item--wrapper" href="../../pages/english/catalog.html">
-                    <p class="nav-item nav-item--eng">Catalog</p>
+                <a class="nav-item--wrapper nav-item--greekWrapper" href="../../pages/greek/catalog.html">
+                    <p class="nav-item nav-item--greek">Κατάλογος</p>
                 </a>
-                <a class="nav-item--wrapper" href="../../pages/english/faq.html">
-                    <p class="nav-item nav-item--eng">FAQ</p>
+                <a class="nav-item--wrapper nav-item--greekWrapper" href="../../pages/greek/faq.html">
+                    <p class="nav-item nav-item--greek">Συχνές ερωτήσεις</p>
                 </a>
-                <a class="nav-item--wrapper" href="../../en.html#contact">
-                    <p class="nav-item nav-item--eng">Contact</p>
+                <a class="nav-item--wrapper nav-item--greekWrapper" href="../../gr.html#contact">
+                    <p class="nav-item nav-item--greek">Επικοινωνία</p>
                 </a>
             </nav>
             <div class="profile">
                 <div class="language">
 					<a class="language-item--wrapper" href="../../en.html">
-                        <p class="language-item language-item--checked">EN</p>
+                        <p class="language-item">EN</p>
                     </a>
                     <hr class="language-separator">
                     <a class="language-item--wrapper" href="../../gr.html">
-                        <p class="language-item">GR</p>
+                        <p class="language-item language-item--checked">GR</p>
                     </a>
 				</div>
                 <a class="cart-wrapper clicable-icon--wrapper" href="./cart.html">
@@ -68,25 +68,25 @@
             <label class="menu-button--close" for="menuToggle"><span></span></label>
             <div class="language">
                 <a class="language-item--wrapper" href="../../en.html">
-                    <p class="language-item  language-item--checked">EN</p>
+                    <p class="language-item">EN</p>
                 </a>
                 <hr class="language-separator">
                 <a class="language-item--wrapper" href="../../gr.html">
-                    <p class="language-item">GR</p>
+                    <p class="language-item language-item--checked">GR</p>
                 </a>
             </div>
             <nav class="nav">
-                <a class="nav-item--wrapper" href="../../en.html#about" onclick="uncheckBurgerInput()">
-                    <p class="nav-item nav-item--eng">About</p>
+                <a class="nav-item--wrapper" href="../../gr.html#about" onclick="uncheckBurgerInput()">
+                    <p class="nav-item nav-item--greek">Σχετικά με εμάς</p>
                 </a>
                 <a class="nav-item--wrapper" href="./catalog.html">
-                    <p class="nav-item nav-item--eng">Catalog</p>
+                    <p class="nav-item nav-item--greek">Κατάλογος</p>
                 </a>
                 <a class="nav-item--wrapper" href="./faq.html">
-                    <p class="nav-item nav-item--eng">FAQ</p>
+                    <p class="nav-item nav-item--greek">Συχνές ερωτήσεις</p>
                 </a>
-                <a class="nav-item--wrapper" href="../../en.html#contact" onclick="uncheckBurgerInput()">
-                    <p class="nav-item nav-item--eng">Contact</p>
+                <a class="nav-item--wrapper" href="../../gr.html#contact" onclick="uncheckBurgerInput()">
+                    <p class="nav-item nav-item--greek">Επικοινωνία</p>
                 </a>
             </nav>
         </div>
@@ -94,26 +94,26 @@
 
     <section class="cartContact">
         <div class="cartContact-container container">
-            <h1 class="cartContact-heading revealByLoad revealByLoad--left">Your shopping cart</h1>
+            <h1 class="cartContact-heading greekLocalization revealByLoad revealByLoad--left">Το καλάθι σας</h1>
             <div class="cartContact-table cartContact-table--empty">
-                <p class="cartContact-subheading revealByLoad revealByLoad--right">Your cart is empty</p>
-                <div class="cartContact-emptyCart--wrapper revealByLoad">
+                <p class="cartContact-subheading greekLocalization revealByLoad revealByLoad--right">Το καλάθι αγορών σας είναι άδειο</p>
+                <div class="cartContact-emptyCart--wrapper">
                     <img class="cartContact-emptyCart" src="../../assets/images/icons/emptyCart.svg" alt="empty cart">
                 </div>
             </div>
             <div class="cartContact-table cartContact-table--full">
-                <p class="cartContact-subheading revealByLoad revealByLoad--right">Your order</p>
+                <p class="cartContact-subheading greekLocalization revealByLoad revealByLoad--right">Η παραγγελία σας</p>
                 <div class="cartContact-table__item--wrapper revealByLoad revealByLoad--left">
                     <div class="cartContact-table__item cartContact-titles">
-                        <p class="cartContact-title cartContact-title--name">Name</p>
-                        <p class="cartContact-title">Width</p>
-                        <p class="cartContact-title">Length</p>
-                        <p class="cartContact-title">Quantity</p>
-                        <p class="cartContact-title">Total</p>
+                        <p class="cartContact-title cartContact-title--name greekLocalization">Προϊόν</p>
+                        <p class="cartContact-title greekLocalization">Πλάτος</p>
+                        <p class="cartContact-title greekLocalization">Μήκος</p>
+                        <p class="cartContact-title greekLocalization">Ποσότητα</p>
+                        <p class="cartContact-title greekLocalization">Σύνολο</p>
                     </div>
                 </div>
                 <div class="cartContact-subtotal revealByLoad revealByLoad--right">
-                    <p class="cartContact-subtotal__item">Subtotal:</p>
+                    <p class="cartContact-subtotal__item greekLocalization">Τελικό σύνολο:</p>
                     <p class="cartContact-subtotal__price"><span class="cartContact-subtotal__price--inner">0</span>€</p>
                 </div>
             </div>
@@ -122,39 +122,39 @@
 
     <section class="contact" id="contact">
         <div class="contact-container container">
-            <p class="contact-subheading revealByScroll revealByScroll--right">Order checkout</p>
-            <p class="contact-sticker">Fill out this form and our managers will contact you to place your order and answer any raised questions</p>
+            <p class="contact-subheading greekLocalization revealByScroll revealByScroll--right">Oλοκλήρωση παραγγελίας</p>
+            <p class="contact-sticker greekLocalization">Συμπληρώστε αυτή την φόρμα και οι υπεύθυνοι της εταιρίας μας θα επικοινωνήσουν σύντομα μαζί σας για να προωθήσουν την παραγγελία σας και να απαντήσουν σε τυχόν ερωτήσεις.</p>
             <div class="form form--cart">
                 <form class="form-body revealByScrollDown" action="#" id="form">
                     <div class="form-item">
-                        <input class="form-input _req" id="formName" type="text" name="name" placeholder="Enter your name">
-                        <label class="form-label" for="formName">Name*:</label>
+                        <input class="form-input greekLocalization _req" id="formName" type="text" name="name" placeholder="Πληκτρολογήστε το όνομά σας">
+                        <label class="form-label greekLocalization" for="formName">Όνομα*:</label>
                     </div>
                     <div class="form-item">
-                        <input class="form-input _req _email" id="formEmail" type="email" name="email" placeholder="Enter your e-mail">
-                        <label class="form-label" for="formEmail">E-mail*:</label>
+                        <input class="form-input greekLocalization _req _email" id="formEmail" type="email" name="email" placeholder="Εισαγάγετε το e-mail σας">
+                        <label class="form-label greekLocalization" for="formEmail">E-mail*:</label>
                     </div>
                     <div class="form-item">
-                        <input class="form-input _req" id="formPhone" type="tel" name="phone" placeholder="Enter your phone number">
-                        <label class="form-label" for="formPhone">Phone*:</label>
+                        <input class="form-input greekLocalization _req" id="formPhone" type="tel" name="phone" placeholder="Πληκτρολογήστε τον αριθμό τηλεφώνου σας">
+                        <label class="form-label greekLocalization" for="formPhone">Τηλέφωνο*:</label>
                     </div>
                     <div class="form-item">
-                        <input class="form-input" id="formAddress" type="text" name="address" placeholder="Enter your address">
-                        <label class="form-label" for="formAddress">Address:</label>
+                        <input class="form-input greekLocalization" id="formAddress" type="text" name="address" placeholder="Πληκτρολογήστε τη διεύθυνσή σας">
+                        <label class="form-label greekLocalization" for="formAddress">Διεύθυνση:</label>
                     </div>
                     <div class="form-item form-item--wide">
-                        <textarea class="form-input" id="formMessage" name="message" placeholder="Type your message"></textarea>
-                        <label class="form-label" for="formMessage">Message:</label>
+                        <textarea class="form-input greekLocalization" id="formMessage" name="message" placeholder="Πληκτρολογήστε το μήνυμά σας εδώ"></textarea>
+                        <label class="form-label greekLocalization" for="formMessage">Μήνυμα:</label>
                     </div>
                     <div class="form-item form-item--hiden">
                         <input class="form-input" id="formHiddenMessage" name="products" placeholder="Your products will appear here"></input>
                     </div>
                     <div class="form-agreement">
                         <input class="agreement-input _req" id="formAgreement" type="checkbox" name="agreement">
-                        <label class="agreement-label" for="formAgreement"><span>I give my consent to the processing of my personal data in accordance with the <a class="agreement-link" href="./termsConditions.html">Terms & Conditions</a></span></label>
+                        <label class="agreement-label agreement-labelGR greekLocalization" for="formAgreement"><span>Δίνω τη συγκατάθεσή μου για την επεξεργασία των προσωπικών μου δεδομένων σύμφωνα με τους  <a class="agreement-link" href="./termsConditions.html">Όρους & Προϋποθέσεις</a></span></label>
                     </div>
                     <div class="form-button--wrapper">
-                        <button class="form-button" type="submit">Submit</button>
+                        <button class="form-button greekLocalization" type="submit">Υποβολή</button>
                         <div class="loader-container">
                             <div class="loader"></div>
                         </div>
@@ -175,69 +175,69 @@
                         </path>
                     </svg>
                 </div>
-                <p class="contact-modal__heading">Thank you</p>
-                <p class="contact-modal__subheading">for your order!</p>
-                <p class="contact-modal__info">Our managers will contact you for order approval</p>
+                <p class="contact-modal__heading greekLocalization">Σας ευχαριστούμε</p>
+                <p class="contact-modal__subheading greekLocalization">για την παραγγελία!</p>
+                <p class="contact-modal__info contact-modal__infoGR greekLocalization">Οι υπεύθυνοι της εταιρίας μας θε επικοινωνήσουν σύντομα μαζί σας για την έγκριση της παραγγελίας σας.</p>
             </div>
         </div>
     </div>
 
     <footer class="footer">
         <div class="footer-container container">
-            <a class="logo-wrapper" href="../../en.html">
+            <a class="logo-wrapper" href="../../gr.html">
                 <img class="logo" src="../../assets/images/icons/logo.svg" alt="logo">
             </a>
             <div class="footer-content">
                 <nav class="nav">
-                    <a class="nav-item--wrapper" href="../../en.html#about">
-                        <p class="nav-item nav-item--eng">About</p>
+                    <a class="nav-item--wrapper nav-item--greekWrapper" href="../../gr.html#about">
+                        <p class="nav-item nav-item--greek">Σχετικά με εμάς</p>
                     </a>
-                    <a class="nav-item--wrapper" href="../../pages/english/catalog.html">
-                        <p class="nav-item nav-item--eng">Catalog</p>
+                    <a class="nav-item--wrapper nav-item--greekWrapper" href="../../pages/greek/catalog.html">
+                        <p class="nav-item nav-item--greek">Κατάλογος</p>
                     </a>
-                    <a class="nav-item--wrapper" href="../../pages/english/faq.html">
-                        <p class="nav-item nav-item--eng">FAQ</p>
+                    <a class="nav-item--wrapper nav-item--greekWrapper" href="../../pages/greek/faq.html">
+                        <p class="nav-item nav-item--greek">Συχνές ερωτήσεις</p>
                     </a>
-                    <a class="nav-item--wrapper" href="../../en.html#contact">
-                        <p class="nav-item nav-item--eng">Contact</p>
+                    <a class="nav-item--wrapper nav-item--greekWrapper" href="../../gr.html#contact">
+                        <p class="nav-item nav-item--greek">Επικοινωνία</p>
                     </a>
                 </nav>
                 <hr class="footer-separator">
                 <div class="footer-box">
                     <div class="footer-box__item">
-                        <p class="footer-box__item-heading footer-box__item-heading--eng">Address</p>
+                        <p class="footer-box__item-heading greekLocalization">Διεύθυνση</p>
                         <div class="footer-box__item-inner">
                             <div class="footer-box__item-row">
                                 <img class="footer-box__item-icon" src="../../assets/images/icons/location.svg" alt="location icon">
-                                <p class="footer-box__item-info footer-box__item-info--eng">Psiloriti <span class="footer-box__item-info--number">59</span>B Glyfada, Athens</p>
+                                <p class="footer-box__item-info footer-box__item-info--eng greekLocalization">Ψηλορείτη 59B Γλυφάδα, Αθήνα</p>
                             </div>
                         </div>
                     </div>
                     <div class="footer-box__item">
-                        <p class="footer-box__item-heading footer-box__item-heading--eng">Working hours</p>
+                        <p class="footer-box__item-heading greekLocalization">Ώρες εργασίας</p>
                         <div class="footer-box__item-inner">
                             <div class="footer-box__item-row">
-                                <p class="footer-box__item-info footer-box__item-info--eng">Monday - Friday</p>
+                                <p class="footer-box__item-info greekLocalization">Δευτέρα - Παρασκευή</p>
                             </div>
                             <div class="footer-box__item-row">
-                                <p class="footer-box__item-info">from <span class="footer-box__item-info--number">09:00</span> to <span class="footer-box__item-info--number">17:00</span></p>
+                                <p class="footer-box__item-info greekLocalization">από <span class="footer-box__item-info--number">09:00</span> έως <span class="footer-box__item-info--number">17:00</span></p>
                             </div>
                         </div>
                     </div>
                     <div class="footer-box__item">
-                        <p class="footer-box__item-heading footer-box__item-heading--eng">Stay in touch</p>
+                        <p class="footer-box__item-heading footer-box__item-heading--eng greekLocalization">Μείνετε σε επαφή</p>
                         <div class="footer-box__item-inner">
                             <a class="footer-box__item-row clicable-icon--wrapper"  href="tel:+306980736760">
                                 <svg class="footer-box__item-icon clicable-icon" width="18" height="18" viewBox="0 0 18 18" fill="none">
                                     <path d="M7.12721 3.19291C6.89942 2.62343 6.34785 2.25 5.7345 2.25H3.67105C2.88623 2.25 2.25 2.88626 2.25 3.67108C2.25 10.3421 7.65808 15.75 14.3291 15.75C15.1139 15.75 15.75 15.1138 15.75 14.329L15.7499 12.2655C15.7499 11.6522 15.3764 11.1006 14.8069 10.8729L12.8303 10.0822C12.3188 9.87754 11.7364 9.96976 11.3131 10.3225L10.8023 10.748C10.2063 11.2447 9.32998 11.205 8.78141 10.6564L7.34352 9.21863C6.79495 8.67005 6.75542 7.79365 7.25208 7.19766L7.67761 6.68698C8.03033 6.26372 8.12252 5.6812 7.9179 5.16965L7.12721 3.19291Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
-                                <p class="footer-box__item-info--number clicable-text">Mobile: +30 69 80736760</p>
+                                <p class="footer-box__item-info--number clicable-text greekLocalization">Mobile: +30 69 80736760</p>
                             </a>
                             <a class="footer-box__item-row clicable-icon--wrapper"  href="tel:+302130282939">
                                 <svg class="footer-box__item-icon clicable-icon" width="18" height="18" viewBox="0 0 18 18" fill="none">
                                     <path d="M7.12721 3.19291C6.89942 2.62343 6.34785 2.25 5.7345 2.25H3.67105C2.88623 2.25 2.25 2.88626 2.25 3.67108C2.25 10.3421 7.65808 15.75 14.3291 15.75C15.1139 15.75 15.75 15.1138 15.75 14.329L15.7499 12.2655C15.7499 11.6522 15.3764 11.1006 14.8069 10.8729L12.8303 10.0822C12.3188 9.87754 11.7364 9.96976 11.3131 10.3225L10.8023 10.748C10.2063 11.2447 9.32998 11.205 8.78141 10.6564L7.34352 9.21863C6.79495 8.67005 6.75542 7.79365 7.25208 7.19766L7.67761 6.68698C8.03033 6.26372 8.12252 5.6812 7.9179 5.16965L7.12721 3.19291Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
-                                <p class="footer-box__item-info--number clicable-text">Office: +30 21 30282939</p>
+                                <p class="footer-box__item-info--number clicable-text greekLocalization">Office: +30 21 30282939</p>
                             </a>
                             <a class="footer-box__item-row clicable-icon--wrapper" href="mailto:info@grassluxuryturf.com">
                                 <svg class="footer-box__item-icon clicable-icon" width="18" height="18" viewBox="0 0 18 18" fill="none">
@@ -248,7 +248,7 @@
                         </div>
                     </div>
                     <div class="footer-box__item">
-                        <p class="footer-box__item-heading footer-box__item-heading--eng">Our socials</p>
+                        <p class="footer-box__item-heading footer-box__item-heading--eng greekLocalization">Τα social μας</p>
                         <div class="footer-box__item-inner">
                             <div class="footer-box__item-row">
                                 <a href="https://www.facebook.com/profile.php?id=61554992885602" target="_blank" class="footer-box__item-icon--wrapper clicable-icon--wrapper">
@@ -267,10 +267,10 @@
                         </div>
                     </div>
                     <div class="footer-box__item">
-                        <p class="footer-box__item-heading footer-box__item-heading--eng">Legal documentations</p>
+                        <p class="footer-box__item-heading footer-box__item-heading--eng greekLocalization">Γενικές πληροφορίες</p>
                         <div class="footer-box__item-inner">
                             <a class="footer-box__item-row clicable-icon--wrapper" href="./termsConditions.html">
-                                <p class="footer-box__item-info--number clicable-text">Terms & Conditions</p>
+                                <p class="footer-box__item-info--number clicable-text greekLocalization">Όροι χρήσης</p>
                             </a>
                         </div>
                     </div>

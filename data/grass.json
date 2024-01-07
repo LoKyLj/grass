@@ -51,7 +51,7 @@
     {
         "id": 5,
         "name": "Natural 3S 45mm",
-        "price": 33.5,
+        "price": 28.5,
         "img": "products/Natural 3S 45mm/01.webp",
         "img2" : "products/Natural 3S 45mm/02.webp",
         "img3" : "products/Natural 3S 45mm/03.webp",
@@ -62,18 +62,29 @@
 
     {
         "id": 6,
-        "name": "Natural 4S 50mm",
-        "price": 37.6,
-        "img": "products/Natural 4S 50mm/01.webp",
-        "img2" : "products/Natural 4S 50mm/02.webp",
-        "img3" : "products/Natural 4S 50mm/03.webp",
-        "img4" : "products/Natural 4S 50mm/04.webp",
-        "img5" : "products/Natural 4S 50mm/05.webp",
-        "img6" : "products/Natural 4S 50mm/06.webp"
+        "name": "Bella Vista 48mm",
+        "price": 33.5,
+        "img": "products/Bella Vista 48mm/01.webp",
+        "img2" : "products/Bella Vista 48mm/02.webp",
+        "img3" : "products/Bella Vista 48mm/03.webp",
+        "img4" : "products/Bella Vista 48mm/04.webp",
+        "img5" : "products/Bella Vista 48mm/05.webp"
     },
 
     {
         "id": 7,
+        "name": "New 4S 50mm",
+        "price": 33.5,
+        "img": "products/New 4S 50mm/01.webp",
+        "img2" : "products/New 4S 50mm/02.webp",
+        "img3" : "products/New 4S 50mm/03.webp",
+        "img4" : "products/New 4S 50mm/04.webp",
+        "img5" : "products/New 4S 50mm/05.webp",
+        "img6" : "products/New 4S 50mm/06.webp"
+    },
+
+    {
+        "id": 8,
         "name": "Katana 55mm",
         "price": 37.6,
         "img": "products/Katana 55mm/01.webp",
@@ -82,16 +93,5 @@
         "img4" : "products/Katana 55mm/04.webp",
         "img5" : "products/Katana 55mm/05.webp",
         "img6" : "products/Katana 55mm/06.webp"
-    },
-
-    {
-        "id": 8,
-        "name": "Bella Vista 48mm",
-        "price": 33.5,
-        "img": "products/Bella Vista 48mm/01.webp",
-        "img2" : "products/Bella Vista 48mm/02.webp",
-        "img3" : "products/Bella Vista 48mm/03.webp",
-        "img4" : "products/Bella Vista 48mm/04.webp",
-        "img5" : "products/Bella Vista 48mm/05.webp"
     }
 ]

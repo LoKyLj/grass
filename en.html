@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv='X-UA-Compatible' content='IE=Edge' />
+    <title>Grass Luxury Turf</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png">
+    <link rel="manifest" href="./favicons/site.webmanifest">
+    <meta name="apple-mobile-web-app-title" content="Grass Luxury Turf">
+    <meta name="application-name" content="Grass Luxury Turf">
+    <meta name="msapplication-TileColor" content="#00a300">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <script src="./assets/scripts/animations.js" defer></script>
+    <script src="./assets/scripts/products.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-container container">
+            <a class="logo-wrapper" href="./en.html">
+                <img class="logo" src="./assets/images/icons/logo.svg" alt="logo">
+            </a>
+            <nav class="nav">
+                <a class="nav-item--wrapper" href="#about">
+                    <p class="nav-item nav-item--eng">About</p>
+                </a>
+                <a class="nav-item--wrapper" href="./pages/english/catalog.html">
+                    <p class="nav-item nav-item--eng">Catalog</p>
+                </a>
+                <a class="nav-item--wrapper" href="./pages/english/faq.html">
+                    <p class="nav-item nav-item--eng">FAQ</p>
+                </a>
+                <a class="nav-item--wrapper" href="#contact">
+                    <p class="nav-item nav-item--eng">Contact</p>
+                </a>
+            </nav>
+            <div class="profile">
+                <div class="language">
+					<a class="language-item--wrapper" href="en.html">
+                        <p class="language-item  language-item--checked">EN</p>
+                    </a>
+                    <hr class="language-separator">
+                    <a class="language-item--wrapper" href="gr.html">
+                        <p class="language-item">GR</p>
+                    </a>
+				</div>
+                <a class="cart-wrapper clicable-icon--wrapper" href="./pages/english/cart.html">
+                    <svg class="cart-icon clicable-icon" width="24" height="25" viewBox="0 0 24 25">
+                        <path d="M7.5 8.17001V7.20001C7.5 4.95001 9.31 2.74001 11.56 2.53001C14.24 2.27001 16.5 4.38001 16.5 7.01001V8.39001" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9.00001 22.5H15C19.02 22.5 19.74 20.89 19.95 18.93L20.7 12.93C20.97 10.49 20.27 8.5 16 8.5H8.00001C3.73001 8.5 3.03001 10.49 3.30001 12.93L4.05001 18.93C4.26001 20.89 4.98001 22.5 9.00001 22.5Z" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M15.4955 12.5H15.5045" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M8.49451 12.5H8.50349" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <p class="cart-count">0</p>
+                </a>
+                <div class="burger">
+                    <input id="menuToggle" type="checkbox" onchange="burgerLogic()">
+                    <label class="menu-button" for="menuToggle"><span></span></label>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="sidebar sidebar--hiden">
+        <div class="sidebar-container container">
+            <label class="menu-button--close" for="menuToggle"><span></span></label>
+            <div class="language">
+                <a class="language-item--wrapper" href="en.html">
+                    <p class="language-item  language-item--checked">EN</p>
+                </a>
+                <hr class="language-separator">
+                <a class="language-item--wrapper" href="gr.html">
+                    <p class="language-item">GR</p>
+                </a>
+            </div>
+            <nav class="nav">
+                <a class="nav-item--wrapper" href="#about" onclick="uncheckBurgerInput()">
+                    <p class="nav-item nav-item--eng">About</p>
+                </a>
+                <a class="nav-item--wrapper" href="./pages/english/catalog.html">
+                    <p class="nav-item nav-item--eng">Catalog</p>
+                </a>
+                <a class="nav-item--wrapper" href="./pages/english/faq.html">
+                    <p class="nav-item nav-item--eng">FAQ</p>
+                </a>
+                <a class="nav-item--wrapper" href="#contact" onclick="uncheckBurgerInput()">
+                    <p class="nav-item nav-item--eng">Contact</p>
+                </a>
+            </nav>
+        </div>
+    </div>
+
+    <section class="hero">
+        <div class="hero-video">
+            <video class="hero-video__media" src="./assets/images/video.mp4" video autoplay loop muted playsinline webkit-playinginline></video>
+        </div>
+        <div class="hero-container container">
+            <h1 class="hero-heading hero-heading--eng"><span class="revealByLoad revealByLoad--left">INTRODUCING</span><span class="revealByLoad revealByLoad--right">GRASS LUXURY</span><span class="revealByLoad revealByLoad--left">TURF</span></h1>
+            <p class="hero-subheading hero-subheading--eng revealByLoad revealByLoad--right">Quality Products at Affordable Prices</p>
+        </div>
+    </section>
+
+    <section class="intro">
+        <div class="intro-container container">
+            <h2 class="intro-heading intro-heading--eng revealByScroll revealByScroll--right">Welcome to Grass Luxury Turf</h2>
+            <p class="intro-subheading intro-subheading--eng revealByScroll revealByScroll--left">where the lush green dream of a perfect landscape becomes a reality!</p>
+            <p class="intro-item intro-item--left intro-item--eng revealByScroll revealByScroll--left">Established with a vision to redefine outdoor spaces, our artificial grass e-shop stands as a testament to the seamless blend of innovation and passion for transforming <span class="intro-item--marked">landscapes.</span>
+                <br><br> We are thrilled to bring you a wide range of <span class="intro-item--marked">premium-quality</span> synthetic turf products that will transform your outdoor space into a stunning oasis. Whether you're looking to enhance your residential garden, create a kids and pet-friendly area, or upgrade your commercial landscape, we have the perfect solution for you.</p>
+            <p class="intro-item intro-item--right intro-item--eng revealByScroll revealByScroll--right">Explore our extensive collection, carefully curated to provide durability, aesthetics, and low maintenance. Our dedicated team is here to assist you every step of the way, ensuring <span class="intro-item--marked">a smooth and enjoyable shopping experience.</span> Get ready to elevate your outdoor living with our exceptional artificial grass products.
+                <br><br>Start browsing now out collection, and let us help you bring your <span class="intro-item--marked">dream landscape to life!</span> Our carefully curated collection features the finest artificial grass options, meticulously crafted to replicate <span class="intro-item--marked">the look and feel of natural grass.</span> With our products, you can enjoy the lush greenery without the hassle of mowing, watering, or fertilizing.</p>
+        </div>
+        <div class="intro-img--wrapper revealByScrollDown">
+            <img class="intro-img" src="./assets/images/girl-with-heaphones.webp" alt="Girl with headphones">
+        </div>
+    </section>
+
+    <section class="about"> 
+        <div class="about-container container" id="about">
+            <h2 class="about-heading about-heading--eng revealByScroll revealByScroll--right">Who we are</h2>
+            <div class="about-items">
+                <div class="about-item about-item--first revealByScroll revealByScroll--left">
+                    <p class="about-text about-text--eng">Grass Luxury Turf was founded on the belief that every outdoor area deserves the touch of nature without the hassle of maintenance. A team of professionals deeply committed to the art of landscaping.</p>
+                    <svg class="about-item--number" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62 104" fill="none">
+                        <path d="M43.312 91.0507L37.3047 103.239L-16.8331 76.5568L-10.8259 64.3682L10.588 74.9223L39.8735 15.503C38.368 16.2759 36.3097 16.9026 33.6987 17.3832C31.1377 17.7621 28.3505 17.9665 25.3369 17.9961C22.3234 18.0258 19.4099 17.8523 16.5966 17.4757C13.8334 16.9975 11.4464 16.2629 9.43572 15.272L15.7434 2.47394C17.9551 3.56403 20.6683 4.14379 23.8829 4.21322C27.2482 4.23063 30.613 3.99535 33.9774 3.50738C37.3418 3.0194 40.2539 2.4348 42.7139 1.75357C45.2745 1.12189 46.8557 0.575658 47.4577 0.114873L61.0299 6.80407L24.1601 81.6115L43.312 91.0507Z" fill="white"/>
+                    </svg>
+                </div>
+                <div class="about-item about-item--second revealByScroll revealByScroll--right">
+                    <p class="about-text about-text--eng">We take pride in offering the best artificial grass products in the market, meticulously selected and certified to ensure durability, authenticity, and an incredibly lifelike appearance. From residential lawns to commercial spaces, our extensive range is designed to meet the diverse requirements of our clients.</p>
+                    <svg class="about-item--number" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 77" fill="none">
+                        <path d="M17.8062 76.3819C16.8053 73.3623 16.092 70.4568 15.6662 67.6655C15.3154 64.8493 15.3771 62.0221 15.8513 59.1839C16.4005 56.3207 17.5121 53.3969 19.1863 50.4122C20.8354 47.3521 23.222 44.1313 26.346 40.7499C28.1704 38.7209 30.0199 36.7674 31.8943 34.8893C33.8438 32.9864 35.5808 31.0701 37.1052 29.1405C38.7046 27.1861 39.8541 25.2551 40.5535 23.3476C41.228 21.3646 41.2274 19.3539 40.5518 17.3157C39.9763 15.5794 38.9009 14.0926 37.3256 12.8553C35.8002 11.5176 33.8625 10.6937 31.5124 10.3834C29.2123 9.9728 26.5999 10.2522 23.6751 11.2216C21.4253 11.9673 19.4631 12.9528 17.7885 14.1781C16.1888 15.3786 14.8017 16.7181 13.6271 18.1966C12.5025 19.5748 11.5529 20.9787 10.7783 22.4084C10.0537 23.7378 9.45405 24.942 8.97936 26.0209L0.465465 21.0509C0.840215 20.1727 1.55236 18.9312 2.6019 17.3266C3.62642 15.6465 5.02591 13.8421 6.80035 11.9134C8.5748 9.98469 10.7493 8.13288 13.3238 6.35794C15.9482 4.48265 18.9853 2.97331 22.435 1.82992C27.0845 0.288822 31.3344 -0.19817 35.1845 0.368945C39.0847 0.835709 42.3975 2.16739 45.1231 4.36399C47.8237 6.4851 49.737 9.2442 50.863 12.6413C51.8388 15.5854 52.0521 18.3634 51.5028 20.9752C51.0286 23.5621 50.0918 26.0091 48.6924 28.3162C47.3681 30.5984 45.8562 32.6914 44.1567 34.5952C42.5073 36.3987 40.9952 37.9891 39.6206 39.3663C36.7964 42.1456 34.4096 44.6124 32.4602 46.7666C30.5108 48.9209 28.9739 50.9384 27.8494 52.8192C26.775 54.5997 25.988 56.3686 25.4885 58.1261C25.0639 59.8587 24.952 61.781 25.1526 63.8929L64.8613 50.7314L67.8639 59.7903L17.8062 76.3819Z" fill="white"/>
+                    </svg>
+                </div>
+                <div class="about-item about-item--third revealByScroll revealByScroll--right">
+                    <p class="about-text about-text--eng">We are driven by a shared enthusiasm for creating stunning outdoor environments and embarked on a mission to curate the finest artificial grass solutions for homes, businesses, and public spaces.</p>
+                    <svg class="about-item--number" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47 57" fill="none">
+                        <path d="M28.8066 30.6649C30.6024 32.1365 31.8793 33.8675 32.6372 35.8579C33.4221 37.8017 33.6957 39.8852 33.458 42.1083C33.2473 44.2848 32.5099 46.4678 31.2458 48.6573C29.6051 51.4989 27.4741 53.5916 24.8527 54.9353C22.2505 56.3523 19.3674 56.9238 16.2035 56.6499C13.0126 56.4226 9.7561 55.3499 6.43399 53.4319C2.92731 51.4073 0.225888 48.947 -1.67029 46.051C-3.54721 43.2282 -4.52464 40.1793 -4.60256 36.9045L1.86114 35.1393C1.84654 37.6154 2.41624 39.9319 3.57022 42.0889C4.77034 44.2725 6.80076 46.1901 9.66147 47.8417C12.8452 49.6798 15.7671 50.373 18.4272 49.9212C21.1066 49.5427 23.2801 47.9092 24.9476 45.021C26.642 42.0862 26.9948 39.1842 26.0059 36.3151C25.09 33.426 22.7634 30.9026 19.026 28.7448L17.2265 27.7059L20.212 22.535L22.1499 23.6538C25.472 25.5719 28.4804 26.2218 31.1751 25.6036C33.9159 25.0121 35.9856 23.5051 37.3842 21.0827C38.3524 19.4057 38.7536 17.805 38.5878 16.2807C38.4221 14.7564 37.818 13.3517 36.7758 12.0667C35.7605 10.7352 34.3762 9.56327 32.6228 8.55098C30.0851 7.08582 27.5245 6.35283 24.9411 6.35202C22.4308 6.33126 20.0802 6.9928 17.8893 8.33665L16.4112 2.26577C18.1562 1.1614 20.1262 0.46645 22.3212 0.180929C24.5624 -0.0779553 26.8863 0.052573 29.293 0.572513C31.7459 1.11909 34.1258 2.05836 36.4329 3.39032C39.3397 5.06859 41.6047 7.0595 43.2277 9.36305C44.8969 11.6932 45.8164 14.1496 45.9864 16.7323C46.1564 19.3149 45.5152 21.864 44.0628 24.3796C43.0139 26.1964 41.6727 27.7203 40.0392 28.9511C38.4327 30.1354 36.6376 30.9003 34.654 31.2458C32.7435 31.5714 30.7944 31.3777 28.8066 30.6649Z" fill="black"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="itcss__outer">
+            <div class="itcss">
+                <div class="itcss__wrapper">
+                    <div class="itcss__items">
+                        <div class="itcss__item">
+                            <img class="itcss__image" src="./assets/images/CAROUSEL1.png" alt="carousel1">
+                        </div>
+                        <div class="itcss__item">
+                            <img class="itcss__image" src="./assets/images/CAROUSEL2.png" alt="carousel2">
+                        </div>
+                        <div class="itcss__item">
+                            <img class="itcss__image" src="./assets/images/CAROUSEL3.png" alt="carousel3">
+                        </div>
+                        <div class="itcss__item">
+                            <img class="itcss__image" src="./assets/images/CAROUSEL4.png" alt="carousel4">
+                        </div>
+                    </div>
+                </div>
+                <button class="itcss__btn itcss__btn_prev" role="button" data-slide="prev"></button>
+                <button class="itcss__btn itcss__btn_next" role="button" data-slide="next"></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="miniShop">
+        <div class="miniShop-container container">
+            <h2 class="miniShop-heading miniShop-heading--eng revealByScroll revealByScroll--right">Our products</h2>
+            <div class="miniShop-list">
+            </div>
+            <a class="miniShop-link revealByScrollDown" href="./pages/english/catalog.html">Catalog</a>
+        </div>        
+    </section>
+
+    <section class="features">
+        <div class="features-container container">
+            <div class="features-card features-card--wide features-card--heading revealByScrollDown">
+                <h2 class="features-card__heading"><span class="features-card__heading--marked">Why</span> artificial turf?</h2>
+            </div>
+            <div class="features-card features-card--tiny features-card--green features-card--1 revealByScrollDown">
+                <p class="features-card__title features-card__title--1">Elastic and flexible</p>
+                <p class="features-card__info">The elastic and flexible structure of the grass instantly regains its shape after pressure, providing a durable and resilient soft surface</p>
+            </div>
+            <div class="features-card features-card--medium features-card--image features-card--2 revealByScrollDown">
+                <p class="features-card__title features-card__title--2">UV protection</p>
+                <p class="features-card__info">A high degree of protection against UV rays guarantees durability and color fastness even under intensive exposure to sunlight</p>
+            </div>
+            <div class="features-card features-card--wide features-card--image features-card--3 revealByScrollDown">
+                <p class="features-card__title features-card__title--3">Kids friendly</p>
+                <p class="features-card__info">A safe and well-maintained place to play and relax. Reduce the risk of injury and the grass structure creates a pleasant feeling underfoot</p>
+            </div>
+            <div class="features-card features-card--medium features-card--transparent features-card--4 revealByScrollDown">
+                <p class="features-card__title features-card__title--4">Weather resistant</p>
+                <p class="features-card__info">Resistant from high temperatures to heavy rains. Grass retains its shape and color, providing consistent beauty in all seasons</p>
+            </div>
+            <div class="features-card features-card--tiny features-card--green features-card--5 revealByScrollDown">
+                <p class="features-card__title features-card__title--5">Fire resistant</p>
+                <p class="features-card__info">High resistance to fire, which provides an extra layer of protection in case of unexpected situations</p>
+            </div>
+            <div class="features-card features-card--tiny features-card--transparent features-card--6 revealByScrollDown">
+                <p class="features-card__title features-card__title--6">Maintained appearance</p>
+                <p class="features-card__info">Specially developed technology keeps alive pile height and shape while preserving a natural and attractive look.</p>
+            </div>
+            <div class="features-card features-card--medium features-card--green features-card--7 revealByScrollDown">
+                <p class="features-card__title features-card__title--7">Minimal maintenance</p>
+                <p class="features-card__info">Almost zero maintenance is required. Forget about watering and lawn mowing</p>
+            </div>
+            <div class="features-card features-card--wide features-card--image features-card--8 revealByScrollDown">
+                <p class="features-card__title features-card__title--8">Pet friendly</p>
+                <p class="features-card__info">Created with consideration of your pet’s care, offering a secure and cozy surface</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="perfectFor">
+        <div class="perfectFor-container container">
+            <h3 class="perfectFor-heading revealByScroll revealByScroll--right">Perfect for</h3>
+            <div class="perfectFor-item--container">
+                <div class="perfectFor-item revealByScrollDown">
+                    <img class="perfectFor-item__img" src="./assets/images/perfect for/terraces.svg" alt="Terrace">
+                    <p class="perfectFor-item__name">Terraces</p>
+                </div>
+                <div class="perfectFor-item revealByScrollDown">
+                    <img class="perfectFor-item__img" src="./assets/images/perfect for/gardens.svg" alt="Garden">
+                    <p class="perfectFor-item__name">Private gardens</p>
+                </div>
+                <div class="perfectFor-item revealByScrollDown">
+                    <img class="perfectFor-item__img" src="./assets/images/perfect for/companies.svg" alt="Company">
+                    <p class="perfectFor-item__name">Company areas</p>
+                </div>
+                <div class="perfectFor-item revealByScrollDown">
+                    <img class="perfectFor-item__img" src="./assets/images/perfect for/sports.svg" alt="Sports">
+                    <p class="perfectFor-item__name">Sports</p>
+                </div>
+                <div class="perfectFor-item revealByScrollDown">
+                    <img class="perfectFor-item__img" src="./assets/images/perfect for/playgrounds.svg" alt="Playground">
+                    <p class="perfectFor-item__name">Playground</p>
+                </div>
+                <div class="perfectFor-item revealByScrollDown">
+                    <img class="perfectFor-item__img" src="./assets/images/perfect for/shopStands.svg" alt="Stands">
+                    <p class="perfectFor-item__name">Stands & Fairs</p>
+                </div>
+                <div class="perfectFor-item revealByScrollDown">
+                    <img class="perfectFor-item__img" src="./assets/images/perfect for/parks.svg" alt="Parks">
+                    <p class="perfectFor-item__name">Urban areas</p>
+                </div>
+                <div class="perfectFor-item revealByScrollDown">
+                    <img class="perfectFor-item__img" src="./assets/images/perfect for/pets.svg" alt="Pets">
+                    <p class="perfectFor-item__name">Pets</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="contact-container container">
+            <h2 class="contact-heading revealByScroll revealByScroll--right">Get in touch!</h2>
+            <p class="contact-subheading revealByScroll revealByScroll--left">We are always here to help you if you have any questions!</p>
+            <div class="form revealByScrollDown">
+                <form class="form-body" action="#" id="form">
+                    <div class="form-item">
+                        <input class="form-input _req" id="formName" type="text" name="name" placeholder="Enter your name">
+                        <label class="form-label" for="formName">Name*:</label>
+                    </div>
+                    <div class="form-item">
+                        <input class="form-input _req _email" id="formEmail" type="email" name="email" placeholder="Enter your e-mail">
+                        <label class="form-label" for="formEmail">E-mail*:</label>
+                    </div>
+                    <div class="form-item">
+                        <input class="form-input _req" id="formPhone" type="tel" name="phone" placeholder="Enter your phone number">
+                        <label class="form-label" for="formPhone">Phone*:</label>
+                    </div>
+                    <div class="form-item">
+                        <input class="form-input" id="formAddress" type="text" name="address" placeholder="Enter your address">
+                        <label class="form-label" for="formAddress">Address:</label>
+                    </div>
+                    <div class="form-item form-item--wide">
+                        <textarea class="form-input" id="formMessage" name="message" placeholder="Type your message"></textarea>
+                        <label class="form-label" for="formMessage">Message:</label>
+                    </div>
+                    <div class="form-agreement">
+                        <input class="agreement-input _req" id="formAgreement" type="checkbox" name="agreement">
+                        <label class="agreement-label" for="formAgreement"><span>I give my consent to the processing of my personal data in accordance with the <a class="agreement-link" href="./pages/english/termsConditions.html">Terms & Conditions</a></span></label>
+                    </div>
+                    <div class="form-button--wrapper">
+                        <button class="form-button" type="submit">Submit</button>
+                        <div class="loader-container">
+                            <div class="loader"></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <iframe class="map revealByScrollDown" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3148.6399446334194!2d23.775430600000004!3d37.892102200000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a195efde5e5cb3%3A0x48b0a071d28b832a!2sPsilorit%CE%B9%2059%2C%20Glifada%20165%2062%2C%20Greece!5e0!3m2!1sen!2sby!4v1704144402175!5m2!1sen!2sby" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <div class="contact-modal">
+        <div class="contact-modal--inner">
+			<div class="closeButton-box"></div>
+            <div class="contact-modal__content">    
+                <div class="closeButton">
+                    <svg class="closeButton-pic" width="16" height="16" fill="gray" viewBox="0 0 16 16">
+                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z">
+                        </path>
+                    </svg>
+                </div>
+                <p class="contact-modal__heading">Thank you</p>
+                <p class="contact-modal__info">Our managers will contact you soon</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container container">
+            <a class="logo-wrapper" href="./en.html">
+                <img class="logo" src="./assets/images/icons/logo.svg" alt="logo">
+            </a>
+            <div class="footer-content">
+                <nav class="nav">
+                    <a class="nav-item--wrapper" href="#about">
+                        <p class="nav-item nav-item--eng">About</p>
+                    </a>
+                    <a class="nav-item--wrapper" href="./pages/english/catalog.html">
+                        <p class="nav-item nav-item--eng">Catalog</p>
+                    </a>
+                    <a class="nav-item--wrapper" href="./pages/english/faq.html">
+                        <p class="nav-item nav-item--eng">FAQ</p>
+                    </a>
+                    <a class="nav-item--wrapper" href="#contact">
+                        <p class="nav-item nav-item--eng">Contact</p>
+                    </a>
+                </nav>
+                <hr class="footer-separator">
+                <div class="footer-box">
+                    <div class="footer-box__item">
+                        <p class="footer-box__item-heading">Address</p>
+                        <div class="footer-box__item-inner">
+                            <div class="footer-box__item-row">
+                                <img class="footer-box__item-icon" src="./assets/images/icons/location.svg" alt="location icon">
+                                <p class="footer-box__item-info footer-box__item-info--eng">Psiloriti <span class="footer-box__item-info--number">59</span>B Glyfada, Athens</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-box__item">
+                        <p class="footer-box__item-heading">Working hours</p>
+                        <div class="footer-box__item-inner">
+                            <div class="footer-box__item-row">
+                                <p class="footer-box__item-info">Monday - Friday</p>
+                            </div>
+                            <div class="footer-box__item-row">
+                                <p class="footer-box__item-info">from <span class="footer-box__item-info--number">09:00</span> to <span class="footer-box__item-info--number">17:00</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-box__item">
+                        <p class="footer-box__item-heading footer-box__item-heading--eng">Stay in touch</p>
+                        <div class="footer-box__item-inner">
+                            <a class="footer-box__item-row clicable-icon--wrapper"  href="tel:+306980736760">
+                                <svg class="footer-box__item-icon clicable-icon" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                    <path d="M7.12721 3.19291C6.89942 2.62343 6.34785 2.25 5.7345 2.25H3.67105C2.88623 2.25 2.25 2.88626 2.25 3.67108C2.25 10.3421 7.65808 15.75 14.3291 15.75C15.1139 15.75 15.75 15.1138 15.75 14.329L15.7499 12.2655C15.7499 11.6522 15.3764 11.1006 14.8069 10.8729L12.8303 10.0822C12.3188 9.87754 11.7364 9.96976 11.3131 10.3225L10.8023 10.748C10.2063 11.2447 9.32998 11.205 8.78141 10.6564L7.34352 9.21863C6.79495 8.67005 6.75542 7.79365 7.25208 7.19766L7.67761 6.68698C8.03033 6.26372 8.12252 5.6812 7.9179 5.16965L7.12721 3.19291Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <p class="footer-box__item-info--number clicable-text">Mobile: +30 69 80736760</p>
+                            </a>
+                            <a class="footer-box__item-row clicable-icon--wrapper"  href="tel:+302130282939">
+                                <svg class="footer-box__item-icon clicable-icon" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                    <path d="M7.12721 3.19291C6.89942 2.62343 6.34785 2.25 5.7345 2.25H3.67105C2.88623 2.25 2.25 2.88626 2.25 3.67108C2.25 10.3421 7.65808 15.75 14.3291 15.75C15.1139 15.75 15.75 15.1138 15.75 14.329L15.7499 12.2655C15.7499 11.6522 15.3764 11.1006 14.8069 10.8729L12.8303 10.0822C12.3188 9.87754 11.7364 9.96976 11.3131 10.3225L10.8023 10.748C10.2063 11.2447 9.32998 11.205 8.78141 10.6564L7.34352 9.21863C6.79495 8.67005 6.75542 7.79365 7.25208 7.19766L7.67761 6.68698C8.03033 6.26372 8.12252 5.6812 7.9179 5.16965L7.12721 3.19291Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <p class="footer-box__item-info--number clicable-text">Office: +30 21 30282939</p>
+                            </a>
+                            <a class="footer-box__item-row clicable-icon--wrapper" href="mailto:info@grassluxuryturf.com">
+                                <svg class="footer-box__item-icon clicable-icon" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                    <path d="M3 4.5L9.17143 9L15 4.5M15.75 6.14996V11.85C15.75 12.69 15.7502 13.1102 15.5867 13.431C15.4429 13.7133 15.2131 13.9427 14.9308 14.0865C14.61 14.25 14.1902 14.25 13.3501 14.25H4.65015C3.81007 14.25 3.38972 14.25 3.06885 14.0865C2.7866 13.9427 2.5573 13.7133 2.41349 13.431C2.25 13.1102 2.25 12.69 2.25 11.85V6.14996C2.25 5.30988 2.25 4.8899 2.41349 4.56903C2.5573 4.28679 2.7866 4.0573 3.06885 3.91349C3.38972 3.75 3.81007 3.75 4.65015 3.75H13.3501C14.1902 3.75 14.61 3.75 14.9308 3.91349C15.2131 4.0573 15.4429 4.28679 15.5867 4.56903C15.7502 4.8899 15.75 5.30988 15.75 6.14996Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <p class="footer-box__item-info--number clicable-text">info@grassluxuryturf.com</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer-box__item">
+                        <p class="footer-box__item-heading footer-box__item-heading--eng">Our socials</p>
+                        <div class="footer-box__item-inner">
+                            <div class="footer-box__item-row">
+                                <a href="https://www.facebook.com/profile.php?id=61554992885602" target="_blank" class="footer-box__item-icon--wrapper clicable-icon--wrapper">
+                                    <svg class="footer-box__item-icon clicable-icon" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                        <path class="clicable-icon--inner" d="M18 9C18 4.02943 13.9706 0 9 0C4.02943 0 0 4.02943 0 9C0 13.4921 3.29115 17.2155 7.59375 17.8907V11.6016H5.30859V9H7.59375V7.01719C7.59375 4.76156 8.93742 3.51562 10.9932 3.51562C11.9776 3.51562 13.0078 3.69141 13.0078 3.69141V5.90625H11.873C10.755 5.90625 10.4062 6.60006 10.4062 7.3125V9H12.9023L12.5033 11.6016H10.4062V17.8907C14.7088 17.2155 18 13.4921 18 9Z" stroke-width="0" fill="white"/>
+                                    </svg>
+                                </a>
+                                <a href="https://www.instagram.com/grass_luxury_turf/" target="_blank" class="footer-box__item-icon--wrapper clicable-icon--wrapper">
+                                    <svg class="footer-box__item-icon clicable-icon" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                        <path class="clicable-icon--inner" d="M9 1.6207C11.4047 1.6207 11.6895 1.63125 12.6352 1.67344C13.5141 1.71211 13.9887 1.85977 14.3051 1.98281C14.7234 2.14453 15.0258 2.34141 15.3387 2.6543C15.6551 2.9707 15.8484 3.26953 16.0102 3.68789C16.1332 4.0043 16.2809 4.48242 16.3195 5.35781C16.3617 6.30703 16.3723 6.5918 16.3723 8.99297C16.3723 11.3977 16.3617 11.6824 16.3195 12.6281C16.2809 13.507 16.1332 13.9816 16.0102 14.298C15.8484 14.7164 15.6516 15.0187 15.3387 15.3316C15.0223 15.648 14.7234 15.8414 14.3051 16.0031C13.9887 16.1262 13.5105 16.2738 12.6352 16.3125C11.6859 16.3547 11.4012 16.3652 9 16.3652C6.59531 16.3652 6.31055 16.3547 5.36484 16.3125C4.48594 16.2738 4.01133 16.1262 3.69492 16.0031C3.27656 15.8414 2.97422 15.6445 2.66133 15.3316C2.34492 15.0152 2.15156 14.7164 1.98984 14.298C1.8668 13.9816 1.71914 13.5035 1.68047 12.6281C1.63828 11.6789 1.62773 11.3941 1.62773 8.99297C1.62773 6.58828 1.63828 6.30351 1.68047 5.35781C1.71914 4.47891 1.8668 4.0043 1.98984 3.68789C2.15156 3.26953 2.34844 2.96719 2.66133 2.6543C2.97773 2.33789 3.27656 2.14453 3.69492 1.98281C4.01133 1.85977 4.48945 1.71211 5.36484 1.67344C6.31055 1.63125 6.59531 1.6207 9 1.6207ZM9 0C6.55664 0 6.25078 0.0105469 5.29102 0.0527344C4.33477 0.0949219 3.67734 0.249609 3.10781 0.471094C2.51367 0.703125 2.01094 1.00898 1.51172 1.51172C1.00898 2.01094 0.703125 2.51367 0.471094 3.1043C0.249609 3.67734 0.0949219 4.33125 0.0527344 5.2875C0.0105469 6.25078 0 6.55664 0 9C0 11.4434 0.0105469 11.7492 0.0527344 12.709C0.0949219 13.6652 0.249609 14.3227 0.471094 14.8922C0.703125 15.4863 1.00898 15.9891 1.51172 16.4883C2.01094 16.9875 2.51367 17.2969 3.1043 17.5254C3.67734 17.7469 4.33125 17.9016 5.2875 17.9437C6.24727 17.9859 6.55312 17.9965 8.99648 17.9965C11.4398 17.9965 11.7457 17.9859 12.7055 17.9437C13.6617 17.9016 14.3191 17.7469 14.8887 17.5254C15.4793 17.2969 15.982 16.9875 16.4813 16.4883C16.9805 15.9891 17.2898 15.4863 17.5184 14.8957C17.7398 14.3227 17.8945 13.6687 17.9367 12.7125C17.9789 11.7527 17.9895 11.4469 17.9895 9.00352C17.9895 6.56016 17.9789 6.2543 17.9367 5.29453C17.8945 4.33828 17.7398 3.68086 17.5184 3.11133C17.2969 2.51367 16.991 2.01094 16.4883 1.51172C15.9891 1.0125 15.4863 0.703125 14.8957 0.474609C14.3227 0.253125 13.6688 0.0984375 12.7125 0.05625C11.7492 0.0105469 11.4434 0 9 0Z" stroke-width="0" fill="white"/>
+                                        <path class="clicable-icon--inner" d="M9 4.37695C6.44766 4.37695 4.37695 6.44766 4.37695 9C4.37695 11.5523 6.44766 13.623 9 13.623C11.5523 13.623 13.623 11.5523 13.623 9C13.623 6.44766 11.5523 4.37695 9 4.37695ZM9 11.9988C7.34414 11.9988 6.00117 10.6559 6.00117 9C6.00117 7.34414 7.34414 6.00117 9 6.00117C10.6559 6.00117 11.9988 7.34414 11.9988 9C11.9988 10.6559 10.6559 11.9988 9 11.9988Z" stroke-width="0" fill="white"/>
+                                        <path class="clicable-icon--inner" d="M14.8852 4.19404C14.8852 4.7917 14.4 5.27334 13.8059 5.27334C13.2082 5.27334 12.7266 4.78819 12.7266 4.19404C12.7266 3.59639 13.2117 3.11475 13.8059 3.11475C14.4 3.11475 14.8852 3.5999 14.8852 4.19404Z" stroke-width="0" fill="white"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-box__item">
+                        <p class="footer-box__item-heading footer-box__item-heading--eng">Legal documentations</p>
+                        <div class="footer-box__item-inner">
+                            <a class="footer-box__item-row clicable-icon--wrapper" href="./pages/english/termsConditions.html">
+                                <p class="footer-box__item-info--number clicable-text">Terms & Conditions</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="JDDesign" href="https://www.instagram.com/jd_agency_design/" target="_blank">Website by: JD Agency</a>
+    </footer>
+
+    <script src="./assets/scripts/header.js"></script>
+    <script src="./assets/scripts/slider.js"></script>
+    <script src="./assets/scripts/contactForm.js"></script>
+</body>
+</html>

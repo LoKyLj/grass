@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grass Luxury Turf</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="../../favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../favicons/favicon-16x16.png">
+    <link rel="manifest" href="../../favicons/site.webmanifest">
+    <meta name="apple-mobile-web-app-title" content="Grass Luxury Turf">
+    <meta name="application-name" content="Grass Luxury Turf">
+    <meta name="msapplication-TileColor" content="#00a300">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="../../assets/styles/style.css">
+    <script src="../../assets/scripts/animations.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-container container">
+            <a class="logo-wrapper" href="../../gr.html">
+                <img class="logo" src="../../assets/images/icons/logo.svg" alt="logo">
+            </a>
+            <nav class="nav">
+                <a class="nav-item--wrapper nav-item--greekWrapper" href="../../gr.html#about">
+                    <p class="nav-item nav-item--greek">Σχετικά με εμάς</p>
+                </a>
+                <a class="nav-item--wrapper nav-item--greekWrapper" href="../../pages/greek/catalog.html">
+                    <p class="nav-item nav-item--greek">Κατάλογος</p>
+                </a>
+                <a class="nav-item--wrapper nav-item--greekWrapper" href="../../pages/greek/faq.html">
+                    <p class="nav-item nav-item--greek">Συχνές ερωτήσεις</p>
+                </a>
+                <a class="nav-item--wrapper nav-item--greekWrapper" href="../../gr.html#contact">
+                    <p class="nav-item nav-item--greek">Επικοινωνία</p>
+                </a>
+            </nav>
+            <div class="profile">
+                <div class="language">
+					<a class="language-item--wrapper" href="../../en.html">
+                        <p class="language-item">EN</p>
+                    </a>
+                    <hr class="language-separator">
+                    <a class="language-item--wrapper" href="../../gr.html">
+                        <p class="language-item language-item--checked">GR</p>
+                    </a>
+				</div>
+                <a class="cart-wrapper clicable-icon--wrapper" href="./cart.html">
+                    <svg class="cart-icon clicable-icon" width="24" height="25" viewBox="0 0 24 25">
+                        <path d="M7.5 8.17001V7.20001C7.5 4.95001 9.31 2.74001 11.56 2.53001C14.24 2.27001 16.5 4.38001 16.5 7.01001V8.39001" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9.00001 22.5H15C19.02 22.5 19.74 20.89 19.95 18.93L20.7 12.93C20.97 10.49 20.27 8.5 16 8.5H8.00001C3.73001 8.5 3.03001 10.49 3.30001 12.93L4.05001 18.93C4.26001 20.89 4.98001 22.5 9.00001 22.5Z" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M15.4955 12.5H15.5045" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M8.49451 12.5H8.50349" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <p class="cart-count">0</p>
+                </a>
+                <div class="burger">
+                    <input id="menuToggle" type="checkbox" onchange="burgerLogic()">
+                    <label class="menu-button" for="menuToggle"><span></span></label>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="sidebar sidebar--hiden">
+        <div class="sidebar-container container">
+            <label class="menu-button--close" for="menuToggle"><span></span></label>
+            <div class="language">
+                <a class="language-item--wrapper" href="../../en.html">
+                    <p class="language-item">EN</p>
+                </a>
+                <hr class="language-separator">
+                <a class="language-item--wrapper" href="../../gr.html">
+                    <p class="language-item language-item--checked">GR</p>
+                </a>
+            </div>
+            <nav class="nav">
+                <a class="nav-item--wrapper" href="../../gr.html#about" onclick="uncheckBurgerInput()">
+                    <p class="nav-item nav-item--greek">Σχετικά με εμάς</p>
+                </a>
+                <a class="nav-item--wrapper" href="./catalog.html">
+                    <p class="nav-item nav-item--greek">Κατάλογος</p>
+                </a>
+                <a class="nav-item--wrapper" href="./faq.html">
+                    <p class="nav-item nav-item--greek">Συχνές ερωτήσεις</p>
+                </a>
+                <a class="nav-item--wrapper" href="../../gr.html#contact" onclick="uncheckBurgerInput()">
+                    <p class="nav-item nav-item--greek">Επικοινωνία</p>
+                </a>
+            </nav>
+        </div>
+    </div>
+
+    <section class="terms">
+        <div class="container terms-container">
+            <h1 class="terms-heading terms-heading--eng greekLocalization revealByLoad revealByLoad--right">Όροι & Προϋποθέσεις</h1>
+            <div class="terms-item">
+                <p class="terms-item__heading greekLocalization revealByLoad revealByLoad--left">Υπόκειται σε οποιοδήποτε νόμιμο δικαίωμα</p>
+                <p class="terms-item__paragraph greekLocalization revealByLoad revealByLoad--right">Η Grass Luxury Turf εκτιμά το απόρρητο των επισκεπτών του ιστότοπού μας και τηρεί τα υψηλότερα πρότυπα προστασίας δεδομένων. Θέλουμε να σας παρέχουμε πληροφορίες σχετικά με τους τύπους δεδομένων που συλλέγουμε, πώς τα χρησιμοποιούμε και πώς μπορείτε να διαχειριστείτε τις πληροφορίες σας μαζί μας. Όλη η συλλογή, η επεξεργασία και η χρήση δεδομένων πραγματοποιούνται με αυστηρή συμμόρφωση με τους κανονισμούς προστασίας δεδομένων που ισχύουν στην τοποθεσία του αρμόδιου τμήματός μας. Καταβάλλουμε κάθε δυνατή προσπάθεια για να διασφαλίσουμε τη συμμόρφωση.</p>
+                <p class="terms-item__paragraph greekLocalization revealByLoad revealByLoad--left">Συγκεκριμένα:</p>
+                <p class="terms-item__paragraph greekLocalization revealByLoad revealByLoad--right">Ο επισκέπτης/χρήστης του ιστότοπου artificialgrass.gr (εφεξής «ο ιστότοπος») αναγνωρίζει και αποδέχεται ότι όλες οι σελίδες/υπηρεσίες παρέχονται «ως έχουν». Ο ιστότοπος αποποιείται κάθε ευθύνης για περιορισμένη διάρκεια, κακή απόδοση ή αποτυχία ηλεκτρονικής αποθήκευσης δεδομένων χρήστη ή/και προσωπικού περιεχομένου σε σελίδες/υπηρεσίες.</p>
+                <p class="terms-item__paragraph greekLocalization revealByLoad revealByLoad--right">Ο επισκέπτης/χρήστης είναι υπεύθυνος για την πρόσβαση στις υπηρεσίες του ιστότοπου και τυχόν σχετικές χρεώσεις από τρίτα μέρη (π.χ. παροχή υπηρεσιών Διαδικτύου) αποτελούν αποκλειστική ευθύνη του επισκέπτη/χρήστη. Επιπλέον, ο επισκέπτης/χρήστης είναι υπεύθυνος για τη διασφάλιση ότι ο προσωπικός εξοπλισμός του διαθέτει τα απαραίτητα τεχνολογικά μέσα για πρόσβαση στις υπηρεσίες του ιστότοπου.</p>
+                <p class="terms-item__paragraph greekLocalization revealByLoad revealByLoad--right">Ο ιστότοπος δεσμεύεται να προστατεύει το απόρρητο των επισκεπτών. Η Πολιτική Απορρήτου μας εξηγεί πώς χειριζόμαστε τα προσωπικά δεδομένα των επισκεπτών/χρηστών σύμφωνα με τους σχετικούς νόμους περί απορρήτου, συμπεριλαμβανομένου του Γενικού Κανονισμού Προστασίας Δεδομένων (GDPR) της Ευρωπαϊκής Ένωσης.</p>
+            </div>
+            <div class="terms-item">
+                <p class="terms-item__heading revealByScroll revealByScroll--left greekLocalization">ΣΥΜΠΕΡΙΦΟΡΑ ΧΡΗΣΤΗ</p>
+                <p class="terms-item__paragraph revealByScroll revealByScroll--right greekLocalization">Συμφωνείται αμοιβαία ότι οποιοδήποτε περιεχόμενο, συμπεριλαμβανομένων πληροφοριών, δεδομένων, κειμένου, γραφικών, εικόνων, βίντεο, μηνυμάτων και άλλου υλικού που υποβάλλεται στον ιστότοπο, αποτελεί αποκλειστική ευθύνη του αποστολέα. Ο ιστότοπος δεν μπορεί να ελέγξει όλο το περιεχόμενο που δημιουργείται από τους χρήστες και δεν εγγυάται την ακρίβεια, την ακεραιότητα, τη νομιμότητα ή την ποιότητά του. Ο ιστότοπος δεν ευθύνεται για λάθη ή παραλείψεις σε οποιοδήποτε περιεχόμενο.</p>
+                <p class="terms-item__paragraph revealByScroll revealByScroll--right greekLocalization">Οι χρήστες συμφωνούν να μην χρησιμοποιούν τις υπηρεσίες του ιστότοπου για:</p>
+                <ul class="terms-item__list">
+                    <li class="terms-item__list-item revealByScroll revealByScroll--left greekLocalization">Δημοσίευση παράνομου, επιβλαβούς, απειλητικού, υβριστικού, δυσφημιστικού, χυδαίου, βίαιου, ρατσιστικού ή άλλως απαράδεκτου περιεχομένου.</li>
+                    <li class="terms-item__list-item revealByScroll revealByScroll--left greekLocalization">Βλάβη ή βλάβη ανηλίκων με οποιονδήποτε τρόπο.</li>
+                    <li class="terms-item__list-item revealByScroll revealByScroll--left greekLocalization">Μίμηση οποιουδήποτε νομικού ή φυσικού προσώπου, ψευδείς δηλώσεις περί ταυτότηταςή παραπλανητικές δηλώσεις για σχέσεις ή συνεργασία.</li>
+                    <li class="terms-item__list-item revealByScroll revealByScroll--left greekLocalization">Παραβίαση των αναγνωριστικών χρηστών ή εμπλοκή σε οποιαδήποτε μορφή παραποίησης περιεχομένου.</li>
+                    <li class="terms-item__list-item revealByScroll revealByScroll--left greekLocalization">Μετάδοση περιεχομένου από μη εξουσιοδοτημένη πηγή ή παραβίαση του απορρήτου.</li>
+                    <li class="terms-item__list-item revealByScroll revealByScroll--left greekLocalization">Διακοπή ή παρεμβολή σε υπηρεσίες ιστότοπου, διακομιστές, δίκτυα ή παραβίαση κανόνων χρήσης.</li>
+                    <li class="terms-item__list-item revealByScroll revealByScroll--left greekLocalization">Ο ιστότοπος διατηρεί το δικαίωμα να μετακινήσει ή να διαγράψει οποιοδήποτε περιεχόμενο και να διαγράψει λογαριασμούς χρηστών που παραβιάζουν αυτούς τους όρους.</li>
+                </ul>
+            </div>
+            <div class="terms-item">
+                <p class="terms-item__heading revealByScroll revealByScroll--left greekLocalization">COOKIES</p>
+                <p class="terms-item__paragraph revealByScroll revealByScroll--right greekLocalization">Ο ιστότοπος μπορεί να χρησιμοποιεί cookies για την αναγνώριση των επισκεπτών/χρηστών και τη βελτίωση της εμπειρίας τους. Τα cookies είναι πακέτα πληροφοριών που αποστέλλονται από τον διακομιστή στο πρόγραμμα περιήγησης του χρήστη και περιέχουν έναν κωδικό αναγνώρισης. Οι επισκέπτες/χρήστες καλούνται να αποδεχτούν τη χρήσηcookies όταν επισκέπτονται τον ιστότοπο. Οι χρήστες μπορούν να διαχειρίζονται τις προτιμήσεις cookie μέσω των ρυθμίσεων του προγράμματος περιήγησης.</p>
+            </div>
+            <div class="terms-item">
+                <p class="terms-item__heading revealByScroll revealByScroll--left greekLocalization">ΔΙΚΑΙΩΜΑΤΑ ΠΝΕΥΜΑΤΙΚΗΣ ΚΑΙ ΒΙΟΜΗΧΑΝΙΚΗΣ ΙΔΙΟΚΤΗΣΙΑΣ – ΣΗΜΑΤΑ</p>
+                <p class="terms-item__paragraph revealByScroll revealByScroll--right greekLocalization">Όλο το περιεχόμενο στον ιστότοπο, συμπεριλαμβανομένων κειμένων, εικόνων, βίντεο και υπηρεσιών, αποτελεί πνευματική ιδιοκτησία του ιστότοπου και προστατεύεται από τους σχετικούς νόμους. Οι χρήστες δεν επιτρέπεται να πωλούν, να αντιγράφουν, να τροποποιούν, να αναπαράγουν ή να διανέμουν οποιοδήποτε περιεχόμενο χωρίς ρητή άδεια, εκτός από υλικά που παρέχονται για δημόσια χρήση.</p>
+            </div>
+            <div class="terms-item">
+                <p class="terms-item__heading revealByScroll revealByScroll--left greekLocalization">ΤΟΝ ΠΕΡΙΟΡΙΣΜΟ ΤΗΣ ΕΥΘΥΝΗΣ</p>
+                <p class="terms-item__paragraph revealByScroll revealByScroll--right greekLocalization">Ο ιστότοπος δεν ευθύνεται για τυχόν ζημίες στους επισκέπτες/χρήστες που προκύπτουν από τη χρήση των σελίδων, των υπηρεσιών ή του περιεχομένου του. Το περιεχόμενο παρέχεται “ως έχει” χωρίς καμία εγγύηση. Ο ιστότοπος αποποιείται κάθε εγγύηση, ρητή ή σιωπηρή, στον μέγιστο βαθμό που επιτρέπεται από τη νομοθεσία.</p>
+                <p class="terms-item__paragraph revealByScroll revealByScroll--right greekLocalization">Ο ιστότοπος δεν εγγυάται αδιάλειπτες υπηρεσίες χωρίς σφάλματα ή την απουσία ιών. Δεν εγγυάται την ακρίβεια, την πληρότητα ή τη διαθεσιμότητα του περιεχομένου.</p>
+            </div>
+            <div class="terms-item">
+                <p class="terms-item__heading revealByScroll revealByScroll--left greekLocalization">ΑΠΟΠΟΙΗΣΗ ΠΛΗΡΟΦΟΡΙΩΝ / ΣΥΜΒΟΥΛΩΝ</p>
+                <p class="terms-item__paragraph revealByScroll revealByScroll--right greekLocalization">Το περιεχόμενο του ιστότοπου είναι μόνο για ενημερωτικούς σκοπούς και δεν αποτελεί συμβουλή. Ο ιστότοπος έχει σχεδιαστεί για να ενημερώνει τους επισκέπτες σχετικά με τα προϊόντα και τις υπηρεσίες της Grass Luxury Turf. Οι χρήστες θα πρέπει να αναζητούν επαγγελματική συμβουλή για συγκεκριμένες καταστάσεις.</p>
+            </div>
+            <div class="terms-item">
+                <p class="terms-item__heading revealByScroll revealByScroll--left greekLocalization">ΣΥΛΛΟΓΗ ΚΑΙ ΧΡΗΣΗ ΔΕΔΟΜΕΝΩΝ</p>
+                <p class="terms-item__paragraph revealByScroll revealByScroll--right greekLocalization">Ο ιστότοπος συλλέγει προσωπικές πληροφορίες όταν οι επισκέπτες εγγράφονται στο ενημερωτικό δελτίο, ζητούν προσφορά ή ζητούν δείγματα προϊόντων. Οι υποχρεωτικές πληροφορίες περιλαμβάνουν όνομα εταιρείας, όνομα, email, αριθμό τηλεφώνου, διεύθυνση και χώρα.</p>
+                <p class="terms-item__paragraph revealByScroll revealByScroll--right greekLocalization">Ο ιστότοπος μπορεί επίσης να συλλέγει, να αποθηκεύει και να χρησιμοποιεί:</p>
+                <p class="terms-item__paragraph revealByScroll revealByScroll--right greekLocalization">(α) Πληροφορίες σχετικά με τον υπολογιστή, τις επισκέψεις και τις δραστηριότητες του χρήστη στον ιστότοπο. (β) Πληροφορίες παρέχονται κατά την εγγραφή. (γ) Πληροφορίες που παρέχονται για εγγραφή σε ενημερώσεις. (δ) Πληροφορίες που παρέχονται χρησιμοποιώντας υπηρεσίες ιστοτόπου. (ε) Πληροφορίες που αποστέλλονται για δημοσίευση στον ιστότοπο. (στ) Άλλες προσωπικές πληροφορίες που παρέχονται.</p>
+                <p class="terms-item__paragraph revealByScroll revealByScroll--right greekLocalization">Τα προσωπικά δεδομένα χρησιμοποιούνται για τη διαχείριση, την εξατομίκευση, την ενεργοποίηση υπηρεσιών, την αποστολή ενημερώσεων, ειδοποιήσεων, ενημερωτικά δελτία, τη διαχείριση ερωτημάτων και παραπόνων, τη διασφάλιση της ασφάλειας του ιστότοπου και την επαλήθευση της συμμόρφωσης με όρους και προϋποθέσεις.</p>
+                <p class="terms-item__paragraph revealByScroll revealByScroll--right greekLocalization">Ο ιστότοπος δεν αποκαλύπτει προσωπικές πληροφορίες για άμεσο μάρκετινγκ χωρίς τη συγκατάθεση του χρήστη.</p>
+            </div>
+            <div class="terms-item">
+                <p class="terms-item__heading revealByScroll revealByScroll--left greekLocalization">ΔΙΑΤΗΡΗΣΗ ΠΡΟΣΩΠΙΚΩΝ ΠΛΗΡΟΦΟΡΙΩΝ</p>
+                <p class="terms-item__paragraph revealByScroll revealByScroll--right greekLocalization">Τα προσωπικά στοιχεία διατηρούνται όπως απαιτείται και θα διαγραφούν όταν δεν απαιτούνται πλέον. Ορισμένα δεδομένα ενδέχεται να διατηρηθούν για νομικούς σκοπούς ή για σκοπούς επίλυσης διαφορών.</p>
+                <p class="terms-item__paragraph revealByScroll revealByScroll--right greekLocalization">Ο ιστότοπος λαμβάνει οργανωτικές και τεχνολογικές προφυλάξεις για την αποφυγή απώλειας, κακής χρήσης ή αλλοίωσης προσωπικών πληροφοριών. Οι προσωπικές πληροφορίες αποθηκεύονται σε ασφαλείς διακομιστές, με προστασία κωδικού πρόσβασης και με τείχος προστασίας. Ωστόσο, ο ιστότοπος δεν μπορεί να εγγυηθεί την ασφάλεια της διαδικτυακής μετάδοσης δεδομένων.</p>
+                <p class="terms-item__paragraph revealByScroll revealByScroll--right greekLocalization">Ο ιστότοπος δεν πουλάει, ενοικιάζει ή αποκαλύπτει προσωπικά δεδομένα σε τρίτους εκτός από:</p>
+                <p class="terms-item__paragraph revealByScroll revealByScroll--right greekLocalization">(α) Όταν είναι απαραίτητο για την εκπλήρωση αιτημάτων χρηστών, με συνδεδεμένα νομικά πρόσωπα που επεξεργάζονται δεδομένα μόνο όπως απαιτείται. (β) Για συμμόρφωση με τις νομικές διατάξεις και τις αρμόδιες αρχές.</p>
+                <p class="terms-item__paragraph revealByScroll revealByScroll--right greekLocalization">Οι πληροφορίες χρήστη ενδέχεται να γνωστοποιηθούν σε υπαλλήλους, συμβούλους, προμηθευτές ή υπεργολάβους, όπως απαιτείται.</p>
+            </div>
+            <div class="terms-item">
+                <p class="terms-item__heading revealByScroll revealByScroll--left greekLocalization">ΔΙΚΑΙΩΜΑΤΑ ΧΡΗΣΤΗ</p>
+                <p class="terms-item__paragraph revealByScroll revealByScroll--right greekLocalization">Οι χρήστες μπορούν να ζητήσουν προσωπικές πληροφορίες που κατέχει ο ιστότοπος.</p>
+            </div>
+            <div class="terms-item">
+                <p class="terms-item__heading revealByScroll revealByScroll--left greekLocalization">ΔΙΚΑΙΩΜΑ ΠΕΡΙΟΡΙΣΜΟΥ ΕΠΕΞΕΡΓΑΣΙΑΣ</p>
+                <p class="terms-item__paragraph revealByScroll revealByScroll--right greekLocalization">Οι χρήστες μπορούν να ζητήσουν από τον ιστότοπο να μην επεξεργάζεται τις πληροφορίες τους για εμπορικούς σκοπούς.</p>
+            </div>
+            <div class="terms-item">
+                <p class="terms-item__heading revealByScroll revealByScroll--left greekLocalization">ΔΙΚΑΙΩΜΑ ΔΙΟΡΘΩΣΗΣ / ΑΝΤΙΚΕΙΜΕΝΟΥ / ΑΝΤΙΚΕΙΜΕΝΟΥ</p>
+                <p class="terms-item__paragraph revealByScroll revealByScroll--right greekLocalization">Οι χρήστες έχουν το δικαίωμα να αντιταχθούν, να ζητήσουν διόρθωση ή διαγραφή των προσωπικών τους στοιχείων επικοινωνώντας με τον ιστότοπο.</p>
+            </div>
+            <div class="terms-item">
+                <p class="terms-item__heading revealByScroll revealByScroll--left greekLocalization">ΕΦΑΡΜΟΣΤΕΟ ΔΙΚΑΙΟ ΚΑΙ ΑΛΛΟΙ ΟΡΟΙ</p>
+                <p class="terms-item__paragraph revealByScroll revealByScroll--right greekLocalization">Αυτοί οι όροι διέπονται από το ελληνικό δίκαιο, το δίκαιο της ΕΕ και τις διεθνείς συνθήκες. Σε περίπτωση αντικρουόμενης διάταξης, οι υπόλοιποι όροι παραμένουν σε ισχύ. Οι διαφορές επιλύονται στα Δικαστήρια της Αθήνας.</p>
+                <p class="terms-item__paragraph revealByScroll revealByScroll--right greekLocalization">Ο ιστότοπος ενδέχεται να ενημερώνει αυτήν την πολιτική και συνιστάται στους χρήστες να ελέγχουν τακτικά για αλλαγές. Η ειδοποίηση των αλλαγών μπορεί να γίνει μέσω email ή της υπηρεσίας ανταλλαγής μηνυμάτων του ιστότοπου.</p>
+                <p class="terms-item__paragraph revealByScroll revealByScroll--right greekLocalization">Αυτή η Όροι & Προϋποθέσεις υπόκειται στην ελληνική νομοθεσία και ενδέχεται να αλλάξει εντός του νομικού πλαισίου.</p>
+                <p class="terms-item__paragraph revealByScroll revealByScroll--right greekLocalization">Εάν κάποιος χρήστης διαφωνεί με τους όρους, δεν θα πρέπει να χρησιμοποιεί τις υπηρεσίες του ιστότοπου.</p>
+            </div>
+            <div class="terms-item">
+                <p class="terms-item__heading revealByScroll revealByScroll--left greekLocalization">ΕΠΙΚΟΙΝΩΝΙΑ</p>
+                <p class="terms-item__paragraph revealByScroll revealByScroll--right greekLocalization">Για ερωτήσεις ή σχόλια σχετικά με τους Όροι & Προϋποθέσεις, οι χρήστες μπορούν να επικοινωνήσουν με τον ιστότοπο μέσω email μέσω της ενότητας ΕΠΙΚΟΙΝΩΝΙΑ.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container container">
+            <a class="logo-wrapper" href="../../gr.html">
+                <img class="logo" src="../../assets/images/icons/logo.svg" alt="logo">
+            </a>
+            <div class="footer-content">
+                <nav class="nav">
+                    <a class="nav-item--wrapper nav-item--greekWrapper" href="../../gr.html#about">
+                        <p class="nav-item nav-item--greek">Σχετικά με εμάς</p>
+                    </a>
+                    <a class="nav-item--wrapper nav-item--greekWrapper" href="../../pages/greek/catalog.html">
+                        <p class="nav-item nav-item--greek">Κατάλογος</p>
+                    </a>
+                    <a class="nav-item--wrapper nav-item--greekWrapper" href="../../pages/greek/faq.html">
+                        <p class="nav-item nav-item--greek">Συχνές ερωτήσεις</p>
+                    </a>
+                    <a class="nav-item--wrapper nav-item--greekWrapper" href="../../gr.html#contact">
+                        <p class="nav-item nav-item--greek">Επικοινωνία</p>
+                    </a>
+                </nav>
+                <hr class="footer-separator">
+                <div class="footer-box">
+                    <div class="footer-box__item">
+                        <p class="footer-box__item-heading greekLocalization">Διεύθυνση</p>
+                        <div class="footer-box__item-inner">
+                            <div class="footer-box__item-row">
+                                <img class="footer-box__item-icon" src="../../assets/images/icons/location.svg" alt="location icon">
+                                <p class="footer-box__item-info footer-box__item-info--eng greekLocalization">Ψηλορείτη 59B Γλυφάδα, Αθήνα</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-box__item">
+                        <p class="footer-box__item-heading greekLocalization">Ώρες εργασίας</p>
+                        <div class="footer-box__item-inner">
+                            <div class="footer-box__item-row">
+                                <p class="footer-box__item-info greekLocalization">Δευτέρα - Παρασκευή</p>
+                            </div>
+                            <div class="footer-box__item-row">
+                                <p class="footer-box__item-info greekLocalization">από <span class="footer-box__item-info--number">09:00</span> έως <span class="footer-box__item-info--number">17:00</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-box__item">
+                        <p class="footer-box__item-heading footer-box__item-heading--eng greekLocalization">Μείνετε σε επαφή</p>
+                        <div class="footer-box__item-inner">
+                            <a class="footer-box__item-row clicable-icon--wrapper"  href="tel:+306980736760">
+                                <svg class="footer-box__item-icon clicable-icon" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                    <path d="M7.12721 3.19291C6.89942 2.62343 6.34785 2.25 5.7345 2.25H3.67105C2.88623 2.25 2.25 2.88626 2.25 3.67108C2.25 10.3421 7.65808 15.75 14.3291 15.75C15.1139 15.75 15.75 15.1138 15.75 14.329L15.7499 12.2655C15.7499 11.6522 15.3764 11.1006 14.8069 10.8729L12.8303 10.0822C12.3188 9.87754 11.7364 9.96976 11.3131 10.3225L10.8023 10.748C10.2063 11.2447 9.32998 11.205 8.78141 10.6564L7.34352 9.21863C6.79495 8.67005 6.75542 7.79365 7.25208 7.19766L7.67761 6.68698C8.03033 6.26372 8.12252 5.6812 7.9179 5.16965L7.12721 3.19291Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <p class="footer-box__item-info--number clicable-text greekLocalization">Mobile: +30 69 80736760</p>
+                            </a>
+                            <a class="footer-box__item-row clicable-icon--wrapper"  href="tel:+302130282939">
+                                <svg class="footer-box__item-icon clicable-icon" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                    <path d="M7.12721 3.19291C6.89942 2.62343 6.34785 2.25 5.7345 2.25H3.67105C2.88623 2.25 2.25 2.88626 2.25 3.67108C2.25 10.3421 7.65808 15.75 14.3291 15.75C15.1139 15.75 15.75 15.1138 15.75 14.329L15.7499 12.2655C15.7499 11.6522 15.3764 11.1006 14.8069 10.8729L12.8303 10.0822C12.3188 9.87754 11.7364 9.96976 11.3131 10.3225L10.8023 10.748C10.2063 11.2447 9.32998 11.205 8.78141 10.6564L7.34352 9.21863C6.79495 8.67005 6.75542 7.79365 7.25208 7.19766L7.67761 6.68698C8.03033 6.26372 8.12252 5.6812 7.9179 5.16965L7.12721 3.19291Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <p class="footer-box__item-info--number clicable-text greekLocalization">Office: +30 21 30282939</p>
+                            </a>
+                            <a class="footer-box__item-row clicable-icon--wrapper" href="mailto:info@grassluxuryturf.com">
+                                <svg class="footer-box__item-icon clicable-icon" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                    <path d="M3 4.5L9.17143 9L15 4.5M15.75 6.14996V11.85C15.75 12.69 15.7502 13.1102 15.5867 13.431C15.4429 13.7133 15.2131 13.9427 14.9308 14.0865C14.61 14.25 14.1902 14.25 13.3501 14.25H4.65015C3.81007 14.25 3.38972 14.25 3.06885 14.0865C2.7866 13.9427 2.5573 13.7133 2.41349 13.431C2.25 13.1102 2.25 12.69 2.25 11.85V6.14996C2.25 5.30988 2.25 4.8899 2.41349 4.56903C2.5573 4.28679 2.7866 4.0573 3.06885 3.91349C3.38972 3.75 3.81007 3.75 4.65015 3.75H13.3501C14.1902 3.75 14.61 3.75 14.9308 3.91349C15.2131 4.0573 15.4429 4.28679 15.5867 4.56903C15.7502 4.8899 15.75 5.30988 15.75 6.14996Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <p class="footer-box__item-info--number clicable-text">info@grassluxuryturf.com</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer-box__item">
+                        <p class="footer-box__item-heading footer-box__item-heading--eng greekLocalization">Τα social μας</p>
+                        <div class="footer-box__item-inner">
+                            <div class="footer-box__item-row">
+                                <a href="https://www.facebook.com/profile.php?id=61554992885602" target="_blank" class="footer-box__item-icon--wrapper clicable-icon--wrapper">
+                                    <svg class="footer-box__item-icon clicable-icon" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                        <path class="clicable-icon--inner" d="M18 9C18 4.02943 13.9706 0 9 0C4.02943 0 0 4.02943 0 9C0 13.4921 3.29115 17.2155 7.59375 17.8907V11.6016H5.30859V9H7.59375V7.01719C7.59375 4.76156 8.93742 3.51562 10.9932 3.51562C11.9776 3.51562 13.0078 3.69141 13.0078 3.69141V5.90625H11.873C10.755 5.90625 10.4062 6.60006 10.4062 7.3125V9H12.9023L12.5033 11.6016H10.4062V17.8907C14.7088 17.2155 18 13.4921 18 9Z" stroke-width="0" fill="white"/>
+                                    </svg>
+                                </a>
+                                <a href="https://www.instagram.com/grass_luxury_turf/" target="_blank" class="footer-box__item-icon--wrapper clicable-icon--wrapper">
+                                    <svg class="footer-box__item-icon clicable-icon" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                        <path class="clicable-icon--inner" d="M9 1.6207C11.4047 1.6207 11.6895 1.63125 12.6352 1.67344C13.5141 1.71211 13.9887 1.85977 14.3051 1.98281C14.7234 2.14453 15.0258 2.34141 15.3387 2.6543C15.6551 2.9707 15.8484 3.26953 16.0102 3.68789C16.1332 4.0043 16.2809 4.48242 16.3195 5.35781C16.3617 6.30703 16.3723 6.5918 16.3723 8.99297C16.3723 11.3977 16.3617 11.6824 16.3195 12.6281C16.2809 13.507 16.1332 13.9816 16.0102 14.298C15.8484 14.7164 15.6516 15.0187 15.3387 15.3316C15.0223 15.648 14.7234 15.8414 14.3051 16.0031C13.9887 16.1262 13.5105 16.2738 12.6352 16.3125C11.6859 16.3547 11.4012 16.3652 9 16.3652C6.59531 16.3652 6.31055 16.3547 5.36484 16.3125C4.48594 16.2738 4.01133 16.1262 3.69492 16.0031C3.27656 15.8414 2.97422 15.6445 2.66133 15.3316C2.34492 15.0152 2.15156 14.7164 1.98984 14.298C1.8668 13.9816 1.71914 13.5035 1.68047 12.6281C1.63828 11.6789 1.62773 11.3941 1.62773 8.99297C1.62773 6.58828 1.63828 6.30351 1.68047 5.35781C1.71914 4.47891 1.8668 4.0043 1.98984 3.68789C2.15156 3.26953 2.34844 2.96719 2.66133 2.6543C2.97773 2.33789 3.27656 2.14453 3.69492 1.98281C4.01133 1.85977 4.48945 1.71211 5.36484 1.67344C6.31055 1.63125 6.59531 1.6207 9 1.6207ZM9 0C6.55664 0 6.25078 0.0105469 5.29102 0.0527344C4.33477 0.0949219 3.67734 0.249609 3.10781 0.471094C2.51367 0.703125 2.01094 1.00898 1.51172 1.51172C1.00898 2.01094 0.703125 2.51367 0.471094 3.1043C0.249609 3.67734 0.0949219 4.33125 0.0527344 5.2875C0.0105469 6.25078 0 6.55664 0 9C0 11.4434 0.0105469 11.7492 0.0527344 12.709C0.0949219 13.6652 0.249609 14.3227 0.471094 14.8922C0.703125 15.4863 1.00898 15.9891 1.51172 16.4883C2.01094 16.9875 2.51367 17.2969 3.1043 17.5254C3.67734 17.7469 4.33125 17.9016 5.2875 17.9437C6.24727 17.9859 6.55312 17.9965 8.99648 17.9965C11.4398 17.9965 11.7457 17.9859 12.7055 17.9437C13.6617 17.9016 14.3191 17.7469 14.8887 17.5254C15.4793 17.2969 15.982 16.9875 16.4813 16.4883C16.9805 15.9891 17.2898 15.4863 17.5184 14.8957C17.7398 14.3227 17.8945 13.6687 17.9367 12.7125C17.9789 11.7527 17.9895 11.4469 17.9895 9.00352C17.9895 6.56016 17.9789 6.2543 17.9367 5.29453C17.8945 4.33828 17.7398 3.68086 17.5184 3.11133C17.2969 2.51367 16.991 2.01094 16.4883 1.51172C15.9891 1.0125 15.4863 0.703125 14.8957 0.474609C14.3227 0.253125 13.6688 0.0984375 12.7125 0.05625C11.7492 0.0105469 11.4434 0 9 0Z" stroke-width="0" fill="white"/>
+                                        <path class="clicable-icon--inner" d="M9 4.37695C6.44766 4.37695 4.37695 6.44766 4.37695 9C4.37695 11.5523 6.44766 13.623 9 13.623C11.5523 13.623 13.623 11.5523 13.623 9C13.623 6.44766 11.5523 4.37695 9 4.37695ZM9 11.9988C7.34414 11.9988 6.00117 10.6559 6.00117 9C6.00117 7.34414 7.34414 6.00117 9 6.00117C10.6559 6.00117 11.9988 7.34414 11.9988 9C11.9988 10.6559 10.6559 11.9988 9 11.9988Z" stroke-width="0" fill="white"/>
+                                        <path class="clicable-icon--inner" d="M14.8852 4.19404C14.8852 4.7917 14.4 5.27334 13.8059 5.27334C13.2082 5.27334 12.7266 4.78819 12.7266 4.19404C12.7266 3.59639 13.2117 3.11475 13.8059 3.11475C14.4 3.11475 14.8852 3.5999 14.8852 4.19404Z" stroke-width="0" fill="white"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-box__item">
+                        <p class="footer-box__item-heading footer-box__item-heading--eng greekLocalization">Γενικές πληροφορίες</p>
+                        <div class="footer-box__item-inner">
+                            <a class="footer-box__item-row clicable-icon--wrapper" href="./termsConditions.html">
+                                <p class="footer-box__item-info--number clicable-text greekLocalization">Όροι χρήσης</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="JDDesign" href="https://www.instagram.com/jd_agency_design/" target="_blank">Website by: JD Agency</a>
+    </footer>
+
+    <script src="../../assets/scripts/header.js"></script>
+</body>
+</html>

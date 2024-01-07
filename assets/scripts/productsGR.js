@@ -14,7 +14,7 @@ function setBasketLocalStorage(basket) {
 }
 
 // cards shown count
-const COUNT_SHOW_CARDS = 99;
+const COUNT_SHOW_CARDS = 3;
 
 
 const cards = document.querySelector('.miniShop-list'); 
@@ -44,20 +44,20 @@ function renderStartPage (data) {
     createCards(arrCards);
 }
 
-// Render Cards
+// Render Cards Main
 function createCards(data) {
     data.forEach(card => {
         const {id, name, price, img} = card;
         const cardItem  = 
         `
-            <div class="miniShop-list__item" data-product-id="${id}">
-                <a class="miniShop-item__photo--wrapper" href="../../pages/english/catalog/${name}.html">
-                    <img class="miniShop-item__photo" src="../../assets/images/${img}" alt="${name}turf picture">
+            <div class="miniShop-list__item revealByScrollDown" data-product-id="${id}">
+                <a class="miniShop-item__photo--wrapper" href="./pages/greek/catalog/${name}.html">
+                    <img class="miniShop-item__photo" src="./assets/images/${img}" alt="${name}turf picture">
                 </a>
                 <div class="miniShop-item__info">
                     <p class="miniShop-item__info-name miniShop-item__info-name--eng">${name}</p>
-                    <p class="miniShop-item__info-price">${price}€<span class="miniShop-item__info-price--meter">per m²</span></p>
-                    <a class="miniShop-item__info-button" href="../../pages/english/catalog/${name}.html">Shop now</a>
+                    <p class="miniShop-item__info-price greekLocalization">${price}€<span class="miniShop-item__info-price--meter greekLocalization">ανά m²</span></p>
+                    <a class="miniShop-item__info-button greekLocalization" href="./pages/greek/catalog/${name}.html">Αγοράστε τώρα</a>
                 </div>
             </div>
         `;

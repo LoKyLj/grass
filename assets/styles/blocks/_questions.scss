@@ -47,6 +47,10 @@
             @include fontSize(14);
         }
 
+        &:hover::after {
+            transform: rotateZ(-8deg) scale(1.1);
+        }
+
         &::after {
             content: "";
             position: absolute;
@@ -57,6 +61,8 @@
             width: 100px;
             height: 92px;
             background-image: url('../images/icons/questionArrow.svg');
+            transform: rotateZ(-15deg);
+            transition: all 0.25s ease-in-out;
 
             @include netbook {
                 width: 80px;
@@ -74,6 +80,27 @@
 
             @include mobile {
                 right: 15px;
+            }
+        }
+    }
+
+    &-subheadingGR {
+        &::after {
+            right: 40px;
+            top: 90px;
+
+            @include netbook {
+                right: 120px;
+            }
+
+            @include tablet {
+                top: 110px;
+                right: 10px;
+            }
+
+            @include mobile {
+                right: -30px;
+                transform: rotateZ(-28deg)
             }
         }
     }

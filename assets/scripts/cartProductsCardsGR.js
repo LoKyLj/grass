@@ -7,11 +7,11 @@ if (localStorage.getItem('basket')) {
         `
             <div class="cartContact-table__item cartContact-product" id="product${id}" data-product-id="${id}">
                 <div class="cartContact-product__image--container">
-                    <a class="cartContact-product__image-wrapper" href="../english/catalog/${name}.html">
+                    <a class="cartContact-product__image-wrapper" href="../greek/catalog/${name}.html">
                         <img class="cartContact-product__image" src="../../assets/images/products/${name}/01.webp" alt="turf photo">
                     </a>
                     <p class="calculationsPrice">${price}</p>
-                    <a class="cartContact-product__name" href="../english/catalog/${name}.html">${name}</a>
+                    <a class="cartContact-product__name" href="../greek/catalog/${name}.html">${name}</a>
                     <div class="closeButton cartContact-closeButton" id="deleteProductButton${id}">
                         <svg class="closeButton-pic" width="16" height="16" fill="gray" viewBox="0 0 16 16">
                             <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z">

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grass Luxury Turf</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="../../favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../favicons/favicon-16x16.png">
+    <link rel="manifest" href="../../favicons/site.webmanifest">
+    <meta name="apple-mobile-web-app-title" content="Grass Luxury Turf">
+    <meta name="application-name" content="Grass Luxury Turf">
+    <meta name="msapplication-TileColor" content="#00a300">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="../../assets/styles/style.css">
+    <script src="../../assets/scripts/animations.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-container container">
+            <a class="logo-wrapper" href="../../gr.html">
+                <img class="logo" src="../../assets/images/icons/logo.svg" alt="logo">
+            </a>
+            <nav class="nav">
+                <a class="nav-item--wrapper nav-item--greekWrapper" href="../../gr.html#about">
+                    <p class="nav-item nav-item--greek">Σχετικά με εμάς</p>
+                </a>
+                <a class="nav-item--wrapper nav-item--greekWrapper" href="../../pages/greek/catalog.html">
+                    <p class="nav-item nav-item--greek">Κατάλογος</p>
+                </a>
+                <a class="nav-item--wrapper nav-item--greekWrapper" href="../../pages/greek/faq.html">
+                    <p class="nav-item nav-item--greek">Συχνές ερωτήσεις</p>
+                </a>
+                <a class="nav-item--wrapper nav-item--greekWrapper" href="../../gr.html#contact">
+                    <p class="nav-item nav-item--greek">Επικοινωνία</p>
+                </a>
+            </nav>
+            <div class="profile">
+                <div class="language">
+					<a class="language-item--wrapper" href="../../en.html">
+                        <p class="language-item">EN</p>
+                    </a>
+                    <hr class="language-separator">
+                    <a class="language-item--wrapper" href="../../gr.html">
+                        <p class="language-item language-item--checked">GR</p>
+                    </a>
+				</div>
+                <a class="cart-wrapper clicable-icon--wrapper" href="./cart.html">
+                    <svg class="cart-icon clicable-icon" width="24" height="25" viewBox="0 0 24 25">
+                        <path d="M7.5 8.17001V7.20001C7.5 4.95001 9.31 2.74001 11.56 2.53001C14.24 2.27001 16.5 4.38001 16.5 7.01001V8.39001" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9.00001 22.5H15C19.02 22.5 19.74 20.89 19.95 18.93L20.7 12.93C20.97 10.49 20.27 8.5 16 8.5H8.00001C3.73001 8.5 3.03001 10.49 3.30001 12.93L4.05001 18.93C4.26001 20.89 4.98001 22.5 9.00001 22.5Z" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M15.4955 12.5H15.5045" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M8.49451 12.5H8.50349" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <p class="cart-count">0</p>
+                </a>
+                <div class="burger">
+                    <input id="menuToggle" type="checkbox" onchange="burgerLogic()">
+                    <label class="menu-button" for="menuToggle"><span></span></label>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="sidebar sidebar--hiden">
+        <div class="sidebar-container container">
+            <label class="menu-button--close" for="menuToggle"><span></span></label>
+            <div class="language">
+                <a class="language-item--wrapper" href="../../en.html">
+                    <p class="language-item">EN</p>
+                </a>
+                <hr class="language-separator">
+                <a class="language-item--wrapper" href="../../gr.html">
+                    <p class="language-item language-item--checked">GR</p>
+                </a>
+            </div>
+            <nav class="nav">
+                <a class="nav-item--wrapper" href="../../gr.html#about" onclick="uncheckBurgerInput()">
+                    <p class="nav-item nav-item--greek">Σχετικά με εμάς</p>
+                </a>
+                <a class="nav-item--wrapper" href="./catalog.html">
+                    <p class="nav-item nav-item--greek">Κατάλογος</p>
+                </a>
+                <a class="nav-item--wrapper" href="./faq.html">
+                    <p class="nav-item nav-item--greek">Συχνές ερωτήσεις</p>
+                </a>
+                <a class="nav-item--wrapper" href="../../gr.html#contact" onclick="uncheckBurgerInput()">
+                    <p class="nav-item nav-item--greek">Επικοινωνία</p>
+                </a>
+            </nav>
+        </div>
+    </div>
+
+    <section class="faqHero">
+        <div class="faqHero--inner">
+            <img class="faqHero-hand revealByLoad revealByLoad--right" src="../../assets/images/hand.svg" alt="hand holding a question letter">
+        </div>
+        <div class="faqHero-container container">
+            <h1 class="faqHero-heading faqHero-heading--eng greekLocalization revealByLoad revealByLoad--left">Συχνες ερωτησεις</h1>
+            <p class="faqHero-subheading faqHero-subheading--eng greekLocalization revealByLoad revealByLoad--right">Έχουμε τις απαντήσεις <br>που θέλετε!</p>
+        </div>
+    </section>
+
+    <section class="accordion--wrapper">
+        <div class="accordion-container container">
+            <div class="accordion">
+                <div class="accordion-tab revealByScrollDown">
+                    <input class="accordion-tab__input open-close" id="choice1" type="checkbox" name="accordion">
+                    <label class="accordion-tab__heading accordion-tab__heading--eng greekLocalization" for="choice1">Ποιες είναι οι βασικές αρχές της περιβαλλοντικής ευθύνης της Grass Luxury Turf?</label>
+                </div>
+                <div class="accordion-panel">
+                    <div class="accordion-item--wrapper">
+                        <p class="accordion-item accordion-item--eng greekLocalization"><span class="accordion-item--inner greekLocalization"><span class="accordion-item--marked">Η Grass Luxury Turf</span> είναι περήφανη που σας συστήνει μια προηγμένη σειρά οικολογικού συνθετικού χλοοτάπητα. Τα προϊόντα μας όχι μόνο θα κάνουν τη διαφορά στο περιβάλλον σας αλλά και θα συμβάλουν στη δημιουργία ενός βιώσιμου μέλλοντος.</span></p>
+                        <p class="accordion-item accordion-item--eng greekLocalization"><span class="accordion-item--inner greekLocalization">Επιπλέον, χρησιμοποιούμε υλικά φιλικά προς την υγεία και το περιβάλλον που πληρούν τα πρότυπα ευρωπαικής ασφαλείας. Τα προϊόντα μας είναι ασφαλή για παιδιά και κατοικίδια. Η δέσμευσή μας για περιβαλλοντική ευθύνη είναι εμφανής από την προσεκτική τήρηση των κανονισμών ασφαλείας της ΕΕ, την πιστοποίησή μας για τα υψηλότερα πρότυπα ποιότητας και τη χρήση ανακυκλώσιμων υλικών.</span></p>
+                    </div>
+                </div>
+
+                <div class="accordion-tab revealByScrollDown">
+                    <input class="accordion-tab__input open-close" id="choice2" type="checkbox" name="accordion">
+                    <label class="accordion-tab__heading accordion-tab__heading--eng greekLocalization" for="choice2">Ποια είναι η πολιτική επιστροφής σας?</label>
+                </div>
+                <div class="accordion-panel">
+                    <div class="accordion-item--wrapper">
+                        <p class="accordion-item accordion-item--eng greekLocalization"><span class="accordion-item--inner greekLocalization">Στη <span class="accordion-item--marked">Grass Luxury Turf</span>, κατανοούμε ότι η λήψη ελαττωματικών, λανθασμένων ή κατεστραμμένων εμπορευμάτων μπορεί να είναι απογοητευτική και στόχος μας είναι να διασφαλίσουμε μια γρήγορη και άνευ όρων επίλυση τέτοιων καταστάσεων. Στοχεύουμε στη μέγιστη απλότητα και ελαχιστοποίηση του άγχους για τους αξιότιμους πελάτες μας.</span></p>
+                        <ol class="accordion-list">
+                            <li class="accordion-item accordion-item--eng greekLocalization"><span class="accordion-item--inner greekLocalization"><span class="accordion-item--marked">Επικοινωνήστε μαζί μας:</span> Εάν έχετε λάβει ένα ελαττωματικό προϊόν, φροντίστε να επικοινωνήσετε με την υπηρεσία υποστήριξης αμέσως μόλις εντοπίσετε το πρόβλημα. Χρησιμοποιήστε τη σελίδα πληροφοριών επικοινωνίας και οι εκπρόσωποί μας θα παρέχουν την απαραίτητη βοήθεια. Όταν επικοινωνείτε μαζί μας, προσδιορίστε τα στοιχεία της παραγγελίας σας, συμπεριλαμβανομένου του αριθμού παραγγελίας και μια περιγραφή του προβλήματος και, εάν είναι δυνατόν, επισυνάψτε καθαρές φωτογραφίες που δείχνουν το ελάττωμα ή τη ζημιά. Αυτές οι πληροφορίες θα  βοηθήσουν να αξιολογηθεί η κατάσταση γρήγορα και με ακρίβεια.</span></li>
+                            <li class="accordion-item accordion-item--eng greekLocalization"><span class="accordion-item--inner greekLocalization"><span class="accordion-item--marked">Εκτίμηση και επίλυση:</span> Οι ειδικοί μας θα αναλύσουν αμέσως τις παρεχόμενες πληροφορίες και θα προτείνουν τον καλύτερο τρόπο δράσης, συμπεριλαμβανομένης της έκδοσης αντικατάστασης, της οργάνωσης επιστροφής ή της παροχής οδηγιών για περαιτέρω βήματα.</span></li>
+                            <li class="accordion-item accordion-item--eng greekLocalization"><span class="accordion-item--inner greekLocalization"><span class="accordion-item--marked">Έγκαιρη απάντηση:</span> Κατανοούμε τη σημασία της έγκαιρης ανταπόκρισης. Να είστε βέβαιοι ότι θα καταβάλουμε κάθε δυνατή προσπάθεια για να επιλύσουμε το πρόβλημά σας και να σας κρατάμε ενήμερους σε κάθε στάδιο της διαδικασίας.</span></li>
+                            <li class="accordion-item accordion-item--eng greekLocalization"><span class="accordion-item--inner greekLocalization"><span class="accordion-item--marked">Επιστροφή χρημάτων ή αντικατάσταση:</span> Ανάλογα με τη φύση του προβλήματος, είτε θα εκδίδουμε επιστροφή χρημάτων είτε θα σας αποστείλουμε αντικατάσταση χωρίς πρόσθετο κόστος εκ μέρους σας. Κύριος στόχος μας είναι η πλήρης ικανοποίησή σας με την αγορά.</span></li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="accordion-tab revealByScrollDown">
+                    <input class="accordion-tab__input open-close" id="choice3" type="checkbox" name="accordion">
+                    <label class="accordion-tab__heading accordion-tab__heading--eng greekLocalization" for="choice3">Ποιος είναι ο σωστός τρόπος φροντίδας του τάπητα?</label>
+                </div>
+                <div class="accordion-panel">
+                    <div class="accordion-item--wrapper">
+                        <p class="accordion-item accordion-item--eng greekLocalization"><span class="accordion-item--inner greekLocalization">Η φροντίδα του τεχνητού χλοοτάπητα είναι σχετικά απλή και η τήρηση μερικών βασικών κανόνων θα τον βοηθήσει να παραμείνει πλούσιος και "ζωντανός".</span></p>
+                        <ol class="accordion-list">
+                            <li class="accordion-item accordion-item--eng greekLocalization"><span class="accordion-item--inner greekLocalization"><span class="accordion-item--marked">Τακτικό βούρτσισμα:</span> Χρησιμοποιήστε μια άκαμπτη βούρτσα για να χτενίσετε το γρασίδι αντίθετα στη φυσική φορά της ίνας. Αυτό βοηθά να διατηρούνται οι ίνες σε όρθια θέση. Το βούρτσισμα βοηθά επίσης στην ομοιόμορφη κατανομή του γεμίσματος, εξασφαλίζοντας ομοιόμορφη εμφάνιση.</span></li>
+                            <li class="accordion-item accordion-item--eng greekLocalization"><span class="accordion-item--inner greekLocalization"><span class="accordion-item--marked">Καθαρισμός υπολειμμάτων:</span> Αφαιρείτε τακτικά φύλλα, κλαδιά και άλλα υπολείμματα από την επιφάνεια του τεχνητού χλοοτάπητα. Χρησιμοποιήστε έναν φυσητήρα φύλλων ή ηλεκτρική σκούπα. Ο γρήγορος καθαρισμός των σκουπιδιών αποτρέπει την αποσύνθεση της οργανικής ύλης στην επιφάνεια και βοηθά στη διατήρηση μιας καθαρής επιφάνειας και εμφάνισης.</span></li>
+                            <li class="accordion-item accordion-item--eng greekLocalization"><span class="accordion-item--inner greekLocalization"><span class="accordion-item--marked">Καθαρισμός τροφίμων και υγρών:</span> Καθαρίστε αμέσως τρόφιμα, ποτά ή απορρίμματα κατοικίδιων που χύθηκαν κατά λάθος. Χρησιμοποιήστε ήπιο σαπούνι ή ένα προτεινόμενο διάλυμα καθαρισμού τεχνητού χλοοτάπητα με νερό για να σκουπίσετε απαλά την λερωμένη περιοχή. Ξεπλύνετε καλά με νερό για να αφαιρέσετε τυχόν υπολείμματα. Για λεκέδες από κατοικίδια, χρησιμοποιήστε ένα ήπιο απολυμαντικό ασφαλές για κατοικίδια.</span></li>
+                            <li class="accordion-item accordion-item--eng greekLocalization"><span class="accordion-item--inner greekLocalization"><span class="accordion-item--marked">Έλεγχος ζιζανίων:</span> Αν και ο τεχνητός χλοοτάπητας είναι ανθεκτικός στα ζιζάνια, περιστασιακά, τα ζιζάνια μπορεί να φυτρώσουν κατά μήκος των άκρων ή μέσα από τρύπες αποστράγγισης. Αφαιρέστε τα αναδυόμενα ζιζάνια με το χέρι ή χρησιμοποιήστε ένα διάλυμα εξόντωσης ζιζανίων που είναι ασφαλές για τεχνητό χλοοτάπητα.</span></li>
+                            <li class="accordion-item accordion-item--eng greekLocalization"><span class="accordion-item--inner greekLocalization"><span class="accordion-item--marked">Αποφύγετε επιθετικά χημικά και ΧΛΩΡΙΝΗ:</span> Αποφύγετε τη χρήση επιθετικών χημικών, διαλυτών ή ισχυρών καθαριστικών σε τεχνητό χλοοτάπητα. Επιμείνετε σε απαλό σαπούνι ή ειδικά διαμορφωμένα διαλύματα καθαρισμού τεχνητού χλοοτάπητα.</span></li>
+                            <li class="accordion-item accordion-item--eng greekLocalization accordion-item--margin"><span class="accordion-item--inner greekLocalization"><span class="accordion-item--marked">Εποχιακή συντήρηση:</span> Πραγματοποιήστε βαθύ καθαρισμό τουλάχιστον μία φορά το χρόνο, ειδικά σε περιοχές με μεγάλη κυκλοφορία. Μπορείτε να χρησιμοποιήσετε ένα πιεστικό ή να προσλάβετε την επαγγελματική μας ομάδα καθαρισμού τεχνητού χλοοτάπητα.</span></li>
+                        </ol>
+                        <p class="accordion-item accordion-item--eng greekLocalization"><span class="accordion-item--inner greekLocalization">Ακολουθώντας αυτές τις απλές μεθόδους περιποίησης, μπορείτε να εξασφαλίσετε τη μακροζωία και την αισθητική γοητεία του χαλιού σας από τεχνητό χλοοτάπητα, παρέχοντάς σας ένα καταπράσινο τοπίο όλο το χρόνο.</span></p>
+                    </div>
+                </div>
+
+                <div class="accordion-tab revealByScrollDown">
+                    <input class="accordion-tab__input open-close" id="choice4" type="checkbox" name="accordion">
+                    <label class="accordion-tab__heading accordion-tab__heading--eng greekLocalization" for="choice4">Μπορώ να τοποθετήσω έπιπλα ή γλάστρες με φυτά στην επιφάνεια του τεχνητού χλοοτάπητα?</label>
+                </div>
+                <div class="accordion-panel">
+                    <div class="accordion-item--wrapper">
+                        <p class="accordion-item accordion-item--eng greekLocalization"><span class="accordion-item--inner greekLocalization">Ναι, μπορείτε να τοποθετήσετε έπιπλα ή γλάστρες με φυτά στην επιφάνεια του τεχνητού χλοοτάπητα. Ωστόσο, υπάρχουν πολλά σημαντικά σημεία που πρέπει να ληφθούν υπόψη:</span></p>
+                        <ol class="accordion-list">
+                            <li class="accordion-item accordion-item--eng greekLocalization"><span class="accordion-item--inner greekLocalization"><span class="accordion-item--marked">Κατανομή βάρους:</span> Εάν τοποθετείτε βαριά αντικείμενα, όπως έπιπλα σε τεχνητό χλοοτάπητα, βεβαιωθείτε ότι το βάρος είναι ομοιόμορφα κατανεμημένο για να αποτρέψετε την παραμόρφωση ή τη συμπίεση των ινών.</span></li>
+                            <li class="accordion-item accordion-item--eng greekLocalization"><span class="accordion-item--inner greekLocalization"><span class="accordion-item--marked">Δίσκοι για γλάστρες:</span> Εάν έχετε γλάστρες με φυτά, συνιστάται να χρησιμοποιείτε δίσκους ή βάσεις κάτω από αυτές. Αυτό βοηθά στην πρόληψη της συσσώρευσης νερού κάτω από τις γλάστρες, η οποία θα μπορούσε να οδηγήσει σε προβλήματα αποστράγγισης.</span></li>
+                            <li class="accordion-item accordion-item--eng greekLocalization"><span class="accordion-item--inner greekLocalization"><span class="accordion-item--marked">Μετακινούμενα είδη:</span> Μετακινείτε περιοδικά έπιπλα και γλάστρες για να αποφύγετε τη συγκέντρωση νερού σε συγκεκριμένες περιοχές και να κατανέμετε ομοιόμορφα το φορτίο στην επιφάνεια.</span></li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="accordion-tab revealByScrollDown">
+                    <input class="accordion-tab__input open-close" id="choice5" type="checkbox" name="accordion">
+                    <label class="accordion-tab__heading accordion-tab__heading--eng greekLocalization" for="choice5">Ποια είναι τα πλεονεκτήματα της χρήσης τεχνητού χλοοτάπητα σε σύγκριση με το φυσικό γκαζόν?</label>
+                </div>
+                <div class="accordion-panel">
+                    <div class="accordion-item--wrapper">
+                        <p class="accordion-item accordion-item--eng greekLocalization"><span class="accordion-item--inner greekLocalization">Ο τεχνητός χλοοτάπητας παρέχει ένα όμορφο πράσινο γκαζόν χωρίς να χρειάζεται πότισμα, λιπάσματα και κούρεμα. Είναι επίσης κατάλληλο για περιοχές με δύσκολες κλιματολογικές συνθήκες.</span></p>
+                    </div>
+                </div>
+
+                <div class="accordion-tab revealByScrollDown">
+                    <input class="accordion-tab__input open-close" id="choice6" type="checkbox" name="accordion">
+                    <label class="accordion-tab__heading accordion-tab__heading--eng greekLocalization" for="choice6">Ποιες επιπλέον υπηρεσίες προσφέρει η εταιρεία σε σχέση με την εγκατάσταση και συντήρηση τεχνητού χλοοτάπητα?</label>
+                </div>
+                <div class="accordion-panel">
+                    <div class="accordion-item--wrapper">
+                        <p class="accordion-item accordion-item--eng greekLocalization"><span class="accordion-item--inner greekLocalization">Παρέχουμε υπηρεσίες εγκατάστασης και προσφέρουμε συμβουλές για τη φροντίδα του τεχνητού χλοοτάπητα. Επικοινωνήστε με την υπηρεσία υποστήριξής μας για πρόσθετες πληροφορίες.</span></p>
+                    </div>
+                </div>
+        </div>
+    </section>
+
+    <section class="questions">
+        <div class="questions-container container">
+            <h2 class="questions-heading questions-heading--eng greekLocalization revealByScroll revealByScroll--left">Έχετε άλλες ερωτήσεις?</h2>
+            <p class="questions-subheading questions-subheadingGR questions-subheading--eng greekLocalization revealByScroll revealByScroll--right">Στόχος μας είναι να παρέχουμε απαντήσεις σε όλα τα ερωτήματά σας. Δεν μπορείτε να βρείτε την απάντηση που ψάχνετε; Επικοινωνήστε μαζί μας και θα κάνουμε ό,τι καλύτερο μπορούμε για να σας βοηθήσουμε!</p>
+            <a class="questions-button greekLocalization revealByScroll revealByScroll--left" href="../../gr.html#contact">Επικοινωνήστε μαζί μας</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container container">
+            <a class="logo-wrapper" href="../../gr.html">
+                <img class="logo" src="../../assets/images/icons/logo.svg" alt="logo">
+            </a>
+            <div class="footer-content">
+                <nav class="nav">
+                    <a class="nav-item--wrapper nav-item--greekWrapper" href="../../gr.html#about">
+                        <p class="nav-item nav-item--greek">Σχετικά με εμάς</p>
+                    </a>
+                    <a class="nav-item--wrapper nav-item--greekWrapper" href="../../pages/greek/catalog.html">
+                        <p class="nav-item nav-item--greek">Κατάλογος</p>
+                    </a>
+                    <a class="nav-item--wrapper nav-item--greekWrapper" href="../../pages/greek/faq.html">
+                        <p class="nav-item nav-item--greek">Συχνές ερωτήσεις</p>
+                    </a>
+                    <a class="nav-item--wrapper nav-item--greekWrapper" href="../../gr.html#contact">
+                        <p class="nav-item nav-item--greek">Επικοινωνία</p>
+                    </a>
+                </nav>
+                <hr class="footer-separator">
+                <div class="footer-box">
+                    <div class="footer-box__item">
+                        <p class="footer-box__item-heading greekLocalization">Διεύθυνση</p>
+                        <div class="footer-box__item-inner">
+                            <div class="footer-box__item-row">
+                                <img class="footer-box__item-icon" src="../../assets/images/icons/location.svg" alt="location icon">
+                                <p class="footer-box__item-info footer-box__item-info--eng greekLocalization">Ψηλορείτη 59B Γλυφάδα, Αθήνα</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-box__item">
+                        <p class="footer-box__item-heading greekLocalization">Ώρες εργασίας</p>
+                        <div class="footer-box__item-inner">
+                            <div class="footer-box__item-row">
+                                <p class="footer-box__item-info greekLocalization">Δευτέρα - Παρασκευή</p>
+                            </div>
+                            <div class="footer-box__item-row">
+                                <p class="footer-box__item-info greekLocalization">από <span class="footer-box__item-info--number">09:00</span> έως <span class="footer-box__item-info--number">17:00</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-box__item">
+                        <p class="footer-box__item-heading footer-box__item-heading--eng greekLocalization">Μείνετε σε επαφή</p>
+                        <div class="footer-box__item-inner">
+                            <a class="footer-box__item-row clicable-icon--wrapper"  href="tel:+306980736760">
+                                <svg class="footer-box__item-icon clicable-icon" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                    <path d="M7.12721 3.19291C6.89942 2.62343 6.34785 2.25 5.7345 2.25H3.67105C2.88623 2.25 2.25 2.88626 2.25 3.67108C2.25 10.3421 7.65808 15.75 14.3291 15.75C15.1139 15.75 15.75 15.1138 15.75 14.329L15.7499 12.2655C15.7499 11.6522 15.3764 11.1006 14.8069 10.8729L12.8303 10.0822C12.3188 9.87754 11.7364 9.96976 11.3131 10.3225L10.8023 10.748C10.2063 11.2447 9.32998 11.205 8.78141 10.6564L7.34352 9.21863C6.79495 8.67005 6.75542 7.79365 7.25208 7.19766L7.67761 6.68698C8.03033 6.26372 8.12252 5.6812 7.9179 5.16965L7.12721 3.19291Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <p class="footer-box__item-info--number clicable-text greekLocalization">Mobile: +30 69 80736760</p>
+                            </a>
+                            <a class="footer-box__item-row clicable-icon--wrapper"  href="tel:+302130282939">
+                                <svg class="footer-box__item-icon clicable-icon" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                    <path d="M7.12721 3.19291C6.89942 2.62343 6.34785 2.25 5.7345 2.25H3.67105C2.88623 2.25 2.25 2.88626 2.25 3.67108C2.25 10.3421 7.65808 15.75 14.3291 15.75C15.1139 15.75 15.75 15.1138 15.75 14.329L15.7499 12.2655C15.7499 11.6522 15.3764 11.1006 14.8069 10.8729L12.8303 10.0822C12.3188 9.87754 11.7364 9.96976 11.3131 10.3225L10.8023 10.748C10.2063 11.2447 9.32998 11.205 8.78141 10.6564L7.34352 9.21863C6.79495 8.67005 6.75542 7.79365 7.25208 7.19766L7.67761 6.68698C8.03033 6.26372 8.12252 5.6812 7.9179 5.16965L7.12721 3.19291Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <p class="footer-box__item-info--number clicable-text greekLocalization">Office: +30 21 30282939</p>
+                            </a>
+                            <a class="footer-box__item-row clicable-icon--wrapper" href="mailto:info@grassluxuryturf.com">
+                                <svg class="footer-box__item-icon clicable-icon" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                    <path d="M3 4.5L9.17143 9L15 4.5M15.75 6.14996V11.85C15.75 12.69 15.7502 13.1102 15.5867 13.431C15.4429 13.7133 15.2131 13.9427 14.9308 14.0865C14.61 14.25 14.1902 14.25 13.3501 14.25H4.65015C3.81007 14.25 3.38972 14.25 3.06885 14.0865C2.7866 13.9427 2.5573 13.7133 2.41349 13.431C2.25 13.1102 2.25 12.69 2.25 11.85V6.14996C2.25 5.30988 2.25 4.8899 2.41349 4.56903C2.5573 4.28679 2.7866 4.0573 3.06885 3.91349C3.38972 3.75 3.81007 3.75 4.65015 3.75H13.3501C14.1902 3.75 14.61 3.75 14.9308 3.91349C15.2131 4.0573 15.4429 4.28679 15.5867 4.56903C15.7502 4.8899 15.75 5.30988 15.75 6.14996Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <p class="footer-box__item-info--number clicable-text">info@grassluxuryturf.com</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer-box__item">
+                        <p class="footer-box__item-heading footer-box__item-heading--eng greekLocalization">Τα social μας</p>
+                        <div class="footer-box__item-inner">
+                            <div class="footer-box__item-row">
+                                <a href="https://www.facebook.com/profile.php?id=61554992885602" target="_blank" class="footer-box__item-icon--wrapper clicable-icon--wrapper">
+                                    <svg class="footer-box__item-icon clicable-icon" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                        <path class="clicable-icon--inner" d="M18 9C18 4.02943 13.9706 0 9 0C4.02943 0 0 4.02943 0 9C0 13.4921 3.29115 17.2155 7.59375 17.8907V11.6016H5.30859V9H7.59375V7.01719C7.59375 4.76156 8.93742 3.51562 10.9932 3.51562C11.9776 3.51562 13.0078 3.69141 13.0078 3.69141V5.90625H11.873C10.755 5.90625 10.4062 6.60006 10.4062 7.3125V9H12.9023L12.5033 11.6016H10.4062V17.8907C14.7088 17.2155 18 13.4921 18 9Z" stroke-width="0" fill="white"/>
+                                    </svg>
+                                </a>
+                                <a href="https://www.instagram.com/grass_luxury_turf/" target="_blank" class="footer-box__item-icon--wrapper clicable-icon--wrapper">
+                                    <svg class="footer-box__item-icon clicable-icon" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                        <path class="clicable-icon--inner" d="M9 1.6207C11.4047 1.6207 11.6895 1.63125 12.6352 1.67344C13.5141 1.71211 13.9887 1.85977 14.3051 1.98281C14.7234 2.14453 15.0258 2.34141 15.3387 2.6543C15.6551 2.9707 15.8484 3.26953 16.0102 3.68789C16.1332 4.0043 16.2809 4.48242 16.3195 5.35781C16.3617 6.30703 16.3723 6.5918 16.3723 8.99297C16.3723 11.3977 16.3617 11.6824 16.3195 12.6281C16.2809 13.507 16.1332 13.9816 16.0102 14.298C15.8484 14.7164 15.6516 15.0187 15.3387 15.3316C15.0223 15.648 14.7234 15.8414 14.3051 16.0031C13.9887 16.1262 13.5105 16.2738 12.6352 16.3125C11.6859 16.3547 11.4012 16.3652 9 16.3652C6.59531 16.3652 6.31055 16.3547 5.36484 16.3125C4.48594 16.2738 4.01133 16.1262 3.69492 16.0031C3.27656 15.8414 2.97422 15.6445 2.66133 15.3316C2.34492 15.0152 2.15156 14.7164 1.98984 14.298C1.8668 13.9816 1.71914 13.5035 1.68047 12.6281C1.63828 11.6789 1.62773 11.3941 1.62773 8.99297C1.62773 6.58828 1.63828 6.30351 1.68047 5.35781C1.71914 4.47891 1.8668 4.0043 1.98984 3.68789C2.15156 3.26953 2.34844 2.96719 2.66133 2.6543C2.97773 2.33789 3.27656 2.14453 3.69492 1.98281C4.01133 1.85977 4.48945 1.71211 5.36484 1.67344C6.31055 1.63125 6.59531 1.6207 9 1.6207ZM9 0C6.55664 0 6.25078 0.0105469 5.29102 0.0527344C4.33477 0.0949219 3.67734 0.249609 3.10781 0.471094C2.51367 0.703125 2.01094 1.00898 1.51172 1.51172C1.00898 2.01094 0.703125 2.51367 0.471094 3.1043C0.249609 3.67734 0.0949219 4.33125 0.0527344 5.2875C0.0105469 6.25078 0 6.55664 0 9C0 11.4434 0.0105469 11.7492 0.0527344 12.709C0.0949219 13.6652 0.249609 14.3227 0.471094 14.8922C0.703125 15.4863 1.00898 15.9891 1.51172 16.4883C2.01094 16.9875 2.51367 17.2969 3.1043 17.5254C3.67734 17.7469 4.33125 17.9016 5.2875 17.9437C6.24727 17.9859 6.55312 17.9965 8.99648 17.9965C11.4398 17.9965 11.7457 17.9859 12.7055 17.9437C13.6617 17.9016 14.3191 17.7469 14.8887 17.5254C15.4793 17.2969 15.982 16.9875 16.4813 16.4883C16.9805 15.9891 17.2898 15.4863 17.5184 14.8957C17.7398 14.3227 17.8945 13.6687 17.9367 12.7125C17.9789 11.7527 17.9895 11.4469 17.9895 9.00352C17.9895 6.56016 17.9789 6.2543 17.9367 5.29453C17.8945 4.33828 17.7398 3.68086 17.5184 3.11133C17.2969 2.51367 16.991 2.01094 16.4883 1.51172C15.9891 1.0125 15.4863 0.703125 14.8957 0.474609C14.3227 0.253125 13.6688 0.0984375 12.7125 0.05625C11.7492 0.0105469 11.4434 0 9 0Z" stroke-width="0" fill="white"/>
+                                        <path class="clicable-icon--inner" d="M9 4.37695C6.44766 4.37695 4.37695 6.44766 4.37695 9C4.37695 11.5523 6.44766 13.623 9 13.623C11.5523 13.623 13.623 11.5523 13.623 9C13.623 6.44766 11.5523 4.37695 9 4.37695ZM9 11.9988C7.34414 11.9988 6.00117 10.6559 6.00117 9C6.00117 7.34414 7.34414 6.00117 9 6.00117C10.6559 6.00117 11.9988 7.34414 11.9988 9C11.9988 10.6559 10.6559 11.9988 9 11.9988Z" stroke-width="0" fill="white"/>
+                                        <path class="clicable-icon--inner" d="M14.8852 4.19404C14.8852 4.7917 14.4 5.27334 13.8059 5.27334C13.2082 5.27334 12.7266 4.78819 12.7266 4.19404C12.7266 3.59639 13.2117 3.11475 13.8059 3.11475C14.4 3.11475 14.8852 3.5999 14.8852 4.19404Z" stroke-width="0" fill="white"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-box__item">
+                        <p class="footer-box__item-heading footer-box__item-heading--eng greekLocalization">Γενικές πληροφορίες</p>
+                        <div class="footer-box__item-inner">
+                            <a class="footer-box__item-row clicable-icon--wrapper" href="./termsConditions.html">
+                                <p class="footer-box__item-info--number clicable-text greekLocalization">Όροι χρήσης</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="JDDesign" href="https://www.instagram.com/jd_agency_design/" target="_blank">Website by: JD Agency</a>
+    </footer>
+
+    <script src="../../assets/scripts/header.js"></script>
+    <script src="../../assets/scripts/accordion.js"></script>
+</body>
+</html>

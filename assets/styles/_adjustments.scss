@@ -104,13 +104,6 @@ input[type=number] {
     }
 }
 
-// container
-
-.container {
-    @include container;
-}
-
-
 .revealByLoad {
     &--right {
         @include slideInRight;
@@ -129,4 +122,20 @@ input[type=number] {
     &--left {
         @include slideInLeft;
     }
+}
+
+.revealByScrollDown {
+    @include slideInDown;
+}
+
+// greek localization
+
+.greekLocalization {
+    font-family: 'Manrope' !important;
+}
+
+// container
+
+.container {
+    @include container;
 }

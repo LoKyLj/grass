@@ -25,7 +25,7 @@ if (!error_get_last()) {
     <b>Email:</b> $email<br>
     <b>Phone:</b> $phone<br>
     <b>Address:</b> $address<br><br>
-    <b>Message:</b> $message<br>
+    <b>Message:</b> $message<br><br>
     <b>Order:</b> $products<br>
     ";
     
@@ -45,8 +45,10 @@ if (!error_get_last()) {
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
     $mail->setFrom('smtpmail@grassluxuryturf.com', 'Grass Luxury Turf'); // Адрес самой почты и имя отправителя
+
     
     // Получатель письма
+    // $mail->addAddress('kyljs2d@gmail.com');  
     $mail->addAddress('orders@grassluxuryturf.com');  
     // $mail->addAddress('poluchatel2@gmail.com'); // Ещё один, если нужен
     

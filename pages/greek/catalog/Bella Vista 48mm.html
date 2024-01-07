@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grass Luxury Turf</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../favicons/favicon-16x16.png">
+    <link rel="manifest" href="../../../favicons/site.webmanifest">
+    <meta name="apple-mobile-web-app-title" content="Grass Luxury Turf">
+    <meta name="application-name" content="Grass Luxury Turf">
+    <meta name="msapplication-TileColor" content="#00a300">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="../../../assets/styles/style.css">
+    <script src="../../../assets/scripts/animations.js" defer></script>
+    <script src="../../../assets/scripts/productsCardGR.js" type="module" defer></script>
+</head>
+<body data-product-id="6">
+    <header class="header">
+        <div class="header-container container">
+            <a class="logo-wrapper" href="../../../gr.html">
+                <img class="logo" src="../../../assets/images/icons/logo.svg" alt="logo">
+            </a>
+            <nav class="nav">
+                <a class="nav-item--wrapper nav-item--greekWrapper" href="../../../gr.html#about">
+                    <p class="nav-item nav-item--greek">Σχετικά με εμάς</p>
+                </a>
+                <a class="nav-item--wrapper nav-item--greekWrapper" href="../../../pages/greek/catalog.html">
+                    <p class="nav-item nav-item--greek">Κατάλογος</p>
+                </a>
+                <a class="nav-item--wrapper nav-item--greekWrapper" href="../../../pages/greek/faq.html">
+                    <p class="nav-item nav-item--greek">Συχνές ερωτήσεις</p>
+                </a>
+                <a class="nav-item--wrapper nav-item--greekWrapper" href="../../../gr.html#contact">
+                    <p class="nav-item nav-item--greek">Επικοινωνία</p>
+                </a>
+            </nav>
+            <div class="profile">
+                <div class="language">
+					<a class="language-item--wrapper" href="../../../en.html">
+                        <p class="language-item">EN</p>
+                    </a>
+                    <hr class="language-separator">
+                    <a class="language-item--wrapper" href="../../../gr.html">
+                        <p class="language-item language-item--checked">GR</p>
+                    </a>
+				</div>
+                <a class="cart-wrapper clicable-icon--wrapper" href="../cart.html">
+                    <svg class="cart-icon clicable-icon" width="24" height="25" viewBox="0 0 24 25">
+                        <path d="M7.5 8.17001V7.20001C7.5 4.95001 9.31 2.74001 11.56 2.53001C14.24 2.27001 16.5 4.38001 16.5 7.01001V8.39001" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9.00001 22.5H15C19.02 22.5 19.74 20.89 19.95 18.93L20.7 12.93C20.97 10.49 20.27 8.5 16 8.5H8.00001C3.73001 8.5 3.03001 10.49 3.30001 12.93L4.05001 18.93C4.26001 20.89 4.98001 22.5 9.00001 22.5Z" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M15.4955 12.5H15.5045" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M8.49451 12.5H8.50349" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <p class="cart-count">0</p>
+                </a>
+                <div class="burger">
+                    <input id="menuToggle" type="checkbox" onchange="burgerLogic()">
+                    <label class="menu-button" for="menuToggle"><span></span></label>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="sidebar sidebar--hiden">
+        <div class="sidebar-container container">
+            <label class="menu-button--close" for="menuToggle"><span></span></label>
+            <div class="language">
+                <a class="language-item--wrapper" href="../../../en.html">
+                    <p class="language-item">EN</p>
+                </a>
+                <hr class="language-separator">
+                <a class="language-item--wrapper" href="../../../gr.html">
+                    <p class="language-item language-item--checked">GR</p>
+                </a>
+            </div>
+            <nav class="nav">
+                <a class="nav-item--wrapper" href="../../../gr.html#about" onclick="uncheckBurgerInput()">
+                    <p class="nav-item nav-item--greek">Σχετικά με εμάς</p>
+                </a>
+                <a class="nav-item--wrapper" href="../catalog.html">
+                    <p class="nav-item nav-item--greek">Κατάλογος</p>
+                </a>
+                <a class="nav-item--wrapper" href="../faq.html">
+                    <p class="nav-item nav-item--greek">Συχνές ερωτήσεις</p>
+                </a>
+                <a class="nav-item--wrapper" href="../../../gr.html#contact" onclick="uncheckBurgerInput()">
+                    <p class="nav-item nav-item--greek">Επικοινωνία</p>
+                </a>
+            </nav>
+        </div>
+    </div>
+
+    <section class="calculations">
+        <div class="calculations-container container">
+            <div class="gallery">
+                <div class="gallery-item gallery-item--hiden">
+                    <img src="" alt="#">
+                </div>
+            </div>
+            <div class="calculations-info">
+                <div class="calculations-info__item calculations-info__item--wide">
+                    <div class="calculations-info__item-container">
+                        <p class="calculations-info__item-name greekLocalization">Μήκος</p>
+                        <div class="calculations-info__item-select--wrapper">
+                            <select class="calculations-info__item-select" id="calculationsLength" onchange="calculateCost()">
+                                <option class="calculations-info__item-option" value="0.5">0.5 m</option>
+                                <option class="calculations-info__item-option" value="1">1 m</option>
+                                <option class="calculations-info__item-option" value="1.5">1.5 m</option>
+                                <option class="calculations-info__item-option" value="2">2 m</option>
+                                <option class="calculations-info__item-option" value="2.5">2.5 m</option>
+                                <option class="calculations-info__item-option" value="3">3 m</option>
+                                <option class="calculations-info__item-option" value="3.5">3.5 m</option>
+                                <option class="calculations-info__item-option" value="4">4 m</option>
+                                <option class="calculations-info__item-option" value="4.5">4.5 m</option>
+                                <option class="calculations-info__item-option" value="5">5 m</option>
+                                <option class="calculations-info__item-option" value="5.5">5.5 m</option>
+                                <option class="calculations-info__item-option" value="6">6 m</option>
+                                <option class="calculations-info__item-option" value="6.5">6.5 m</option>
+                                <option class="calculations-info__item-option" value="7">7 m</option>
+                                <option class="calculations-info__item-option" value="7.5">7.5 m</option>
+                                <option class="calculations-info__item-option" value="8">8 m</option>
+                                <option class="calculations-info__item-option" value="8.5">8.5 m</option>
+                                <option class="calculations-info__item-option" value="9">9 m</option>
+                                <option class="calculations-info__item-option" value="9.5">9.5 m</option>
+                                <option class="calculations-info__item-option" value="10">10 m</option>
+                                <option class="calculations-info__item-option" value="10.5">10.5 m</option>
+                                <option class="calculations-info__item-option" value="11">11 m</option>
+                                <option class="calculations-info__item-option" value="11.5">11.5 m</option>
+                                <option class="calculations-info__item-option" value="12">12 m</option>
+                                <option class="calculations-info__item-option" value="12.5">12.5 m</option>
+                                <option class="calculations-info__item-option" value="13">13 m</option>
+                                <option class="calculations-info__item-option" value="13.5">13.5 m</option>
+                                <option class="calculations-info__item-option" value="14">14 m</option>
+                                <option class="calculations-info__item-option" value="14.5">14.5 m</option>
+                                <option class="calculations-info__item-option" value="15">15 m</option>
+                                <option class="calculations-info__item-option" value="15.5">15.5 m</option>
+                                <option class="calculations-info__item-option" value="16">16 m</option>
+                                <option class="calculations-info__item-option" value="16.5">16.5 m</option>
+                                <option class="calculations-info__item-option" value="17">17 m</option>
+                                <option class="calculations-info__item-option" value="17.5">17.5 m</option>
+                                <option class="calculations-info__item-option" value="18">18 m</option>
+                                <option class="calculations-info__item-option" value="18.5">18.5 m</option>
+                                <option class="calculations-info__item-option" value="19">19 m</option>
+                                <option class="calculations-info__item-option" value="19.5">19.5 m</option>
+                                <option class="calculations-info__item-option" value="20">20 m</option>
+                                <option class="calculations-info__item-option" value="20.5">20.5 m</option>
+                                <option class="calculations-info__item-option" value="21">21 m</option>
+                                <option class="calculations-info__item-option" value="21.5">21.5 m</option>
+                                <option class="calculations-info__item-option" value="22">22 m</option>
+                                <option class="calculations-info__item-option" value="22.5">22.5 m</option>
+                                <option class="calculations-info__item-option" value="23">23 m</option>
+                                <option class="calculations-info__item-option" value="23.5">23.5 m</option>
+                                <option class="calculations-info__item-option" value="24">24 m</option>
+                                <option class="calculations-info__item-option" value="24.5">24.5 m</option>
+                                <option class="calculations-info__item-option" value="25">25 m</option>
+                            </select>
+                            <svg class="calculations-info__item-select--arrow" viewBox="0 0 16 17" fill="none">
+                                <path d="M13.28 6.46655L8.9333 10.8132C8.41997 11.3266 7.57997 11.3266 7.06664 10.8132L2.71997 6.46655" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="calculations-info__item-container">
+                        <p class="calculations-info__item-name greekLocalization">Πλάτος</p>
+                        <div class="calculations-info__item-radiobuttons">
+                            <input class="calculations-info__item-radiobutton" type="radio" name="width" value="2" id="2m" checked onchange="calculateCost()">
+                            <label class="calculations-info__item-label" for="2m">2 m</label>
+                            <input class="calculations-info__item-radiobutton" type="radio" name="width" value="4" id="4m" onchange="calculateCost()">
+                            <label class="calculations-info__item-label" for="4m">4 m</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="calculations-info__item calculations-info__item--lone">
+                    <p class="calculations-info__item-name greekLocalization">Ποσότητα</p>
+                    <div class="calculations-info__item-quantity">
+                        <svg class="calculations-info__item-quantity--minus minus" viewBox="0 0 14 14" fill="none">
+                            <path d="M3.5 7H10.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <input class="calculations-info__item-quantity--text" id="calculationsQuantity" type="number" value="1" min="1" max="10" onchange="calculateCost()">
+                        <svg class="calculations-info__item-quantity--plus plus" viewBox="0 0 14 14" fill="none">
+                            <path d="M3.5 7H10.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M7 10.5V3.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+                <p class="calculations-info__cost">
+                    <span class="calculations-info__cost-text calculations-info__cost-text--eng greekLocalization">Σύνολο:</span><span class="calculations-info__cost-number"><span class="calculationsPriceStorage" id="calculationsPriceStorage">0</span>€</span>
+                    <br>
+                    <span class="calculations-info__cost-text calculations-info__cost-text--eng greekLocalization">Εμβαδόν:</span><span class="calculations-info__cost-number"><span class="calculationsAreaStorage" id="calculationsAreaStorage">0</span>m²</span>
+                </p>
+                <a class="calculations-info__button calculations-info__buttonGR greekLocalization">Προσθήκη στο καλάθι</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="cardDescription">
+        <div class="cardDescription-container container">
+            <p class="cardDescription-subheading cardDescription-subheading--eng greekLocalization revealByScroll revealByScroll--left">Υπηρεσίες εγκατάστασης & συντήρησης</p>
+            <div class="card-description">
+                <p class="card-item__text greekLocalization revealByScroll revealByScroll--right"><span class="card-item__text--marked">Παρέχουμε υπηρεσίες εγκατάστασης και προσφέρουμε συμβουλές για τη φροντίδα του τεχνητού χλοοτάπητα. Επικοινωνήστε με την υπηρεσία υποστήριξής μας για πρόσθετες πληροφορίες.</span></p>
+            </div>
+            <p class="cardDescription-subheading cardDescription-subheading--eng greekLocalization revealByScroll revealByScroll--left">Περιγραφή προιόντος</p>
+            <div class="card-description">
+                <p class="card-item__text greekLocalization revealByScroll revealByScroll--right">Σας παρουσιάζουμε το <span class="card-item__text--marked">Bella Vista</span> 48mm – Αναβαθμίστε τον εξωτερικό σας χώρο σε ένα πολυτελές τοπίο!</p>
+                <p class="card-item__text greekLocalization revealByScroll revealByScroll--right">Μεταμορφώστε τον χώρο σας σε μια κατάφυτη όαση με το συνθετικό χλοοτάπητα <span class="card-item__text--marked">Bella Vista</span>. Σχεδιασμένος για να φέρει την ομορφιά της φύσης στο κατώφλι σας. Premium σειρά που προσφέρει μια εκπληκτική λύση χωρίς συντήρηση για ένα καταπράσινο τοπίο όλο το χρόνο.</p>
+                <p class="card-item__text greekLocalization revealByScroll revealByScroll--right">Δεν περιέχει μόλυβδο και κάδμιο, διασφαλίζοντας έτσι ότι οι πελάτες μας λαμβάνουν μόνο την καλύτερη ποιότητα. Σχεδιασμένος με τελειότητα χάρη στις ειδικές ίνες <span class="card-item__text--marked">C-shaped.</span></p>
+                <p class="card-item__text greekLocalization revealByScroll revealByScroll--right">Το σχήμα C-shaped είναι ότι πιο κοντινό με το φυσικό γκαζόν, διαθέτοντας επίσης μια πολύ ωραία λάμψη σαν μετάξι. Οι ίνες του δεν είναι πολύ γυαλιστερές, αλλά ούτε πολύ θαμπές. Ακριβώς όπως του φυσικού γκαζόν, αλλά χωρίς την ταλαιπωρία του φυσικού γρασιδιού. Έως και 20% λιγότερη απορρόφηση θερμότητας σε μια μέση ηλιόλουστη μέρα, κάτι το οποίο το καθιστά ένα από τα πιο δροσερά γκαζόν! Διαθέτει εξαιρετικό επίπεδο σταθεροποίησης UV που προστατεύει τον τάπητα από την επίδραση του ήλιου, της βροχής, του παγετού και της ακτινοβολίας και προσφέρει μια πολύ φυσική εμφάνιση και αίσθηση για πολλά χρόνια.</p>
+                <p class="card-item__text greekLocalization revealByScroll revealByScroll--right">Όλη η γκάμα του συνθετικού μας γκαζόν είναι φιλική προς το περιβάλλον, τα παιδιά και τα κατοικίδια, χωρίς μόλυβδο και κάδμιο. Έχουν 8 χρόνια εγγύηση για αποχρωματισμό των ινών και αντοχή σε όλες τις καιρικές συνθήκες. Πιστοποιημένα και ελεγμένα για συμμόρφωση με τα πρότυπα της Ευρωπαϊκής Ένωσης.</p>
+            </div>
+            <div class="cardDescription-items">
+                <div class="cardDescription-item cardDescription-item--wide revealByScrollDown">
+                    <p class="card-heading card-heading--greenMark greekLocalization">Τεχνικές προδιαγραφές</p>
+                    <div class="card-items--wrapper">
+                        <div class="card-items card-items--list1">
+                            <ul class="card-item">
+                                <li class="card-item__text greekLocalization"><span class="card-item__text--marked">Ύψος ίνας:</span>  περ. 48 mm</li>
+                                <li class="card-item__text greekLocalization"><span class="card-item__text--marked">Συνολικό ύψος:</span> 50 mm</li>
+                                <li class="card-item__text greekLocalization"><span class="card-item__text--marked">Συνολικό βάρος:</span> 2.580 gr/m² (± 10%)</li>
+                                <li class="card-item__text greekLocalization"><span class="card-item__text--marked">Ίνα:</span> 100% μονόκλωνο PE + PP</li>
+                            </ul>   
+                        </div>
+                        <div class="card-items card-items--list2">
+                            <ul class="card-item">
+                                <li class="card-item__text greekLocalization"><span class="card-item__text--marked">Detex νήματος:</span> 13.100 Dtex</li>
+                                <li class="card-item__text greekLocalization"><span class="card-item__text--marked">Κύριο υπόστρωμα:</span> 100% PP με φλις ίνες</li>
+                                <li class="card-item__text greekLocalization"><span class="card-item__text--marked">Επικάλυψη:</span> fλατέξ SBR; περ. 720 gr/m² </li>
+                                <li class="card-item__text greekLocalization"><span class="card-item__text--marked">Υδατοπερατότητα:</span> περ. 60 λίτρα/m² </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="cardDescription-item cardDescription-item--bottomGrass revealByScrollDown">
+                    <p class="card-heading card-heading--whiteMark greekLocalization">Αντοχή στις καιρικές συνθήκες</p>
+                    <div class="card-items">
+                        <div class="card-item card-item--sun">
+                            <p class="card-item__text greekLocalization">Αντοχή στην υπεριώδη ακτινοβολία: εγγυημένη αντοχή στο ξεθώριασμα από το ηλιακό φως</p>
+                        </div>
+                        <div class="card-item card-item--cloudSun">
+                            <p class="card-item__text greekLocalization">Αντοχή στις καιρικές συνθήκες: ικανό να αντέχει σε ακραίες θερμοκρασίες, υγρασία και ανέμους</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cardDescription-item cardDescription-item--double revealByScrollDown">
+                    <div class="cardDescription-item cardDescription-item--tiny">
+                        <p class="card-heading card-heading--whiteMark greekLocalization">Περιβαλλοντική ασφάλεια</p>
+                        <div class="card-items">
+                            <div class="card-item  card-item--tree">
+                                <p class="card-item__text greekLocalization">Κατασκευασμένο από φιλικά προς το περιβάλλον υλικά χωρίς επιβλαβή χημικά πρόσθετα</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cardDescription-item cardDescription-item--tiny">
+                        <p class="card-heading card-heading--whiteMark greekLocalization">Χρήση</p>
+                        <div class="card-items">
+                            <div class="card-item card-item--checkbox">
+                                <p class="card-item__text greekLocalization">Κατάλληλο για εσωτερική και εξωτερική χρήση. Ιδανικό για τοπία, κήπους, μπαλκόνια, βεράντες και χώρους παιχνιδιού</p> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cardDescription-item cardDescription-item--wide cardDescription-item--guarantee revealByScrollDown">
+                    <p class="card-heading card-heading--greenMark greekLocalization">Εγγύηση</p>
+                    <div class="card-items">
+                        <div class="card-item card-item--verify">
+                            <p class="card-item__text card-item__text--big greekLocalization"><span class="card-item__text--marked card-item__text--markedBig">8 χρόνια</span> εγγύηση για διατήρηση χρώματος και ποιότητας</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="miniShop">
+        <div class="miniShop-container container">
+            <p class="miniShop-subheading miniShop-subheading--eng greekLocalization revealByScroll revealByScroll--left">Δείτε τα άλλα προϊόντα μας:</p>
+            <div class="miniShop-list">
+            </div>
+        </div>        
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container container">
+            <a class="logo-wrapper" href="../../../gr.html">
+                <img class="logo" src="../../../assets/images/icons/logo.svg" alt="logo">
+            </a>
+            <div class="footer-content">
+                <nav class="nav">
+                    <a class="nav-item--wrapper nav-item--greekWrapper" href="../../../gr.html#about">
+                        <p class="nav-item nav-item--greek">Σχετικά με εμάς</p>
+                    </a>
+                    <a class="nav-item--wrapper nav-item--greekWrapper" href="../../../pages/greek/catalog.html">
+                        <p class="nav-item nav-item--greek">Κατάλογος</p>
+                    </a>
+                    <a class="nav-item--wrapper nav-item--greekWrapper" href="../../../pages/greek/faq.html">
+                        <p class="nav-item nav-item--greek">Συχνές ερωτήσεις</p>
+                    </a>
+                    <a class="nav-item--wrapper nav-item--greekWrapper" href="../../../gr.html#contact">
+                        <p class="nav-item nav-item--greek">Επικοινωνία</p>
+                    </a>
+                </nav>
+                <hr class="footer-separator">
+                <div class="footer-box">
+                    <div class="footer-box__item">
+                        <p class="footer-box__item-heading greekLocalization">Διεύθυνση</p>
+                        <div class="footer-box__item-inner">
+                            <div class="footer-box__item-row">
+                                <img class="footer-box__item-icon" src="../../../assets/images/icons/location.svg" alt="location icon">
+                                <p class="footer-box__item-info footer-box__item-info--eng greekLocalization">Ψηλορείτη 59B Γλυφάδα, Αθήνα</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-box__item">
+                        <p class="footer-box__item-heading greekLocalization">Ώρες εργασίας</p>
+                        <div class="footer-box__item-inner">
+                            <div class="footer-box__item-row">
+                                <p class="footer-box__item-info greekLocalization">Δευτέρα - Παρασκευή</p>
+                            </div>
+                            <div class="footer-box__item-row">
+                                <p class="footer-box__item-info greekLocalization">από <span class="footer-box__item-info--number">09:00</span> έως <span class="footer-box__item-info--number">17:00</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-box__item">
+                        <p class="footer-box__item-heading footer-box__item-heading--eng greekLocalization">Μείνετε σε επαφή</p>
+                        <div class="footer-box__item-inner">
+                            <a class="footer-box__item-row clicable-icon--wrapper"  href="tel:+306980736760">
+                                <svg class="footer-box__item-icon clicable-icon" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                    <path d="M7.12721 3.19291C6.89942 2.62343 6.34785 2.25 5.7345 2.25H3.67105C2.88623 2.25 2.25 2.88626 2.25 3.67108C2.25 10.3421 7.65808 15.75 14.3291 15.75C15.1139 15.75 15.75 15.1138 15.75 14.329L15.7499 12.2655C15.7499 11.6522 15.3764 11.1006 14.8069 10.8729L12.8303 10.0822C12.3188 9.87754 11.7364 9.96976 11.3131 10.3225L10.8023 10.748C10.2063 11.2447 9.32998 11.205 8.78141 10.6564L7.34352 9.21863C6.79495 8.67005 6.75542 7.79365 7.25208 7.19766L7.67761 6.68698C8.03033 6.26372 8.12252 5.6812 7.9179 5.16965L7.12721 3.19291Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <p class="footer-box__item-info--number clicable-text greekLocalization">Mobile: +30 69 80736760</p>
+                            </a>
+                            <a class="footer-box__item-row clicable-icon--wrapper"  href="tel:+302130282939">
+                                <svg class="footer-box__item-icon clicable-icon" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                    <path d="M7.12721 3.19291C6.89942 2.62343 6.34785 2.25 5.7345 2.25H3.67105C2.88623 2.25 2.25 2.88626 2.25 3.67108C2.25 10.3421 7.65808 15.75 14.3291 15.75C15.1139 15.75 15.75 15.1138 15.75 14.329L15.7499 12.2655C15.7499 11.6522 15.3764 11.1006 14.8069 10.8729L12.8303 10.0822C12.3188 9.87754 11.7364 9.96976 11.3131 10.3225L10.8023 10.748C10.2063 11.2447 9.32998 11.205 8.78141 10.6564L7.34352 9.21863C6.79495 8.67005 6.75542 7.79365 7.25208 7.19766L7.67761 6.68698C8.03033 6.26372 8.12252 5.6812 7.9179 5.16965L7.12721 3.19291Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <p class="footer-box__item-info--number clicable-text greekLocalization">Office: +30 21 30282939</p>
+                            </a>
+                            <a class="footer-box__item-row clicable-icon--wrapper" href="mailto:info@grassluxuryturf.com">
+                                <svg class="footer-box__item-icon clicable-icon" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                    <path d="M3 4.5L9.17143 9L15 4.5M15.75 6.14996V11.85C15.75 12.69 15.7502 13.1102 15.5867 13.431C15.4429 13.7133 15.2131 13.9427 14.9308 14.0865C14.61 14.25 14.1902 14.25 13.3501 14.25H4.65015C3.81007 14.25 3.38972 14.25 3.06885 14.0865C2.7866 13.9427 2.5573 13.7133 2.41349 13.431C2.25 13.1102 2.25 12.69 2.25 11.85V6.14996C2.25 5.30988 2.25 4.8899 2.41349 4.56903C2.5573 4.28679 2.7866 4.0573 3.06885 3.91349C3.38972 3.75 3.81007 3.75 4.65015 3.75H13.3501C14.1902 3.75 14.61 3.75 14.9308 3.91349C15.2131 4.0573 15.4429 4.28679 15.5867 4.56903C15.7502 4.8899 15.75 5.30988 15.75 6.14996Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <p class="footer-box__item-info--number clicable-text">info@grassluxuryturf.com</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer-box__item">
+                        <p class="footer-box__item-heading footer-box__item-heading--eng greekLocalization">Τα social μας</p>
+                        <div class="footer-box__item-inner">
+                            <div class="footer-box__item-row">
+                                <a href="https://www.facebook.com/profile.php?id=61554992885602" target="_blank" class="footer-box__item-icon--wrapper clicable-icon--wrapper">
+                                    <svg class="footer-box__item-icon clicable-icon" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                        <path class="clicable-icon--inner" d="M18 9C18 4.02943 13.9706 0 9 0C4.02943 0 0 4.02943 0 9C0 13.4921 3.29115 17.2155 7.59375 17.8907V11.6016H5.30859V9H7.59375V7.01719C7.59375 4.76156 8.93742 3.51562 10.9932 3.51562C11.9776 3.51562 13.0078 3.69141 13.0078 3.69141V5.90625H11.873C10.755 5.90625 10.4062 6.60006 10.4062 7.3125V9H12.9023L12.5033 11.6016H10.4062V17.8907C14.7088 17.2155 18 13.4921 18 9Z" stroke-width="0" fill="white"/>
+                                    </svg>
+                                </a>
+                                <a href="https://www.instagram.com/grass_luxury_turf/" target="_blank" class="footer-box__item-icon--wrapper clicable-icon--wrapper">
+                                    <svg class="footer-box__item-icon clicable-icon" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                        <path class="clicable-icon--inner" d="M9 1.6207C11.4047 1.6207 11.6895 1.63125 12.6352 1.67344C13.5141 1.71211 13.9887 1.85977 14.3051 1.98281C14.7234 2.14453 15.0258 2.34141 15.3387 2.6543C15.6551 2.9707 15.8484 3.26953 16.0102 3.68789C16.1332 4.0043 16.2809 4.48242 16.3195 5.35781C16.3617 6.30703 16.3723 6.5918 16.3723 8.99297C16.3723 11.3977 16.3617 11.6824 16.3195 12.6281C16.2809 13.507 16.1332 13.9816 16.0102 14.298C15.8484 14.7164 15.6516 15.0187 15.3387 15.3316C15.0223 15.648 14.7234 15.8414 14.3051 16.0031C13.9887 16.1262 13.5105 16.2738 12.6352 16.3125C11.6859 16.3547 11.4012 16.3652 9 16.3652C6.59531 16.3652 6.31055 16.3547 5.36484 16.3125C4.48594 16.2738 4.01133 16.1262 3.69492 16.0031C3.27656 15.8414 2.97422 15.6445 2.66133 15.3316C2.34492 15.0152 2.15156 14.7164 1.98984 14.298C1.8668 13.9816 1.71914 13.5035 1.68047 12.6281C1.63828 11.6789 1.62773 11.3941 1.62773 8.99297C1.62773 6.58828 1.63828 6.30351 1.68047 5.35781C1.71914 4.47891 1.8668 4.0043 1.98984 3.68789C2.15156 3.26953 2.34844 2.96719 2.66133 2.6543C2.97773 2.33789 3.27656 2.14453 3.69492 1.98281C4.01133 1.85977 4.48945 1.71211 5.36484 1.67344C6.31055 1.63125 6.59531 1.6207 9 1.6207ZM9 0C6.55664 0 6.25078 0.0105469 5.29102 0.0527344C4.33477 0.0949219 3.67734 0.249609 3.10781 0.471094C2.51367 0.703125 2.01094 1.00898 1.51172 1.51172C1.00898 2.01094 0.703125 2.51367 0.471094 3.1043C0.249609 3.67734 0.0949219 4.33125 0.0527344 5.2875C0.0105469 6.25078 0 6.55664 0 9C0 11.4434 0.0105469 11.7492 0.0527344 12.709C0.0949219 13.6652 0.249609 14.3227 0.471094 14.8922C0.703125 15.4863 1.00898 15.9891 1.51172 16.4883C2.01094 16.9875 2.51367 17.2969 3.1043 17.5254C3.67734 17.7469 4.33125 17.9016 5.2875 17.9437C6.24727 17.9859 6.55312 17.9965 8.99648 17.9965C11.4398 17.9965 11.7457 17.9859 12.7055 17.9437C13.6617 17.9016 14.3191 17.7469 14.8887 17.5254C15.4793 17.2969 15.982 16.9875 16.4813 16.4883C16.9805 15.9891 17.2898 15.4863 17.5184 14.8957C17.7398 14.3227 17.8945 13.6687 17.9367 12.7125C17.9789 11.7527 17.9895 11.4469 17.9895 9.00352C17.9895 6.56016 17.9789 6.2543 17.9367 5.29453C17.8945 4.33828 17.7398 3.68086 17.5184 3.11133C17.2969 2.51367 16.991 2.01094 16.4883 1.51172C15.9891 1.0125 15.4863 0.703125 14.8957 0.474609C14.3227 0.253125 13.6688 0.0984375 12.7125 0.05625C11.7492 0.0105469 11.4434 0 9 0Z" stroke-width="0" fill="white"/>
+                                        <path class="clicable-icon--inner" d="M9 4.37695C6.44766 4.37695 4.37695 6.44766 4.37695 9C4.37695 11.5523 6.44766 13.623 9 13.623C11.5523 13.623 13.623 11.5523 13.623 9C13.623 6.44766 11.5523 4.37695 9 4.37695ZM9 11.9988C7.34414 11.9988 6.00117 10.6559 6.00117 9C6.00117 7.34414 7.34414 6.00117 9 6.00117C10.6559 6.00117 11.9988 7.34414 11.9988 9C11.9988 10.6559 10.6559 11.9988 9 11.9988Z" stroke-width="0" fill="white"/>
+                                        <path class="clicable-icon--inner" d="M14.8852 4.19404C14.8852 4.7917 14.4 5.27334 13.8059 5.27334C13.2082 5.27334 12.7266 4.78819 12.7266 4.19404C12.7266 3.59639 13.2117 3.11475 13.8059 3.11475C14.4 3.11475 14.8852 3.5999 14.8852 4.19404Z" stroke-width="0" fill="white"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-box__item">
+                        <p class="footer-box__item-heading footer-box__item-heading--eng greekLocalization">Γενικές πληροφορίες</p>
+                        <div class="footer-box__item-inner">
+                            <a class="footer-box__item-row clicable-icon--wrapper" href="../termsConditions.html">
+                                <p class="footer-box__item-info--number clicable-text greekLocalization">Όροι χρήσης</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="JDDesign" href="https://www.instagram.com/jd_agency_design/" target="_blank">Website by: JD Agency</a>
+    </footer>
+
+    <div class="modal">
+		<div class="closeButton">
+			<svg class="closeButton-pic" width="16" height="16" fill="gray" viewBox="0 0 16 16">
+				<path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z">
+				</path>
+			</svg>
+		</div>
+		
+		<div class="modal-content">
+			<div class="closeButton-box"></div>
+			<div class="prev--wrapper">
+				<svg class="prev" width="16" height="16" fill="gray" viewBox="0 0 256 256">
+					<path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z">
+					</path>
+				</svg>
+			</div>
+			<img class="modal-image" alt="" />
+			<video class="modal-video" controls style="display: none">
+				<source src="" type="video/mp4" />
+			</video>
+			<div class="next--wrapper">
+				<svg class="next" width="16" height="16" fill="gray" viewBox="0 0 256 256">
+					<path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z">
+					</path>
+				</svg>
+			</div>
+		</div>
+	</div>
+
+    <div class="productAdd-modal">
+        <div class="productAdd-modal--inner">
+			<div class="addProductCloseButton-box closeButton-box"></div>
+            <div class="productAdd-modal__content">
+                <div class="addProductCloseButton closeButton productAddModal-closeButton">
+                    <svg class="closeButton-pic" width="16" height="16" fill="gray" viewBox="0 0 16 16">
+                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z">
+                        </path>
+                    </svg>
+                </div>
+                <p class="productAdd-modal__subheading greekLocalization">Το προϊόν προστέθηκε με επιτυχία στο καλάθι!</p>
+                <p class="productAdd-modal__info greekLocalization">Επισκεφθείτε το καλάθι αγορών ή προχωρήστε στην εξερεύνηση των προϊόντων</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="productChange-modal">
+        <div class="productChange-modal--inner">
+			<div class="changeProductCloseButton-box closeButton-box"></div>
+            <div class="productChange-modal__content">
+                <div class="changeProductCloseButton closeButton productChangeModal-closeButton">
+                    <svg class="closeButton-pic" width="16" height="16" fill="gray" viewBox="0 0 16 16">
+                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z">
+                        </path>
+                    </svg>
+                </div>
+                <p class="productChange-modal__subheading greekLocalization">Το προϊόν έχει αλλάξει με επιτυχία!</p>
+                <p class="productChange-modal__info greekLocalization">Επισκεφθείτε το καλάθι αγορών ή προχωρήστε στην εξερεύνηση των προϊόντων</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../../assets/scripts/header.js"></script>
+</body>
+</html>

@@ -59,6 +59,8 @@
         height: 100%;
         @include flexCenter;
         flex-direction: column;
+        transition: all 0.45s ease-in-out;
+        opacity: 1;
     }
 
     &-heading {
@@ -67,6 +69,8 @@
         @include fontStyle(Raleway, 500, 80);
         flex-direction: column;
         text-shadow: 0px 4px 4px rgb(0, 0, 0);
+        text-align: center;
+        text-transform: uppercase;
 
         @include netbook {
             @include fontStyle(Raleway, 400, 60);
@@ -83,6 +87,7 @@
 
     &-subheading {
         @include fontStyle(Raleway, 400, 26);
+        text-align: center;
 
         @include tablet {
             @include fontStyle(Raleway, 400, 20);

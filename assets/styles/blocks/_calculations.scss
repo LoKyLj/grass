@@ -41,7 +41,7 @@
 
         &__price {
             margin-top: 14px;
-            color: $mediumGreen;
+            color: $lightGreen;
             @include fontStyle(Montserrat, 500, 20);
 
             @include netbook {
@@ -71,17 +71,21 @@
                 }
             }
 
-            &--lone {
-                @include netbook {
-                    margin-top: -71px;
-                    margin-left: 300px;
-                }
+            // &--lone {
+            //     @include netbook {
+            //         margin-top: -71px;
+            //         margin-left: 300px;
+            //     }
 
-                @include mobile {
-                    margin-top: -68.5px;
-                    margin-left: 240px;
-                }
-            }
+            //     @include tablet {
+            //         margin-top: -68.5px;
+            //     }
+                
+            //     @include mobile {
+            //         margin-top: -68.5px;
+            //         margin-left: 240px;
+            //     }
+            // }
 
             &-name {
                 @include fontStyle(Raleway, 400, 18);
@@ -242,7 +246,7 @@
 
         &__cost {
             margin-top: auto;
-            color: $mediumGreen;
+            color: $lightGreen;
             @include fontStyle(Montserrat, 500, 24);
 
             @include netbook {
@@ -285,6 +289,14 @@
             &:active {
                 background: $darkGreen;
                 transform:translateY(3px);
+            }
+        }
+
+        &__buttonGR {
+            width: fit-content;
+
+            @include netbook {
+                width: max-content;
             }
         }
     }
