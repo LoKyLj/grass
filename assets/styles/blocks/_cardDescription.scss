@@ -22,6 +22,15 @@
         @include tablet {
             @include fontSize(20);
         }
+
+        &--whiteMark {
+            padding: 0 4px;
+            border-top-right-radius: 15px;
+            border-bottom-left-radius: 15px;
+            background-color: white;
+            color: $lightGreen;
+            width: fit-content ;
+        }
     }
 
     &-items {

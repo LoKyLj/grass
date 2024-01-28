@@ -411,7 +411,7 @@ transition-none {
 }
 
 .logo {
-  width: 110px;
+  width: 60px;
 }
 .logo:hover {
   cursor: pointer;
@@ -3555,6 +3555,15 @@ transition-none {
   .cardDescription-subheading {
     font-size: 1.25rem;
   }
+}
+.cardDescription-subheading--whiteMark {
+  padding: 0 4px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  background-color: white;
+  color: #5AA02D;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .cardDescription-items {
   margin-top: 45px;
